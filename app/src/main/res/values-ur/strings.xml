@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">غسل: غسل واجب کی مکمل فقہ</string>
+    <string name="nav_home">ہوم</string>
+    <string name="nav_guide">رہنمائی</string>
+    <string name="nav_wizard">حالت جانچیں</string>
+    <string name="nav_ask_ustadz">عالم سے پوچھیں</string>
+    <string name="nav_more">مزید</string>
+    <string name="home_greeting">السلام علیکم</string>
+    <string name="home_subtitle">غسل واجب کو سمجھنے کے لیے مکمل رہنمائی</string>
+    <string name="home_card_guide">رہنمائی اور حوالہ جات</string>
+    <string name="home_card_wizard">اپنی حالت جانچیں</string>
+    <string name="home_card_ustadz">عالم سے پوچھیں</string>
+    <string name="placeholder_coming_soon">جلد آ رہا ہے</string>
+</resources>

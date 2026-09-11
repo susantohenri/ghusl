@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ghusl: Fiqih Mandi Wajib Lengkap</string>
+    <string name="nav_home">Beranda</string>
+    <string name="nav_guide">Panduan</string>
+    <string name="nav_wizard">Cek Kondisi</string>
+    <string name="nav_ask_ustadz">Tanya Ustadz</string>
+    <string name="nav_more">Lainnya</string>
+    <string name="home_greeting">Assalamu\'alaikum</string>
+    <string name="home_subtitle">Panduan lengkap memahami mandi wajib (ghusl)</string>
+    <string name="home_card_guide">Panduan &amp; Rujukan</string>
+    <string name="home_card_wizard">Cek Kondisi Anda</string>
+    <string name="home_card_ustadz">Tanya Ustadz</string>
+    <string name="placeholder_coming_soon">Segera Hadir</string>
+</resources>
