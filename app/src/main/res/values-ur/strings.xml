@@ -11,4 +11,14 @@
     <string name="home_card_wizard">اپنی حالت جانچیں</string>
     <string name="home_card_ustadz">عالم سے پوچھیں</string>
     <string name="placeholder_coming_soon">جلد آ رہا ہے</string>
+    <string name="guide_loading">رہنمائی لوڈ ہو رہی ہے…</string>
+    <string name="guide_error">رہنمائی لوڈ کرنے میں ناکامی</string>
+    <string name="guide_retry">دوبارہ کوشش کریں</string>
+    <string name="guide_empty">کوئی رہنمائی دستیاب نہیں</string>
+    <string name="slide_of">%2$d میں سے %1$d</string>
+    <string name="slide_share_title">یہ رہنمائی شیئر کریں</string>
+    <string name="bookmark_added">بک مارک شامل کیا گیا</string>
+    <string name="bookmark_removed">بک مارک ہٹایا گیا</string>
+    <string name="audio_play">آڈیو چلائیں</string>
+    <string name="audio_pause">آڈیو روکیں</string>
 </resources>

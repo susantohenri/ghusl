@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "start",
+      "question": {
+        "id": "Apakah Anda mengalami salah satu kondisi berikut?",
+        "en": "Have you experienced any of the following conditions?",
+        "ms": "Adakah anda mengalami salah satu keadaan berikut?",
+        "ur": "کیا آپ نے درج ذیل میں سے کوئی حالت محسوس کی؟"
+      },
+      "yesTarget": "placeholder_yes",
+      "noTarget": "placeholder_no",
+      "isResult": false
+    },
+    {
+      "id": "placeholder_yes",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": true,
+      "resultTitle": {
+        "id": "Anda wajib mandi (ghusl)",
+        "en": "You must perform ritual bath (ghusl)",
+        "ms": "Anda wajib mandi (ghusl)",
+        "ur": "آپ کو غسل کرنا واجب ہے"
+      },
+      "resultDescription": {
+        "id": "[Konten akan diisi oleh ustadz/tim produk]",
+        "en": "[Content to be filled by scholar/product team]",
+        "ms": "[Kandungan akan diisi oleh ustaz/pasukan produk]",
+        "ur": "[مواد عالم/پروڈکٹ ٹیم کی طرف سے بھرا جائے گا]"
+      },
+      "resultDalil": "[Dalil akan diisi]"
+    },
+    {
+      "id": "placeholder_no",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": false,
+      "resultTitle": {
+        "id": "Anda tidak wajib mandi (ghusl)",
+        "en": "You are not required to perform ritual bath (ghusl)",
+        "ms": "Anda tidak wajib mandi (ghusl)",
+        "ur": "آپ پر غسل واجب نہیں ہے"
+      },
+      "resultDescription": {
+        "id": "[Konten akan diisi oleh ustadz/tim produk]",
+        "en": "[Content to be filled by scholar/product team]",
+        "ms": "[Kandungan akan diisi oleh ustaz/pasukan produk]",
+        "ur": "[مواد عالم/پروڈکٹ ٹیم کی طرف سے بھرا جائے گا]"
+      },
+      "resultDalil": "[Dalil akan diisi]"
+    }
+  ],
+  "disclaimer": {
+    "id": "Ini panduan umum. Untuk kasus rumit, konsultasikan ke ustadz/ulama setempat.",
+    "en": "This is a general guide. For complex cases, consult a local scholar.",
+    "ms": "Ini panduan umum. Untuk kes rumit, rujuk ustaz/ulama tempatan.",
+    "ur": "یہ ایک عمومی رہنمائی ہے۔ پیچیدہ معاملات کے لیے مقامی عالم سے مشورہ کریں۔"
+  }
+}

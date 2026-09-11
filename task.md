@@ -14,17 +14,17 @@
 - [x] Kerangka UI Beranda (Dashboard, recent reading deep link, quick access cards)
 
 ## Fase 3: Data Model & Local Storage
-- [ ] Setup Room Database (Bookmark, Riwayat Baca, Riwayat Tanya Ustadz)
-- [ ] Setup DataStore Preferences (Pilihan bahasa, tema, onboarding, audio settings)
-- [ ] Repository layer & offline caching strategy
+- [x] Setup Room Database (Bookmark, Riwayat Baca, Riwayat Tanya Ustadz)
+- [x] Setup DataStore Preferences (Pilihan bahasa, tema, onboarding, audio settings)
+- [x] Repository layer & offline caching strategy
 
 ## Fase 4: Fitur Panduan (Dynamic Remote JSON)
-- [ ] Network client untuk fetch `https://raw.githubusercontent.com/susantohenri/admob-remote-configs/refs/heads/main/ghusl/konten/data.json`
-- [ ] Parsing data JSON & pemetaan multi-bahasa (id, en, ms, ur)
-- [ ] UI List Panduan (dengan native ad slot)
-- [ ] UI Slide Show Panduan (Arab RTL, Latin LTR, terjemahan, penjelasan, sumber dalil)
-- [ ] Fitur Share slide & Bookmark
-- [ ] Pemutar Audio (resitasi doa/niat)
+- [x] Network client untuk fetch `https://raw.githubusercontent.com/susantohenri/admob-remote-configs/refs/heads/main/ghusl/konten/data.json`
+- [x] Parsing data JSON & pemetaan multi-bahasa (id, en, ms, ur)
+- [x] UI List Panduan (dengan native ad slot)
+- [x] UI Slide Show Panduan (Arab RTL, Latin LTR, terjemahan, penjelasan, sumber dalil)
+- [x] Fitur Share slide & Bookmark
+- [x] Pemutar Audio (resitasi doa/niat)
 
 ## Fase 5: Wizard Engine Cek Kondisi (Decision Tree)
 - [ ] Schema & parser engine decision tree berbasis JSON config

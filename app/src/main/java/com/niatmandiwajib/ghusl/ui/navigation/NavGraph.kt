@@ -10,6 +10,7 @@ import androidx.navigation.navArgument
 import com.niatmandiwajib.ghusl.ui.screens.guide.GuideListScreen
 import com.niatmandiwajib.ghusl.ui.screens.home.HomeScreen
 import com.niatmandiwajib.ghusl.ui.screens.more.MoreScreen
+import com.niatmandiwajib.ghusl.ui.screens.guide.SlideShowScreen
 import com.niatmandiwajib.ghusl.ui.screens.ustadz.AskUstadzScreen
 import com.niatmandiwajib.ghusl.ui.screens.wizard.WizardScreen
 
@@ -42,7 +43,13 @@ fun NavGraph(
         composable(
             Screen.SlideShow.route,
             arguments = listOf(navArgument("contentId") { type = NavType.StringType })
-        ) { /* TODO: SlideShowScreen */ }
+        ) { backStackEntry ->
+            val contentId = backStackEntry.arguments?.getString("contentId") ?: return@composable
+            SlideShowScreen(
+                contentId = contentId,
+                navController = navController
+            )
+        }
         composable(Screen.WizardResult.route) { /* TODO: WizardResultScreen */ }
         composable(
             Screen.QnADetail.route,

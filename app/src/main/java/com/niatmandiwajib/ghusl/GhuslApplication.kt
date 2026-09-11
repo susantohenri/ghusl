@@ -4,8 +4,12 @@ import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
+import com.niatmandiwajib.ghusl.di.AppContainer
 
 class GhuslApplication : Application() {
+
+    lateinit var container: AppContainer
+        private set
 
     companion object {
         const val CHANNEL_ID_USTADZ = "tanya_ustadz_channel"
@@ -13,6 +17,7 @@ class GhuslApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        container = AppContainer(this)
         createNotificationChannels()
     }
 

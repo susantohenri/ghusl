@@ -11,4 +11,14 @@
     <string name="home_card_wizard">Semak Keadaan Anda</string>
     <string name="home_card_ustadz">Tanya Ustaz</string>
     <string name="placeholder_coming_soon">Akan Datang</string>
+    <string name="guide_loading">Memuatkan panduan…</string>
+    <string name="guide_error">Gagal memuatkan panduan</string>
+    <string name="guide_retry">Cuba lagi</string>
+    <string name="guide_empty">Tiada panduan</string>
+    <string name="slide_of">%1$d daripada %2$d</string>
+    <string name="slide_share_title">Kongsi panduan ini</string>
+    <string name="bookmark_added">Ditanda</string>
+    <string name="bookmark_removed">Tanda dipadam</string>
+    <string name="audio_play">Main audio</string>
+    <string name="audio_pause">Jeda audio</string>
 </resources>
