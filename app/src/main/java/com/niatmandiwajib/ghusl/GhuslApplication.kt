@@ -4,12 +4,23 @@ import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
+import com.niatmandiwajib.ghusl.ads.AdManager
+import com.niatmandiwajib.ghusl.ads.AppOpenAdObserver
 import com.niatmandiwajib.ghusl.di.AppContainer
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class GhuslApplication : Application() {
 
     lateinit var container: AppContainer
         private set
+
+    lateinit var adManager: AdManager
+        private set
+
+    private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     companion object {
         const val CHANNEL_ID_USTADZ = "tanya_ustadz_channel"
@@ -19,6 +30,7 @@ class GhuslApplication : Application() {
         super.onCreate()
         container = AppContainer(this)
         createNotificationChannels()
+        initializeAds()
     }
 
     private fun createNotificationChannels() {
@@ -32,6 +44,21 @@ class GhuslApplication : Application() {
             }
             val manager = getSystemService(NotificationManager::class.java)
             manager.createNotificationChannel(channel)
+        }
+    }
+
+    private fun initializeAds() {
+        adManager = AdManager(this)
+        applicationScope.launch {
+            try {
+                val adConfig = container.adRepository.getAdConfig()
+                adManager.initialize(adConfig)
+                // Start app open ad observer
+                val observer = AppOpenAdObserver(this@GhuslApplication, adManager)
+                observer.start()
+            } catch (e: Exception) {
+                // Ads init failed silently — app works without ads
+            }
         }
     }
 }

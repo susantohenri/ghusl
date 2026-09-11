@@ -8,10 +8,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.niatmandiwajib.ghusl.ui.screens.guide.GuideListScreen
-import com.niatmandiwajib.ghusl.ui.screens.home.HomeScreen
-import com.niatmandiwajib.ghusl.ui.screens.more.MoreScreen
 import com.niatmandiwajib.ghusl.ui.screens.guide.SlideShowScreen
+import com.niatmandiwajib.ghusl.ui.screens.home.HomeScreen
+import com.niatmandiwajib.ghusl.ui.screens.more.*
 import com.niatmandiwajib.ghusl.ui.screens.ustadz.AskUstadzScreen
+import com.niatmandiwajib.ghusl.ui.screens.ustadz.QnADetailScreen
+import com.niatmandiwajib.ghusl.ui.screens.wizard.WizardResultScreen
 import com.niatmandiwajib.ghusl.ui.screens.wizard.WizardScreen
 
 @Composable
@@ -39,7 +41,8 @@ fun NavGraph(
         composable(Screen.More.route) {
             MoreScreen(navController = navController)
         }
-        // Sub-screens — will be implemented in later fases
+
+        // Sub-screens
         composable(
             Screen.SlideShow.route,
             arguments = listOf(navArgument("contentId") { type = NavType.StringType })
@@ -50,15 +53,27 @@ fun NavGraph(
                 navController = navController
             )
         }
-        composable(Screen.WizardResult.route) { /* TODO: WizardResultScreen */ }
+
+        composable(Screen.WizardResult.route) {
+            WizardResultScreen(navController = navController)
+        }
+
         composable(
             Screen.QnADetail.route,
             arguments = listOf(navArgument("questionId") { type = NavType.StringType })
-        ) { /* TODO: QnADetailScreen */ }
-        composable(Screen.Settings.route) { /* TODO: SettingsScreen */ }
-        composable(Screen.Search.route) { /* TODO: SearchScreen */ }
-        composable(Screen.Bookmarks.route) { /* TODO: BookmarkScreen */ }
-        composable(Screen.History.route) { /* TODO: HistoryScreen */ }
-        composable(Screen.About.route) { /* TODO: AboutScreen */ }
+        ) { backStackEntry ->
+            val questionId = backStackEntry.arguments?.getString("questionId")?.toLongOrNull() ?: return@composable
+            QnADetailScreen(
+                questionId = questionId,
+                navController = navController
+            )
+        }
+
+        // More Screens
+        composable(Screen.Settings.route) { SettingsScreen(navController = navController) }
+        composable(Screen.Search.route) { SearchScreen(navController = navController) }
+        composable(Screen.Bookmarks.route) { BookmarkScreen(navController = navController) }
+        composable(Screen.History.route) { HistoryScreen(navController = navController) }
+        composable(Screen.About.route) { AboutScreen(navController = navController) }
     }
 }

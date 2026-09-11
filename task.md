@@ -27,35 +27,35 @@
 - [x] Pemutar Audio (resitasi doa/niat)
 
 ## Fase 5: Wizard Engine Cek Kondisi (Decision Tree)
-- [ ] Schema & parser engine decision tree berbasis JSON config
-- [ ] Flow interaktif pertanyaan Ya / Tidak
-- [ ] Layar Hasil Rekomendasi (wajib mandi / tidak, rujukan dalil ringkas, disclaimer ustadz/ulama)
+- [x] Schema & parser engine decision tree berbasis JSON config
+- [x] Flow interaktif pertanyaan Ya / Tidak
+- [x] Layar Hasil Rekomendasi (wajib mandi / tidak, rujukan dalil ringkas, disclaimer ustadz/ulama)
 
 ## Fase 6: Tanya Ustadz (AI Q&A - Gemini)
-- [ ] Integrasi Google AI Studio (Gemini API direct client dengan system prompt `ustadz.skill.md`)
-- [ ] Mekanisme antrian & notifikasi jawaban (WorkManager / Notification)
-- [ ] Layar kirim pertanyaan, riwayat tanya-jawab, detail jawaban, dan disclaimer
-- [ ] Komentar arsitektur migrasi Fase 2 (GitHub Actions proxy)
+- [x] Integrasi Google AI Studio (Gemini API direct client dengan system prompt `ustadz.skill.md`)
+- [x] Mekanisme antrian & notifikasi jawaban (WorkManager / Notification)
+- [x] Layar kirim pertanyaan, riwayat tanya-jawab, detail jawaban, dan disclaimer
+- [x] Komentar arsitektur migrasi Fase 2 (GitHub Actions proxy)
 
 ## Fase 7: Monetisasi (AdMob) & Privasi (UMP SDK)
-- [ ] Integrasi Google User Messaging Platform (UMP) consent form (GDPR/DMA)
-- [ ] Remote config AdMob (`ads_config.json`)
-- [ ] Implementasi Adaptive Banner (Beranda, Panduan list, Search/FAQ, Tanya Ustadz)
-- [ ] Implementasi Native Ad (disisipkan tiap 4-5 item di list)
-- [ ] Implementasi Interstitial Ad (frequency capped setelah selesai baca panduan)
-- [ ] Implementasi Rewarded Ad & App Open Ad
-- [ ] Brand safety & aturan privasi (no targeting dari data wizard)
+- [x] Integrasi Google User Messaging Platform (UMP) consent form (GDPR/DMA)
+- [x] Remote config AdMob (`ads_config.json`)
+- [x] Implementasi Adaptive Banner (Beranda, Panduan list, Search/FAQ, Tanya Ustadz)
+- [x] Implementasi Native Ad (disisipkan tiap 4-5 item di list)
+- [x] Implementasi Interstitial Ad (frequency capped setelah selesai baca panduan)
+- [x] Implementasi Rewarded Ad & App Open Ad
+- [x] Brand safety & aturan privasi (no targeting dari data wizard)
 
 ## Fase 8: Lokalisasi & RTL (Urdu, Melayu, English, Indonesia)
-- [ ] Resource strings lengkap (strings.xml per locale: en, id, ms, ur)
-- [ ] RTL layout verification & icon mirroring
-- [ ] Typography Urdu (Noto Nastaliq / Naskh)
+- [x] Resource strings lengkap (strings.xml per locale: en, id, ms, ur)
+- [x] RTL layout verification & icon mirroring
+- [x] Typography Urdu (Noto Nastaliq / Naskh)
 
 ## Fase 9: Settings & Legal
-- [ ] Pengaturan bahasa & tema
-- [ ] About screen dengan versi aplikasi & link Privacy Policy
-- [ ] Rate Us link (Play Store) & Follow us (Facebook)
-- [ ] Fitur Pencarian (Search index Panduan + FAQ)
+- [x] Pengaturan bahasa & tema
+- [x] About screen dengan versi aplikasi & link Privacy Policy
+- [x] Rate Us link (Play Store) & Follow us (Facebook)
+- [x] Fitur Pencarian (Search index Panduan + FAQ)
 
 ## Fase 10: Pengujian, Kepatuhan Play Store & Verifikasi Build
 - [ ] Verifikasi build APK / Bundle
