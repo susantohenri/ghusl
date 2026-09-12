@@ -61,7 +61,7 @@ Decision tree tanya-jawab (ya/tidak) untuk menentukan wajib mandi atau tidak, be
 
 ### 3.4 Tanya Ustadz (AI Q&A)
 - User kirim pertanyaan → diproses AI (Google AI Studio / Gemini) → jawaban dikirim lewat **push notification (FCM)** 2–4 jam kemudian → tersimpan di Riwayat.
-- **Arsitektur Fase 1 (sekarang)**: panggil Google AI Studio API **langsung dari client**, API key **hardcode di app**  (mis. `BuildConfig` field / string resource). Ini keputusan sadar untuk mempercepat fase 1 — didokumentasikan di sini sebagai known trade-off, bukan best practice, supaya mudah dilacak saat refactor.
+- **Arsitektur Fase 1 (sekarang)**: panggil Google AI Studio API **langsung dari client**, API key dibaca dari `local.properties` (`gemini_api_key`, gitignored — jangan pernah di-commit). Ini keputusan sadar untuk mempercepat fase 1 — didokumentasikan di sini sebagai known trade-off, bukan best practice, supaya mudah dilacak saat refactor.
 - **Arsitektur Fase 2 (nanti, jangan dikerjakan sekarang)**: migrasi ke proxy tanpa biaya — GitHub Actions terjadwal (cron) yang membaca antrian pertanyaan (Firestore/file di repo), memanggil Gemini API pakai key yang disimpan di **GitHub Secrets**, simpan jawaban, lalu trigger FCM. Beri komentar `// TODO fase 2: pindahkan panggilan Gemini ke GitHub Actions proxy, lihat catatan arsitektur` di kode pemanggil API supaya gampang ditemukan nanti.
 - **Grounding**: ikuti ustadz.skill.md
 
