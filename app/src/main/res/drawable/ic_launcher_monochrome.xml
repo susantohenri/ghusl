@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Monochrome Water Droplet -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M 54,25 C 54,25 73,47 73,60 C 73,70.5 64.5,79 54,79 C 43.5,79 35,70.5 35,60 C 35,47 54,25 54,25 Z" />
+
+    <!-- Crescent Moon cutout -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M 52,36 C 43,40 38,49 38,59 C 38,69 45,76 54,76 C 48,74 43,67 43,58 C 43,49 48,41 55,38 C 54,37 53,36 52,36 Z" />
+
+</vector>
