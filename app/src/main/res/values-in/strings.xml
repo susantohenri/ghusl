@@ -37,6 +37,7 @@
     <string name="ustadz_error">Terjadi kesalahan. Silakan coba lagi.</string>
     <string name="ustadz_disclaimer">Jawaban dihasilkan oleh AI, bersifat edukasi umum seputar mandi wajib, dan bukan fatwa resmi. Untuk kasus personal yang kompleks, silakan konsultasi langsung dengan ustadz, ustadzah, atau lembaga fatwa terpercaya.</string>
     <string name="ustadz_history_empty">Belum ada pertanyaan. Ajukan pertanyaan pertama Anda!</string>
+    <string name="ustadz_history_title">Riwayat Pertanyaan</string>
     <string name="ustadz_status_pending">Menunggu</string>
     <string name="ustadz_status_processing">Diproses</string>
     <string name="ustadz_status_answered">Terjawab</string>

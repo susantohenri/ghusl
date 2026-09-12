@@ -10,9 +10,9 @@ import com.niatmandiwajib.ghusl.R
 
 // TODO: Add Noto Nastaliq Urdu font file to app/src/main/res/font/noto_nastaliq_urdu_regular.ttf
 // Download from: https://fonts.google.com/noto/specimen/Noto+Nastaliq+Urdu
-// val NotoNastaliqUrdu = FontFamily(
-//     Font(R.font.noto_nastaliq_urdu_regular, FontWeight.Normal)
-// )
+val NotoNastaliqUrdu = FontFamily(
+    Font(R.font.noto_nastaliq_urdu_regular, FontWeight.Normal)
+)
 
 // For Arabic text (doa/dalil) — using system default Naskh which renders well
 // TODO: Optionally add Amiri or Scheherazade New font for enhanced Arabic rendering

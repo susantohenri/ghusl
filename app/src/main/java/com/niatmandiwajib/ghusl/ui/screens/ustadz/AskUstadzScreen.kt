@@ -41,7 +41,7 @@ fun AskUstadzScreen(
     
     LaunchedEffect(submitSuccess) {
         if (submitSuccess) {
-            snackbarHostState.showSnackbar("Pertanyaan berhasil dikirim!")
+            snackbarHostState.showSnackbar(context.getString(R.string.ustadz_submitted))
             viewModel.resetSubmitSuccess()
         }
     }
@@ -62,7 +62,7 @@ fun AskUstadzScreen(
                 OutlinedTextField(
                     value = questionText,
                     onValueChange = { viewModel.onQuestionTextChanged(it) },
-                    label = { Text("Tulis pertanyaan Anda di sini...") },
+                    label = { Text(stringResource(id = R.string.ustadz_input_hint)) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .heightIn(min = 120.dp),
@@ -79,14 +79,14 @@ fun AskUstadzScreen(
                     if (isSubmitting) {
                         CircularProgressIndicator(modifier = Modifier.size(24.dp))
                     } else {
-                        Text("Kirim")
+                        Text(stringResource(id = R.string.ustadz_submit))
                     }
                 }
                 
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 Text(
-                    text = "Jawaban dihasilkan oleh AI, bersifat edukasi umum seputar mandi wajib, dan bukan fatwa resmi. Untuk kasus personal yang kompleks, silakan konsultasi langsung dengan ustadz, ustadzah, atau lembaga fatwa terpercaya.",
+                    text = stringResource(id = R.string.ustadz_disclaimer),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -96,7 +96,7 @@ fun AskUstadzScreen(
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 Text(
-                    text = "Riwayat Pertanyaan",
+                    text = stringResource(id = R.string.ustadz_history_title),
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
@@ -169,10 +169,10 @@ fun StatusBadge(status: QnAStatus) {
         QnAStatus.ERROR -> MaterialTheme.colorScheme.onErrorContainer
     }
     val text = when (status) {
-        QnAStatus.PENDING -> "Menunggu"
-        QnAStatus.PROCESSING -> "Diproses"
-        QnAStatus.ANSWERED -> "Terjawab"
-        QnAStatus.ERROR -> "Gagal"
+        QnAStatus.PENDING -> stringResource(id = R.string.ustadz_status_pending)
+        QnAStatus.PROCESSING -> stringResource(id = R.string.ustadz_status_processing)
+        QnAStatus.ANSWERED -> stringResource(id = R.string.ustadz_status_answered)
+        QnAStatus.ERROR -> stringResource(id = R.string.ustadz_error)
     }
     
     Surface(

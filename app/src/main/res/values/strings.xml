@@ -39,6 +39,7 @@
     <string name="ustadz_error">An error occurred. Please try again.</string>
     <string name="ustadz_disclaimer">Answers are AI-generated, for general education about ghusl only, and are not official fatwas. For complex personal cases, please consult a trusted scholar directly.</string>
     <string name="ustadz_history_empty">No questions yet. Ask your first question above!</string>
+    <string name="ustadz_history_title">Question History</string>
     <string name="ustadz_status_pending">Pending</string>
     <string name="ustadz_status_processing">Processing</string>
     <string name="ustadz_status_answered">Answered</string>

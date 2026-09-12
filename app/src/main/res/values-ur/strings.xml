@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">غسل: غسل واجب کی مکمل فقہ</string>
+    <string name="app_name">Ghusl: Ghsal Wajib ki Makmal Faqah</string>
     <string name="nav_home">ہوم</string>
     <string name="nav_guide">رہنمائی</string>
     <string name="nav_wizard">حالت جانچیں</string>
@@ -37,6 +37,7 @@
     <string name="ustadz_error">خرابی ہوئی۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="ustadz_disclaimer">جوابات AI کے ذریعے تیار کیے گئے ہیں، صرف غسل کے بارے میں عمومی تعلیم کے لیے ہیں، اور سرکاری فتویٰ نہیں ہیں۔ پیچیدہ ذاتی معاملات کے لیے براہ کرم قابل اعتماد عالم سے مشورہ کریں۔</string>
     <string name="ustadz_history_empty">ابھی تک کوئی سوال نہیں۔ اوپر اپنا پہلا سوال پوچھیں!</string>
+    <string name="ustadz_history_title">سوالات کی تاریخ</string>
     <string name="ustadz_status_pending">زیر التوا</string>
     <string name="ustadz_status_processing">عملدرآمد</string>
     <string name="ustadz_status_answered">جواب دیا گیا</string>

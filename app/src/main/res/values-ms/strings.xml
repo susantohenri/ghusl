@@ -37,6 +37,7 @@
     <string name="ustadz_error">Ralat berlaku. Sila cuba lagi.</string>
     <string name="ustadz_disclaimer">Jawapan dihasilkan oleh AI, bersifat pendidikan umum tentang mandi wajib sahaja, dan bukan fatwa rasmi. Untuk kes peribadi yang rumit, sila rujuk ustaz atau lembaga fatwa yang dipercayai.</string>
     <string name="ustadz_history_empty">Belum ada soalan. Kemukakan soalan pertama anda!</string>
+    <string name="ustadz_history_title">Sejarah Soalan</string>
     <string name="ustadz_status_pending">Menunggu</string>
     <string name="ustadz_status_processing">Diproses</string>
     <string name="ustadz_status_answered">Dijawab</string>
