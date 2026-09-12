@@ -16,12 +16,20 @@ import com.niatmandiwajib.ghusl.ui.navigation.NavGraph
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import com.niatmandiwajib.ghusl.ui.theme.GhuslTheme
 
-class MainActivity : ComponentActivity() {
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.runtime.collectAsState
+
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val app = application as GhuslApplication
+        app.adManager.requestConsent(this) { canRequestAds ->
+            // Ads will be loaded based on consent result
+        }
         setContent {
-            GhuslTheme {
+            val themeMode by app.container.userPreferences.themeMode.collectAsState(initial = "system")
+            GhuslTheme(themeMode = themeMode) {
                 val navController = rememberNavController()
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route

@@ -50,6 +50,8 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
         viewModelScope.launch {
             userPreferences.setLanguage(lang)
             _uiState.update { it.copy(selectedLanguage = lang) }
+            val appLocale = androidx.core.os.LocaleListCompat.forLanguageTags(if (lang == "id") "in" else lang)
+            androidx.appcompat.app.AppCompatDelegate.setApplicationLocales(appLocale)
         }
     }
 

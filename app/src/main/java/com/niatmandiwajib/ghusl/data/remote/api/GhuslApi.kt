@@ -1,6 +1,8 @@
 package com.niatmandiwajib.ghusl.data.remote.api
 
 import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import com.niatmandiwajib.ghusl.data.remote.dto.AdConfigDto
 import com.niatmandiwajib.ghusl.data.remote.dto.GuideContentDto
 import okhttp3.Cache
@@ -42,6 +44,24 @@ object RetrofitClient {
             val client = OkHttpClient.Builder()
                 .cache(cache)
                 .addInterceptor(logging)
+                .addInterceptor { chain ->
+                    // Offline interceptor: serve stale cache when no network
+                    var request = chain.request()
+                    if (!isNetworkAvailable(context)) {
+                        request = request.newBuilder()
+                            .header("Cache-Control", "public, only-if-cached, max-stale=${7 * 24 * 60 * 60}")
+                            .build()
+                    }
+                    chain.proceed(request)
+                }
+                .addNetworkInterceptor { chain ->
+                    // Network interceptor: add cache-control to responses
+                    val response = chain.proceed(chain.request())
+                    response.newBuilder()
+                        .header("Cache-Control", "public, max-age=${60 * 60}") // 1 hour
+                        .removeHeader("Pragma")
+                        .build()
+                }
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
                 .build()
@@ -57,5 +77,12 @@ object RetrofitClient {
 
     fun getApiService(context: Context): GuideApiService {
         return getInstance(context).create(GuideApiService::class.java)
+    }
+
+    private fun isNetworkAvailable(context: Context): Boolean {
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as android.net.ConnectivityManager
+        val network = connectivityManager.activeNetwork ?: return false
+        val capabilities = connectivityManager.getNetworkCapabilities(network) ?: return false
+        return capabilities.hasCapability(android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET)
     }
 }

@@ -59,4 +59,22 @@
     <string name="bookmarks_empty">Tiada penanda</string>
     <string name="history_empty">Tiada sejarah</string>
     <string name="history_slide">Terakhir dibaca: slaid %1$d</string>
+    <string name="home_continue_reading">Teruskan Bacaan</string>
+    <string name="more_faq">FAQ</string>
+    <string name="faq_q1">Apa itu ghusl (mandi wajib)?</string>
+    <string name="faq_a1">Ghusl ialah bersuci seluruh badan yang diwajibkan dalam Islam untuk keadaan hadats besar tertentu, seperti selepas hubungan suami isteri (junub), haid, atau nifas.</string>
+    <string name="faq_q2">Bilakah ghusl menjadi wajib?</string>
+    <string name="faq_a2">Ghusl menjadi wajib selepas: junub (hubungan suami isteri atau keluar mani), selesai haid, selesai nifas, dan apabila memeluk Islam.</string>
+    <string name="faq_q3">Apa beza ghusl dan wudhu?</string>
+    <string name="faq_a3">Wudhu ialah bersuci sebahagian dengan membasuh anggota badan tertentu, manakala ghusl ialah bersuci seluruh badan termasuk berkumur dan menghirup air ke hidung.</string>
+    <string name="faq_q4">Bolehkah solat tanpa ghusl apabila diwajibkan?</string>
+    <string name="faq_a4">Tidak. Jika ghusl wajib ke atas anda (contohnya kerana junub, selepas haid, atau nifas), anda mesti melakukan ghusl sebelum solat. Solat tanpa ghusl yang diwajibkan adalah tidak sah.</string>
+    <string name="faq_q5">Adakah niat diperlukan untuk ghusl?</string>
+    <string name="faq_a5">Ya, niat adalah rukun ghusl. Anda perlu berniat di dalam hati bahawa anda melakukan ghusl untuk menghilangkan hadats besar.</string>
+    <string name="faq_q6">Adakah jawapan dari \"Tanya Ustadz\" merupakan fatwa rasmi?</string>
+    <string name="faq_a6">Tidak. Jawapan dihasilkan oleh AI untuk tujuan pendidikan umum tentang mandi wajib sahaja. Bukan fatwa rasmi. Untuk kes rumit atau peribadi, sila rujuk terus kepada ustadz atau institusi fatwa yang dipercayai.</string>
+    <string name="faq_q7">Bagaimana cara menggunakan ciri \"Cek Kondisi\"?</string>
+    <string name="faq_a7">Ketik \"Cek Kondisi\" dari skrin utama atau navigasi bawah. Jawab soalan Ya/Tidak untuk mendapatkan panduan umum sama ada ghusl diperlukan untuk situasi anda. Ingat: ini panduan umum, bukan fatwa.</string>
+    <string name="history_tab_reading">Bacaan</string>
+    <string name="history_tab_qna">Soal Jawab</string>
 </resources>

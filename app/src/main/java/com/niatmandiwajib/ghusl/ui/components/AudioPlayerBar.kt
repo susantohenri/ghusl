@@ -15,6 +15,8 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 
+@androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
+@androidx.media3.common.util.UnstableApi
 @Composable
 fun AudioPlayerBar(
     audioUrl: String,
@@ -27,8 +29,11 @@ fun AudioPlayerBar(
     var progress by remember { mutableFloatStateOf(0f) }
 
     val exoPlayer = remember(audioUrl) {
+        val cachedDataSourceFactory = com.niatmandiwajib.ghusl.media.AudioCacheManager.getCachedDataSourceFactory(context)
+        val mediaSource = androidx.media3.exoplayer.source.ProgressiveMediaSource.Factory(cachedDataSourceFactory)
+            .createMediaSource(MediaItem.fromUri(Uri.parse(audioUrl)))
         ExoPlayer.Builder(context).build().apply {
-            setMediaItem(MediaItem.fromUri(Uri.parse(audioUrl)))
+            setMediaSource(mediaSource)
             prepare()
             addListener(object : Player.Listener {
                 override fun onPlaybackStateChanged(playbackState: Int) {

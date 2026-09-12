@@ -14,6 +14,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.AndroidViewModel
@@ -23,6 +24,7 @@ import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.data.local.entity.BookmarkEntity
+import com.niatmandiwajib.ghusl.ui.components.AdBannerView
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -52,6 +54,8 @@ fun BookmarkScreen(
 ) {
     val bookmarks by viewModel.bookmarks.collectAsState()
     val dateFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+    val context = LocalContext.current
+    val adManager = (context.applicationContext as GhuslApplication).adManager
 
     Scaffold(
         topBar = {
@@ -65,28 +69,33 @@ fun BookmarkScreen(
             )
         }
     ) { padding ->
-        if (bookmarks.isEmpty()) {
-            Box(modifier = Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-                Text(stringResource(R.string.bookmarks_empty), color = MaterialTheme.colorScheme.outline)
-            }
-        } else {
-            LazyColumn(modifier = Modifier.fillMaxSize().padding(padding)) {
-                items(bookmarks) { bookmark ->
-                    ListItem(
-                        headlineContent = { Text(bookmark.title) },
-                        supportingContent = { Text(dateFormat.format(Date(bookmark.bookmarkedAt))) },
-                        trailingContent = {
-                            IconButton(onClick = { viewModel.removeBookmark(bookmark.contentKode, bookmark.slideKode) }) {
-                                Icon(Icons.Default.Delete, contentDescription = "Remove")
-                            }
-                        },
-                        modifier = Modifier.clickable {
-                            navController.navigate(Screen.SlideShow.createRoute(bookmark.contentKode))
+        Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+            Box(modifier = Modifier.weight(1f)) {
+                if (bookmarks.isEmpty()) {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Text(stringResource(R.string.bookmarks_empty), color = MaterialTheme.colorScheme.outline)
+                    }
+                } else {
+                    LazyColumn(modifier = Modifier.fillMaxSize()) {
+                        items(bookmarks) { bookmark ->
+                            ListItem(
+                                headlineContent = { Text(bookmark.title) },
+                                supportingContent = { Text(dateFormat.format(Date(bookmark.bookmarkedAt))) },
+                                trailingContent = {
+                                    IconButton(onClick = { viewModel.removeBookmark(bookmark.contentKode, bookmark.slideKode) }) {
+                                        Icon(Icons.Default.Delete, contentDescription = "Remove")
+                                    }
+                                },
+                                modifier = Modifier.clickable {
+                                    navController.navigate(Screen.SlideShow.createRoute(bookmark.contentKode))
+                                }
+                            )
+                            HorizontalDivider()
                         }
-                    )
-                    HorizontalDivider()
+                    }
                 }
             }
+            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }

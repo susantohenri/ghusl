@@ -75,5 +75,6 @@ fun NavGraph(
         composable(Screen.Bookmarks.route) { BookmarkScreen(navController = navController) }
         composable(Screen.History.route) { HistoryScreen(navController = navController) }
         composable(Screen.About.route) { AboutScreen(navController = navController) }
+        composable(Screen.Faq.route) { FaqScreen(navController = navController) }
     }
 }

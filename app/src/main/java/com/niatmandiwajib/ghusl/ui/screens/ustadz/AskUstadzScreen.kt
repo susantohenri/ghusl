@@ -8,14 +8,17 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.domain.model.QnAItem
 import com.niatmandiwajib.ghusl.domain.model.QnAStatus
+import com.niatmandiwajib.ghusl.ui.components.AdBannerView
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -31,6 +34,9 @@ fun AskUstadzScreen(
     val isSubmitting by viewModel.isSubmitting.collectAsState()
     val submitSuccess by viewModel.submitSuccess.collectAsState()
     
+    val context = LocalContext.current
+    val adManager = (context.applicationContext as GhuslApplication).adManager
+
     val snackbarHostState = remember { SnackbarHostState() }
     
     LaunchedEffect(submitSuccess) {
@@ -47,62 +53,68 @@ fun AskUstadzScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(start = 16.dp, end = 16.dp, top = 16.dp)
         ) {
-            OutlinedTextField(
-                value = questionText,
-                onValueChange = { viewModel.onQuestionTextChanged(it) },
-                label = { Text("Tulis pertanyaan Anda di sini...") },
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .heightIn(min = 120.dp),
-                maxLines = 5
-            )
-            
-            Spacer(modifier = Modifier.height(8.dp))
-            
-            Button(
-                onClick = { viewModel.submitQuestion() },
-                modifier = Modifier.align(Alignment.End),
-                enabled = questionText.isNotBlank() && !isSubmitting
+                    .weight(1f)
+                    .padding(start = 16.dp, end = 16.dp, top = 16.dp)
             ) {
-                if (isSubmitting) {
-                    CircularProgressIndicator(modifier = Modifier.size(24.dp))
-                } else {
-                    Text("Kirim")
+                OutlinedTextField(
+                    value = questionText,
+                    onValueChange = { viewModel.onQuestionTextChanged(it) },
+                    label = { Text("Tulis pertanyaan Anda di sini...") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(min = 120.dp),
+                    maxLines = 5
+                )
+                
+                Spacer(modifier = Modifier.height(8.dp))
+                
+                Button(
+                    onClick = { viewModel.submitQuestion() },
+                    modifier = Modifier.align(Alignment.End),
+                    enabled = questionText.isNotBlank() && !isSubmitting
+                ) {
+                    if (isSubmitting) {
+                        CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                    } else {
+                        Text("Kirim")
+                    }
+                }
+                
+                Spacer(modifier = Modifier.height(8.dp))
+                
+                Text(
+                    text = "Jawaban dihasilkan oleh AI, bersifat edukasi umum seputar mandi wajib, dan bukan fatwa resmi. Untuk kasus personal yang kompleks, silakan konsultasi langsung dengan ustadz, ustadzah, atau lembaga fatwa terpercaya.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                HorizontalDivider()
+                Spacer(modifier = Modifier.height(8.dp))
+                
+                Text(
+                    text = "Riwayat Pertanyaan",
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+                
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    items(qnaHistory) { item ->
+                        QnAHistoryItem(item = item, onClick = {
+                            if (item.status == QnAStatus.ANSWERED) {
+                                navController.navigate("qna_detail/${item.id}")
+                            }
+                        })
+                    }
                 }
             }
-            
-            Spacer(modifier = Modifier.height(8.dp))
-            
-            Text(
-                text = "Jawaban dihasilkan oleh AI, bersifat edukasi umum seputar mandi wajib, dan bukan fatwa resmi. Untuk kasus personal yang kompleks, silakan konsultasi langsung dengan ustadz, ustadzah, atau lembaga fatwa terpercaya.",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            
-            Spacer(modifier = Modifier.height(16.dp))
-            HorizontalDivider()
-            Spacer(modifier = Modifier.height(8.dp))
-            
-            Text(
-                text = "Riwayat Pertanyaan",
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
-            
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                items(qnaHistory) { item ->
-                    QnAHistoryItem(item = item, onClick = {
-                        if (item.status == QnAStatus.ANSWERED) {
-                            navController.navigate("qna_detail/${item.id}")
-                        }
-                    })
-                }
-            }
+            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }

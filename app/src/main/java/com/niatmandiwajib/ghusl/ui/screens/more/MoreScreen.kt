@@ -55,6 +55,14 @@ fun MoreScreen(navController: NavController) {
             }
             item {
                 MoreMenuItem(
+                    icon = Icons.Default.Help,
+                    title = stringResource(R.string.more_faq),
+                    onClick = { navController.navigate(Screen.Faq.route) }
+                )
+                HorizontalDivider()
+            }
+            item {
+                MoreMenuItem(
                     icon = Icons.Default.Settings,
                     title = stringResource(R.string.more_settings),
                     onClick = { navController.navigate(Screen.Settings.route) }

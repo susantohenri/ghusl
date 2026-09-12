@@ -52,6 +52,7 @@ sealed class Screen(
     data object Bookmarks : Screen(route = "bookmarks", titleResId = com.niatmandiwajib.ghusl.R.string.nav_more)
     data object History : Screen(route = "history", titleResId = com.niatmandiwajib.ghusl.R.string.nav_more)
     data object About : Screen(route = "about", titleResId = com.niatmandiwajib.ghusl.R.string.nav_more)
+    data object Faq : Screen(route = "faq", titleResId = com.niatmandiwajib.ghusl.R.string.nav_more)
 
     companion object {
         val bottomNavItems: List<Screen>

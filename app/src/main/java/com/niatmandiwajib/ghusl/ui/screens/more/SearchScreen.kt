@@ -23,6 +23,7 @@ import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.domain.model.GuideContent
+import com.niatmandiwajib.ghusl.ui.components.AdBannerView
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -72,6 +73,8 @@ fun SearchScreen(
 ) {
     val query by viewModel.searchQuery.collectAsState()
     val results by viewModel.searchResults.collectAsState()
+    val context = LocalContext.current
+    val adManager = (context.applicationContext as GhuslApplication).adManager
 
     Scaffold(
         topBar = {
@@ -106,29 +109,34 @@ fun SearchScreen(
             )
         }
     ) { padding ->
-        if (query.isNotEmpty() && results.isEmpty()) {
-            Box(modifier = Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
-                Text(stringResource(R.string.search_empty), color = MaterialTheme.colorScheme.outline)
-            }
-        } else {
-            LazyColumn(modifier = Modifier.fillMaxSize().padding(padding)) {
-                items(results) { content ->
-                    ListItem(
-                        headlineContent = { Text(content.title) },
-                        supportingContent = { 
-                            Text(
-                                text = content.description,
-                                maxLines = 2,
-                                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+        Column(modifier = Modifier.fillMaxSize().padding(padding)) {
+            Box(modifier = Modifier.weight(1f)) {
+                if (query.isNotEmpty() && results.isEmpty()) {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Text(stringResource(R.string.search_empty), color = MaterialTheme.colorScheme.outline)
+                    }
+                } else {
+                    LazyColumn(modifier = Modifier.fillMaxSize()) {
+                        items(results) { content ->
+                            ListItem(
+                                headlineContent = { Text(content.title) },
+                                supportingContent = { 
+                                    Text(
+                                        text = content.description,
+                                        maxLines = 2,
+                                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                                    )
+                                },
+                                modifier = Modifier.clickable {
+                                    navController.navigate(Screen.SlideShow.createRoute(content.kode))
+                                }
                             )
-                        },
-                        modifier = Modifier.clickable {
-                            navController.navigate(Screen.SlideShow.createRoute(content.kode))
+                            HorizontalDivider()
                         }
-                    )
-                    HorizontalDivider()
+                    }
                 }
             }
+            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }

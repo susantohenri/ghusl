@@ -27,6 +27,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.ui.components.AudioPlayerBar
 
@@ -39,13 +40,20 @@ fun SlideShowScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    val adManager = (context.applicationContext as GhuslApplication).adManager
 
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(text = uiState.content?.title ?: "") },
                 navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
+                    IconButton(onClick = {
+                        val activity = context as? android.app.Activity
+                        if (activity != null) {
+                            adManager.showInterstitialIfReady(activity)
+                        }
+                        navController.popBackStack()
+                    }) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Back"

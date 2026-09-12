@@ -61,4 +61,22 @@
     <string name="bookmarks_empty">No bookmarks yet</string>
     <string name="history_empty">No reading history</string>
     <string name="history_slide">Last read: slide %1$d</string>
+    <string name="home_continue_reading">Continue Reading</string>
+    <string name="more_faq">FAQ</string>
+    <string name="faq_q1">What is ghusl (ritual bath)?</string>
+    <string name="faq_a1">Ghusl is the full-body purification (washing) required in Islam for certain states of impurity (hadath akbar), such as after sexual intercourse (junub), menstruation (haid), or postpartum bleeding (nifas).</string>
+    <string name="faq_q2">When is ghusl obligatory?</string>
+    <string name="faq_a2">Ghusl becomes obligatory (wajib) after: janabah (sexual intercourse or emission), completion of menstruation (haid), completion of postpartum bleeding (nifas), and upon embracing Islam.</string>
+    <string name="faq_q3">What is the difference between ghusl and wudu?</string>
+    <string name="faq_a3">Wudu (ablution) is a partial purification washing specific body parts, while ghusl is a complete body purification that covers the entire body including rinsing the mouth and nose.</string>
+    <string name="faq_q4">Can I pray without performing ghusl when it is required?</string>
+    <string name="faq_a4">No. If ghusl is obligatory upon you (e.g., due to janabah, after haid, or nifas), you must perform ghusl before praying. Prayers without the required ghusl are not valid.</string>
+    <string name="faq_q5">Is the niyyah (intention) required for ghusl?</string>
+    <string name="faq_a5">Yes, the intention (niyyah) is a pillar (rukun) of ghusl. You must intend in your heart that you are performing ghusl to remove the state of major impurity (hadath akbar).</string>
+    <string name="faq_q6">Are the answers from \"Ask the Scholar\" official fatwas?</string>
+    <string name="faq_a6">No. The answers are AI-generated for general educational purposes about ghusl only. They are not official fatwas. For complex or personal cases, please consult a trusted local scholar or fatwa institution directly.</string>
+    <string name="faq_q7">How do I use the \"Check Your Condition\" feature?</string>
+    <string name="faq_a7">Tap \"Check Your Condition\" from the home screen or bottom navigation. Answer the Yes/No questions to receive general guidance on whether ghusl may be required for your situation. Remember: this is general guidance, not a fatwa.</string>
+    <string name="history_tab_reading">Reading</string>
+    <string name="history_tab_qna">Q\&amp;A</string>
 </resources>
