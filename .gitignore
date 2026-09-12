@@ -47,3 +47,6 @@ obj/
 
 # Play folder (for Google Play Publisher plugin)
 play/
+
+# Freebuff local data (contains pre-rewrite backup with old secret - never commit)
+.freebuff/
