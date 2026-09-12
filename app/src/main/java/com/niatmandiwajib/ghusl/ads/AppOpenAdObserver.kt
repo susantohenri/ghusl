@@ -15,8 +15,12 @@ class AppOpenAdObserver(
     private var currentActivity: Activity? = null
 
     fun start() {
-        application.registerActivityLifecycleCallbacks(this)
-        ProcessLifecycleOwner.get().lifecycle.addObserver(this)
+        try {
+            application.registerActivityLifecycleCallbacks(this)
+            ProcessLifecycleOwner.get().lifecycle.addObserver(this)
+        } catch (e: Exception) {
+            // Ignore if ProcessLifecycleOwner fails
+        }
     }
 
     override fun onStart(owner: LifecycleOwner) {

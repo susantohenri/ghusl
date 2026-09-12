@@ -33,112 +33,143 @@ class AdManager(private val context: Context) {
 
     fun initialize(config: AdConfigDto) {
         adConfig = config
-        MobileAds.initialize(context) {
-            Log.d(TAG, "AdMob initialized")
-            preloadInterstitial()
-            preloadAppOpenAd()
+        try {
+            MobileAds.initialize(context) {
+                Log.d(TAG, "AdMob initialized")
+                preloadInterstitial()
+                preloadAppOpenAd()
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "AdMob init error", e)
         }
     }
 
     // --- UMP Consent ---
     fun requestConsent(activity: Activity, onConsentResult: (Boolean) -> Unit) {
-        val params = ConsentRequestParameters.Builder().build()
-        consentInformation = UserMessagingPlatform.getConsentInformation(context)
-        consentInformation?.requestConsentInfoUpdate(
-            activity, params,
-            {
-                if (consentInformation?.isConsentFormAvailable == true) {
-                    UserMessagingPlatform.loadAndShowConsentFormIfRequired(activity) { error ->
+        try {
+            val params = ConsentRequestParameters.Builder().build()
+            consentInformation = UserMessagingPlatform.getConsentInformation(context)
+            consentInformation?.requestConsentInfoUpdate(
+                activity, params,
+                {
+                    if (consentInformation?.isConsentFormAvailable == true) {
+                        UserMessagingPlatform.loadAndShowConsentFormIfRequired(activity) { error ->
+                            onConsentResult(consentInformation?.canRequestAds() == true)
+                        }
+                    } else {
                         onConsentResult(consentInformation?.canRequestAds() == true)
                     }
-                } else {
-                    onConsentResult(consentInformation?.canRequestAds() == true)
+                },
+                { error -> 
+                    Log.e(TAG, "Consent error: ${error.message}")
+                    onConsentResult(true) // Fallback: allow ads
                 }
-            },
-            { error -> 
-                Log.e(TAG, "Consent error: ${error.message}")
-                onConsentResult(true) // Fallback: allow ads
-            }
-        )
+            )
+        } catch (e: Exception) {
+            onConsentResult(true)
+        }
     }
 
     // --- Interstitial (frequency capped) ---
     fun preloadInterstitial() {
-        val unitId = adConfig?.interstitialAdUnitId ?: return
-        InterstitialAd.load(context, unitId, AdRequest.Builder().build(),
-            object : InterstitialAdLoadCallback() {
-                override fun onAdLoaded(ad: InterstitialAd) { interstitialAd = ad }
-                override fun onAdFailedToLoad(error: LoadAdError) { interstitialAd = null }
-            })
+        try {
+            val unitId = adConfig?.interstitialAdUnitId ?: return
+            InterstitialAd.load(context, unitId, AdRequest.Builder().build(),
+                object : InterstitialAdLoadCallback() {
+                    override fun onAdLoaded(ad: InterstitialAd) { interstitialAd = ad }
+                    override fun onAdFailedToLoad(error: LoadAdError) { interstitialAd = null }
+                })
+        } catch (e: Exception) {
+            Log.e(TAG, "Preload interstitial error", e)
+        }
     }
 
     fun showInterstitialIfReady(activity: Activity, isFromWizard: Boolean = false): Boolean {
-        // Don't show interstitial right after wizard (sensitive content)
         if (isFromWizard) return false
         val now = System.currentTimeMillis()
         if (now - lastInterstitialTime < INTERSTITIAL_COOLDOWN_MS) return false
-        interstitialAd?.let { ad ->
-            ad.fullScreenContentCallback = object : FullScreenContentCallback() {
-                override fun onAdDismissedFullScreenContent() {
-                    interstitialAd = null
-                    preloadInterstitial()
+        try {
+            interstitialAd?.let { ad ->
+                ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdDismissedFullScreenContent() {
+                        interstitialAd = null
+                        preloadInterstitial()
+                    }
                 }
+                ad.show(activity)
+                lastInterstitialTime = now
+                return true
             }
-            ad.show(activity)
-            lastInterstitialTime = now
-            return true
+        } catch (e: Exception) {
+            Log.e(TAG, "Show interstitial error", e)
         }
         return false
     }
 
     // --- App Open Ad (with cooldown, not on first launch) ---
     fun preloadAppOpenAd() {
-        val unitId = adConfig?.appOpenAdUnitId ?: return
-        AppOpenAd.load(context, unitId, AdRequest.Builder().build(),
-            object : AppOpenAd.AppOpenAdLoadCallback() {
-                override fun onAdLoaded(ad: AppOpenAd) { appOpenAd = ad }
-                override fun onAdFailedToLoad(error: LoadAdError) { appOpenAd = null }
-            })
+        try {
+            val unitId = adConfig?.appOpenAdUnitId ?: return
+            AppOpenAd.load(context, unitId, AdRequest.Builder().build(),
+                object : AppOpenAd.AppOpenAdLoadCallback() {
+                    override fun onAdLoaded(ad: AppOpenAd) { appOpenAd = ad }
+                    override fun onAdFailedToLoad(error: LoadAdError) { appOpenAd = null }
+                })
+        } catch (e: Exception) {
+            Log.e(TAG, "Preload app open ad error", e)
+        }
     }
 
     fun showAppOpenAdIfReady(activity: Activity): Boolean {
         if (isFirstLaunch) { isFirstLaunch = false; return false }
         val now = System.currentTimeMillis()
         if (now - lastAppOpenTime < APP_OPEN_COOLDOWN_MS) return false
-        appOpenAd?.let { ad ->
-            ad.fullScreenContentCallback = object : FullScreenContentCallback() {
-                override fun onAdDismissedFullScreenContent() {
-                    appOpenAd = null
-                    preloadAppOpenAd()
+        try {
+            appOpenAd?.let { ad ->
+                ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdDismissedFullScreenContent() {
+                        appOpenAd = null
+                        preloadAppOpenAd()
+                    }
                 }
+                ad.show(activity)
+                lastAppOpenTime = now
+                return true
             }
-            ad.show(activity)
-            lastAppOpenTime = now
-            return true
+        } catch (e: Exception) {
+            Log.e(TAG, "Show app open ad error", e)
         }
         return false
     }
 
     // --- Rewarded Ad ---
     fun preloadRewarded() {
-        val unitId = adConfig?.rewardedAdUnitId ?: return
-        RewardedAd.load(context, unitId, AdRequest.Builder().build(),
-            object : RewardedAdLoadCallback() {
-                override fun onAdLoaded(ad: RewardedAd) { rewardedAd = ad }
-                override fun onAdFailedToLoad(error: LoadAdError) { rewardedAd = null }
-            })
+        try {
+            val unitId = adConfig?.rewardedAdUnitId ?: return
+            RewardedAd.load(context, unitId, AdRequest.Builder().build(),
+                object : RewardedAdLoadCallback() {
+                    override fun onAdLoaded(ad: RewardedAd) { rewardedAd = ad }
+                    override fun onAdFailedToLoad(error: LoadAdError) { rewardedAd = null }
+                })
+        } catch (e: Exception) {
+            Log.e(TAG, "Preload rewarded error", e)
+        }
     }
 
     fun showRewardedAd(activity: Activity, onRewarded: () -> Unit): Boolean {
-        rewardedAd?.let { ad ->
-            ad.fullScreenContentCallback = object : FullScreenContentCallback() {
-                override fun onAdDismissedFullScreenContent() {
-                    rewardedAd = null
-                    preloadRewarded()
+        try {
+            rewardedAd?.let { ad ->
+                ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdDismissedFullScreenContent() {
+                        rewardedAd = null
+                        preloadRewarded()
+                    }
                 }
+                ad.show(activity) { onRewarded() }
+                return true
             }
-            ad.show(activity) { onRewarded() }
-            return true
+        } catch (e: Exception) {
+            Log.e(TAG, "Show rewarded error", e)
         }
         return false
     }

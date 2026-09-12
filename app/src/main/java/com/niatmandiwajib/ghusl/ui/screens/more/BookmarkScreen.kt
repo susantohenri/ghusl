@@ -39,11 +39,7 @@ class BookmarkViewModel(application: Application) : AndroidViewModel(application
 
     fun removeBookmark(contentKode: String, slideKode: String?) {
         viewModelScope.launch {
-            if (slideKode != null) {
-                bookmarkRepository.removeSlideBookmark(contentKode, slideKode)
-            } else {
-                bookmarkRepository.removeContentBookmark(contentKode)
-            }
+            bookmarkRepository.removeBookmark(contentKode)
         }
     }
 }

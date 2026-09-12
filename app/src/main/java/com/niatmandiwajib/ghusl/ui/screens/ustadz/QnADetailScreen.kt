@@ -1,5 +1,6 @@
 package com.niatmandiwajib.ghusl.ui.screens.ustadz
 
+import android.app.Application
 import android.content.Intent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -14,23 +15,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.data.repository.QnARepository
+import com.niatmandiwajib.ghusl.domain.model.QnAItem
 import com.niatmandiwajib.ghusl.domain.model.QnAStatus
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-// ViewModel for detail screen
-class QnADetailViewModel(application: android.app.Application) : androidx.lifecycle.AndroidViewModel(application) {
-    private val container = (application as com.niatmandiwajib.ghusl.GhuslApplication).container
-    // QnARepository needs to be added to AppContainer - for now access via qnADao
-    private val qnARepository = com.niatmandiwajib.ghusl.data.repository.QnARepository(container.qnADao)
+class QnADetailViewModel(application: Application) : AndroidViewModel(application) {
+    private val container = (application as GhuslApplication).container
+    private val qnARepository = QnARepository(container.qnADao)
     
-    private val _qnaItem = kotlinx.coroutines.flow.MutableStateFlow<com.niatmandiwajib.ghusl.domain.model.QnAItem?>(null)
-    val qnaItem: kotlinx.coroutines.flow.StateFlow<com.niatmandiwajib.ghusl.domain.model.QnAItem?> = _qnaItem
+    private val _qnaItem = MutableStateFlow<QnAItem?>(null)
+    val qnaItem: StateFlow<QnAItem?> = _qnaItem
     
     fun loadQuestion(questionId: Long) {
-        androidx.lifecycle.viewModelScope.launch {
+        viewModelScope.launch {
             qnARepository.getQnAById(questionId).collect { item ->
                 _qnaItem.value = item
             }
@@ -55,7 +61,7 @@ fun QnADetailScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(try { stringResource(R.string.ustadz_detail_title) } catch(e: Exception) { "Tanya Ustadz AI" }) },
+                title = { Text(stringResource(R.string.ustadz_detail_title)) },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -85,11 +91,15 @@ fun QnADetailScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(padding)
-                    .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 16.dp)
+                    .padding(16.dp)
                     .verticalScroll(rememberScrollState())
             ) {
                 // Question
-                Text(try { stringResource(R.string.ustadz_question_label) } catch(e: Exception) { "Pertanyaan" }, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                Text(
+                    text = stringResource(R.string.ustadz_question_label),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary
+                )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(item.question, style = MaterialTheme.typography.bodyLarge)
                 Spacer(modifier = Modifier.height(24.dp))
@@ -98,7 +108,11 @@ fun QnADetailScreen(
                 Spacer(modifier = Modifier.height(16.dp))
                 
                 // Answer
-                Text(try { stringResource(R.string.ustadz_answer_label) } catch(e: Exception) { "Jawaban" }, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                Text(
+                    text = stringResource(R.string.ustadz_answer_label),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.primary
+                )
                 Spacer(modifier = Modifier.height(8.dp))
                 
                 when (item.status) {
@@ -109,11 +123,18 @@ fun QnADetailScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             CircularProgressIndicator(modifier = Modifier.size(16.dp), strokeWidth = 2.dp)
                             Spacer(modifier = Modifier.width(8.dp))
-                            Text(try { stringResource(R.string.ustadz_processing) } catch(e: Exception) { "Sedang memproses..." }, style = MaterialTheme.typography.bodyMedium)
+                            Text(
+                                text = stringResource(R.string.ustadz_processing),
+                                style = MaterialTheme.typography.bodyMedium
+                            )
                         }
                     }
                     QnAStatus.ERROR -> {
-                        Text(try { stringResource(R.string.ustadz_error) } catch(e: Exception) { "Gagal memproses jawaban" }, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error)
+                        Text(
+                            text = stringResource(R.string.ustadz_error),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.error
+                        )
                     }
                 }
                 
@@ -124,9 +145,9 @@ fun QnADetailScreen(
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                 ) {
                     Text(
-                        text = try { stringResource(R.string.ustadz_disclaimer) } catch(e: Exception) { "Jawaban dihasilkan oleh AI, bersifat edukasi umum seputar mandi wajib, dan bukan fatwa resmi. Untuk kasus personal yang kompleks, silakan konsultasi langsung dengan ustadz, ustadzah, atau lembaga fatwa terpercaya." },
+                        text = stringResource(R.string.ustadz_disclaimer),
                         style = MaterialTheme.typography.bodySmall,
-                        modifier = Modifier.padding(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 12.dp),
+                        modifier = Modifier.padding(12.dp),
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }

@@ -31,7 +31,9 @@ abstract class GhuslDatabase : RoomDatabase() {
                     context.applicationContext,
                     GhuslDatabase::class.java,
                     "ghusl_database"
-                ).build()
+                )
+                .fallbackToDestructiveMigration()
+                .build()
                 INSTANCE = instance
                 instance
             }

@@ -54,6 +54,7 @@ sealed class Screen(
     data object About : Screen(route = "about", titleResId = com.niatmandiwajib.ghusl.R.string.nav_more)
 
     companion object {
-        val bottomNavItems = listOf(Home, Guide, Wizard, AskUstadz, More)
+        val bottomNavItems: List<Screen>
+            get() = listOf(Home, Guide, Wizard, AskUstadz, More)
     }
 }

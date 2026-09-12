@@ -41,9 +41,9 @@ class SearchViewModel(application: Application) : AndroidViewModel(application) 
             emptyList()
         } else {
             contents.filter {
-                it.judulKonten.contains(query, ignoreCase = true) || 
-                it.deskripsiKonten.contains(query, ignoreCase = true) ||
-                it.slideShow.any { slide -> slide.teksSlide.contains(query, ignoreCase = true) }
+                it.title.contains(query, ignoreCase = true) || 
+                it.description.contains(query, ignoreCase = true) ||
+                it.slides.any { slide -> slide.text.contains(query, ignoreCase = true) || slide.translation.contains(query, ignoreCase = true) }
             }
         }
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
@@ -51,7 +51,7 @@ class SearchViewModel(application: Application) : AndroidViewModel(application) 
     init {
         viewModelScope.launch {
             val lang = userPreferences.selectedLanguage.first()
-            guideRepository.getGuides(lang).collect { result ->
+            guideRepository.getGuideContents(lang).collect { result ->
                 result.onSuccess { contents ->
                     _allContents.value = contents
                 }
@@ -114,10 +114,10 @@ fun SearchScreen(
             LazyColumn(modifier = Modifier.fillMaxSize().padding(padding)) {
                 items(results) { content ->
                     ListItem(
-                        headlineContent = { Text(content.judulKonten) },
+                        headlineContent = { Text(content.title) },
                         supportingContent = { 
                             Text(
-                                text = content.deskripsiKonten,
+                                text = content.description,
                                 maxLines = 2,
                                 overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
                             )

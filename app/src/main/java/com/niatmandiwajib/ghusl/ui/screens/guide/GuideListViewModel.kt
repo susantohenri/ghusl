@@ -35,6 +35,7 @@ class GuideListViewModel(application: Application) : AndroidViewModel(applicatio
                         _uiState.update { it.copy(isLoading = false, contents = contents) }
                     }.onFailure { e ->
                         _uiState.update { it.copy(isLoading = false, error = e.message) }
+                    }
                 }
             }
         }

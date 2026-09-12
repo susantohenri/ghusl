@@ -11,6 +11,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class GhuslApplication : Application() {
 
@@ -20,7 +21,7 @@ class GhuslApplication : Application() {
     lateinit var adManager: AdManager
         private set
 
-    private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
     companion object {
         const val CHANNEL_ID_USTADZ = "tanya_ustadz_channel"
@@ -51,9 +52,11 @@ class GhuslApplication : Application() {
         adManager = AdManager(this)
         applicationScope.launch {
             try {
-                val adConfig = container.adRepository.getAdConfig()
+                val adConfig = withContext(Dispatchers.IO) {
+                    container.adRepository.getAdConfig()
+                }
                 adManager.initialize(adConfig)
-                // Start app open ad observer
+                // Start app open ad observer on Main thread
                 val observer = AppOpenAdObserver(this@GhuslApplication, adManager)
                 observer.start()
             } catch (e: Exception) {
