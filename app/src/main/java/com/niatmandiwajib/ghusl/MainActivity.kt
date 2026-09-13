@@ -15,7 +15,9 @@ import com.niatmandiwajib.ghusl.ui.navigation.BottomNavBar
 import com.niatmandiwajib.ghusl.ui.navigation.NavGraph
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import com.niatmandiwajib.ghusl.ui.theme.GhuslTheme
-
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.navigationBars
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.collectAsState
 
@@ -55,11 +57,33 @@ class MainActivity : AppCompatActivity() {
                     Screen.More.route
                 )
 
+                val showAd = currentRoute in listOf(
+                    Screen.Home.route,
+                    Screen.Guide.route,
+                    Screen.AskUstadz.route,
+                    Screen.Search.route,
+                    Screen.Bookmarks.route,
+                    Screen.History.route
+                )
+
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     bottomBar = {
-                        if (showBottomBar) {
-                            BottomNavBar(navController = navController)
+                        if (showAd || showBottomBar) {
+                            androidx.compose.foundation.layout.Column(
+                                modifier = if (!showBottomBar) {
+                                    Modifier.windowInsetsPadding(WindowInsets.navigationBars)
+                                } else {
+                                    Modifier
+                                }
+                            ) {
+                                if (showAd) {
+                                    com.niatmandiwajib.ghusl.ui.components.AdBannerView(adUnitId = app.adManager.getBannerUnitId())
+                                }
+                                if (showBottomBar) {
+                                    BottomNavBar(navController = navController)
+                                }
+                            }
                         }
                     }
                 ) { innerPadding ->

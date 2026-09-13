@@ -93,7 +93,6 @@ fun BookmarkScreen(
                     }
                 }
             }
-            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }

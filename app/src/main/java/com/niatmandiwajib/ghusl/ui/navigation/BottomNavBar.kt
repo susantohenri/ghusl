@@ -39,9 +39,12 @@ fun BottomNavBar(navController: NavController) {
                 onClick = {
                     if (currentRoute != screen.route) {
                         navController.navigate(screen.route) {
-                            popUpTo(Screen.Home.route) { saveState = true }
+                            popUpTo(Screen.Home.route) {
+                                saveState = true
+                            }
                             launchSingleTop = true
-                            restoreState = true
+                            // Don't restore state when going to Home to prevent restoring other tabs
+                            restoreState = screen.route != Screen.Home.route
                         }
                     }
                 }

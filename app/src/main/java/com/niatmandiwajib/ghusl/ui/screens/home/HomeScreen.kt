@@ -174,9 +174,6 @@ fun HomeScreen(
                 )
             }
         }
-
-        // Adaptive Banner Ad
-        AdBannerView(adUnitId = adManager.getBannerUnitId())
     }
 }
 }

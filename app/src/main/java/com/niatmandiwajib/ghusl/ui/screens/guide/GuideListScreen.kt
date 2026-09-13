@@ -109,9 +109,6 @@ fun GuideListScreen(
                 }
             }
         }
-
-        // Adaptive Banner Ad
-        AdBannerView(adUnitId = adManager.getBannerUnitId())
     }
 }
 }

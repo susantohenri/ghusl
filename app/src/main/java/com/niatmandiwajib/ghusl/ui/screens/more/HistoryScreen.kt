@@ -100,9 +100,6 @@ fun HistoryScreen(
                     1 -> QnAHistoryTab(qnaHistory, navController)
                 }
             }
-
-            // Adaptive Banner Ad
-            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }

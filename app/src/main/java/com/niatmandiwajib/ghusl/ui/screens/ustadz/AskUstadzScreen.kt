@@ -129,7 +129,6 @@ fun AskUstadzScreen(
                     }
                 }
             }
-            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }

@@ -138,7 +138,6 @@ fun SearchScreen(
                     }
                 }
             }
-            AdBannerView(adUnitId = adManager.getBannerUnitId())
         }
     }
 }
