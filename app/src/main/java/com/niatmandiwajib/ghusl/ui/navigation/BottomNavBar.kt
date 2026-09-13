@@ -1,12 +1,15 @@
 package com.niatmandiwajib.ghusl.ui.navigation
 
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 
@@ -21,7 +24,17 @@ fun BottomNavBar(navController: NavController) {
                 icon = {
                     screen.icon?.let { Icon(imageVector = it, contentDescription = stringResource(screen.titleResId)) }
                 },
-                label = { Text(stringResource(screen.titleResId)) },
+                label = {
+                    Text(
+                        text = stringResource(screen.navLabelResId),
+                        maxLines = 1,
+                        softWrap = false,
+                        overflow = TextOverflow.Ellipsis,
+                        style = MaterialTheme.typography.labelSmall,
+                        textAlign = TextAlign.Center
+                    )
+                },
+                alwaysShowLabel = true,
                 selected = currentRoute == screen.route,
                 onClick = {
                     if (currentRoute != screen.route) {

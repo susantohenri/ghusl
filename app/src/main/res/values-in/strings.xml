@@ -85,4 +85,10 @@
     <string name="action_share">Bagikan</string>
     <string name="action_bookmark">Markah</string>
     <string name="action_refresh">Mulai Ulang</string>
+    <!-- Bottom Navigation Labels (Single Line, Concise) -->
+    <string name="bottom_nav_home">Beranda</string>
+    <string name="bottom_nav_guide">Panduan</string>
+    <string name="bottom_nav_wizard">Cek</string>
+    <string name="bottom_nav_ask_ustadz">Tanya</string>
+    <string name="bottom_nav_more">Lainnya</string>
 </resources>

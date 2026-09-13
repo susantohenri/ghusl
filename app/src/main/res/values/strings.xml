@@ -87,4 +87,11 @@
     <string name="action_share">Share</string>
     <string name="action_bookmark">Bookmark</string>
     <string name="action_refresh">Restart</string>
+    <!-- Bottom Navigation Labels (Single Line, Concise) -->
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_guide">Guide</string>
+    <string name="bottom_nav_wizard">Check</string>
+    <string name="bottom_nav_ask_ustadz">Ask</string>
+    <string name="bottom_nav_more">More</string>
 </resources>
+

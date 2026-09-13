@@ -85,4 +85,10 @@
     <string name="action_share">شیئر</string>
     <string name="action_bookmark">بک مارک</string>
     <string name="action_refresh">دوبارہ شروع کریں</string>
+    <!-- Bottom Navigation Labels (Single Line, Concise) -->
+    <string name="bottom_nav_home">ہوم</string>
+    <string name="bottom_nav_guide">رہنمائی</string>
+    <string name="bottom_nav_wizard">جانچیں</string>
+    <string name="bottom_nav_ask_ustadz">پوچھیں</string>
+    <string name="bottom_nav_more">مزید</string>
 </resources>

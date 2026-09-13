@@ -85,4 +85,10 @@
     <string name="action_share">Kongsi</string>
     <string name="action_bookmark">Tanda</string>
     <string name="action_refresh">Mula Semula</string>
+    <!-- Bottom Navigation Labels (Single Line, Concise) -->
+    <string name="bottom_nav_home">Beranda</string>
+    <string name="bottom_nav_guide">Panduan</string>
+    <string name="bottom_nav_wizard">Semak</string>
+    <string name="bottom_nav_ask_ustadz">Tanya</string>
+    <string name="bottom_nav_more">Lagi</string>
 </resources>

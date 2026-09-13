@@ -11,31 +11,37 @@ import androidx.compose.ui.graphics.vector.ImageVector
 sealed class Screen(
     val route: String,
     val titleResId: Int,
+    val navLabelResId: Int = titleResId,
     val icon: ImageVector? = null
 ) {
     data object Home : Screen(
         route = "home",
         titleResId = com.niatmandiwajib.ghusl.R.string.nav_home,
+        navLabelResId = com.niatmandiwajib.ghusl.R.string.bottom_nav_home,
         icon = Icons.Filled.Home
     )
     data object Guide : Screen(
         route = "guide",
         titleResId = com.niatmandiwajib.ghusl.R.string.nav_guide,
+        navLabelResId = com.niatmandiwajib.ghusl.R.string.bottom_nav_guide,
         icon = Icons.Filled.MenuBook
     )
     data object Wizard : Screen(
         route = "wizard",
         titleResId = com.niatmandiwajib.ghusl.R.string.nav_wizard,
+        navLabelResId = com.niatmandiwajib.ghusl.R.string.bottom_nav_wizard,
         icon = Icons.Filled.CheckCircle
     )
     data object AskUstadz : Screen(
         route = "ask_ustadz",
         titleResId = com.niatmandiwajib.ghusl.R.string.nav_ask_ustadz,
+        navLabelResId = com.niatmandiwajib.ghusl.R.string.bottom_nav_ask_ustadz,
         icon = Icons.Filled.QuestionAnswer
     )
     data object More : Screen(
         route = "more",
         titleResId = com.niatmandiwajib.ghusl.R.string.nav_more,
+        navLabelResId = com.niatmandiwajib.ghusl.R.string.bottom_nav_more,
         icon = Icons.Filled.MoreHoriz
     )
 
