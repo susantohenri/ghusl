@@ -33,13 +33,13 @@
     <string name="ustadz_detail_title">سوال کی تفصیلات</string>
     <string name="ustadz_question_label">آپ کا سوال</string>
     <string name="ustadz_answer_label">جواب</string>
-    <string name="ustadz_processing">آپ کا سوال پر عملدرآمد ہو رہا ہے…</string>
+    <string name="ustadz_processing">استاد کے جواب کا انتظار…</string>
     <string name="ustadz_error">خرابی ہوئی۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="ustadz_disclaimer">جوابات AI کے ذریعے تیار کیے گئے ہیں، صرف غسل کے بارے میں عمومی تعلیم کے لیے ہیں، اور سرکاری فتویٰ نہیں ہیں۔ پیچیدہ ذاتی معاملات کے لیے براہ کرم قابل اعتماد عالم سے مشورہ کریں۔</string>
     <string name="ustadz_history_empty">ابھی تک کوئی سوال نہیں۔ اوپر اپنا پہلا سوال پوچھیں!</string>
     <string name="ustadz_history_title">سوالات کی تاریخ</string>
     <string name="ustadz_status_pending">زیر التوا</string>
-    <string name="ustadz_status_processing">عملدرآمد</string>
+    <string name="ustadz_status_processing">استاد کے جواب کا انتظار</string>
     <string name="ustadz_status_answered">جواب دیا گیا</string>
     <string name="more_search">تلاش</string>
     <string name="more_bookmarks">بک مارکس</string>
@@ -89,6 +89,6 @@
     <string name="bottom_nav_home">ہوم</string>
     <string name="bottom_nav_guide">رہنمائی</string>
     <string name="bottom_nav_wizard">جانچیں</string>
-    <string name="bottom_nav_ask_ustadz">پوچھیں</string>
+    <string name="bottom_nav_ask_ustadz">استاد</string>
     <string name="bottom_nav_more">مزید</string>
 </resources>

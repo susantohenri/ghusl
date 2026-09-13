@@ -33,13 +33,13 @@
     <string name="ustadz_detail_title">Detail Pertanyaan</string>
     <string name="ustadz_question_label">Pertanyaan Anda</string>
     <string name="ustadz_answer_label">Jawaban</string>
-    <string name="ustadz_processing">Memproses pertanyaan Anda…</string>
+    <string name="ustadz_processing">Menunggu jawaban ustadz…</string>
     <string name="ustadz_error">Terjadi kesalahan. Silakan coba lagi.</string>
     <string name="ustadz_disclaimer">Jawaban dihasilkan oleh AI, bersifat edukasi umum seputar mandi wajib, dan bukan fatwa resmi. Untuk kasus personal yang kompleks, silakan konsultasi langsung dengan ustadz, ustadzah, atau lembaga fatwa terpercaya.</string>
     <string name="ustadz_history_empty">Belum ada pertanyaan. Ajukan pertanyaan pertama Anda!</string>
     <string name="ustadz_history_title">Riwayat Pertanyaan</string>
     <string name="ustadz_status_pending">Menunggu</string>
-    <string name="ustadz_status_processing">Diproses</string>
+    <string name="ustadz_status_processing">Menunggu Jawaban Ustadz</string>
     <string name="ustadz_status_answered">Terjawab</string>
     <string name="more_search">Pencarian</string>
     <string name="more_bookmarks">Markah</string>
@@ -89,6 +89,6 @@
     <string name="bottom_nav_home">Beranda</string>
     <string name="bottom_nav_guide">Panduan</string>
     <string name="bottom_nav_wizard">Cek</string>
-    <string name="bottom_nav_ask_ustadz">Tanya</string>
+    <string name="bottom_nav_ask_ustadz">Ustadz</string>
     <string name="bottom_nav_more">Lainnya</string>
 </resources>

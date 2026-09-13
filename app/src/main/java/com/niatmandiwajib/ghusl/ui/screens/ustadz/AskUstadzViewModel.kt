@@ -57,10 +57,15 @@ class AskUstadzViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch {
             _isSubmitting.value = true
             try {
+                val existingCount = qnARepository.getQuestionCount()
                 val questionId = qnARepository.submitQuestion(_questionText.value)
                 
                 val context = getApplication<Application>().applicationContext
-                val delay = if (BuildConfig.DEBUG) 0L else (2 * 60 * 60 * 1000L) + (Random.nextLong(2 * 60 * 60 * 1000L)) // 2-4 hours
+                val delay = if (existingCount == 0) {
+                    0L
+                } else {
+                    (2 * 60 * 60 * 1000L) + (Random.nextLong(2 * 60 * 60 * 1000L)) // 2-4 hours
+                }
                 
                 val workRequest = OneTimeWorkRequestBuilder<ProcessQuestionWorker>()
                     .setInitialDelay(delay, TimeUnit.MILLISECONDS)

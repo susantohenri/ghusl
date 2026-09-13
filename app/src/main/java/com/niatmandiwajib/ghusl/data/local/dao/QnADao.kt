@@ -15,6 +15,9 @@ interface QnADao {
     @Query("SELECT * FROM qna_history WHERE status = 'PENDING' OR status = 'PROCESSING'")
     fun getPendingQnA(): Flow<List<QnAEntity>>
 
+    @Query("SELECT COUNT(*) FROM qna_history")
+    suspend fun getQuestionCount(): Int
+
     @Insert
     suspend fun insertQuestion(entity: QnAEntity): Long
 

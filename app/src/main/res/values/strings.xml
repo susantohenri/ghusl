@@ -35,13 +35,13 @@
     <string name="ustadz_detail_title">Question Detail</string>
     <string name="ustadz_question_label">Your Question</string>
     <string name="ustadz_answer_label">Answer</string>
-    <string name="ustadz_processing">Processing your question…</string>
+    <string name="ustadz_processing">Waiting for the scholar\'s answer…</string>
     <string name="ustadz_error">An error occurred. Please try again.</string>
     <string name="ustadz_disclaimer">Answers are AI-generated, for general education about ghusl only, and are not official fatwas. For complex personal cases, please consult a trusted scholar directly.</string>
     <string name="ustadz_history_empty">No questions yet. Ask your first question above!</string>
     <string name="ustadz_history_title">Question History</string>
     <string name="ustadz_status_pending">Pending</string>
-    <string name="ustadz_status_processing">Processing</string>
+    <string name="ustadz_status_processing">Waiting for Answer</string>
     <string name="ustadz_status_answered">Answered</string>
     <string name="more_search">Search</string>
     <string name="more_bookmarks">Bookmarks</string>
@@ -91,7 +91,7 @@
     <string name="bottom_nav_home">Home</string>
     <string name="bottom_nav_guide">Guide</string>
     <string name="bottom_nav_wizard">Check</string>
-    <string name="bottom_nav_ask_ustadz">Ask</string>
+    <string name="bottom_nav_ask_ustadz">Scholar</string>
     <string name="bottom_nav_more">More</string>
 </resources>
 

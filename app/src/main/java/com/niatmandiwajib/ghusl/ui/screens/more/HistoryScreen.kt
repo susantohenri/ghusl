@@ -170,7 +170,7 @@ fun QnAHistoryTab(qnaHistory: List<QnAItem>, navController: NavController) {
                             )
                         }
                     },
-                    modifier = Modifier.clickable(enabled = item.status == QnAStatus.ANSWERED) {
+                    modifier = Modifier.clickable {
                         navController.navigate("qna_detail/${item.id}")
                     }
                 )

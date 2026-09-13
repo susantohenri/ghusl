@@ -1,20 +1,92 @@
 {
-  "version": 1,
+  "version": 2,
   "nodes": [
     {
       "id": "start",
       "question": {
-        "id": "Apakah Anda mengalami salah satu kondisi berikut?",
-        "en": "Have you experienced any of the following conditions?",
-        "ms": "Adakah anda mengalami salah satu keadaan berikut?",
-        "ur": "کیا آپ نے درج ذیل میں سے کوئی حالت محسوس کی؟"
+        "id": "Apakah kondisi ini berkaitan dengan keluarnya cairan dari kemaluan atau hubungan suami-istri?",
+        "en": "Is this condition related to the discharge of fluid from the genitals or sexual intercourse?",
+        "ms": "Adakah keadaan ini berkaitan dengan keluarnya cecair dari kemaluan atau hubungan suami-isteri?",
+        "ur": "کیا یہ حالت شرمگاہ سے مائع کے اخراج یا جنسی تعلق سے متعلق ہے؟"
       },
-      "yesTarget": "placeholder_yes",
-      "noTarget": "placeholder_no",
+      "yesTarget": "node_cairan_hubungan",
+      "noTarget": "node_haid_nifas",
       "isResult": false
     },
     {
-      "id": "placeholder_yes",
+      "id": "node_cairan_hubungan",
+      "question": {
+        "id": "Apakah Anda melakukan hubungan suami-istri (jima'), meskipun tidak keluar mani?",
+        "en": "Did you engage in sexual intercourse, even if no semen was ejaculated?",
+        "ms": "Adakah anda melakukan hubungan suami-isteri (jima'), walaupun tidak keluar air mani?",
+        "ur": "کیا آپ نے ہمبستری کی ہے، یہاں تک کہ منی خارج نہ بھی ہوئی ہو؟"
+      },
+      "yesTarget": "result_wajib_jima",
+      "noTarget": "node_keluar_mani",
+      "isResult": false
+    },
+    {
+      "id": "node_keluar_mani",
+      "question": {
+        "id": "Apakah keluar cairan mani (sperma) baik karena mimpi basah (ihtilam) atau hal lain, yang keluarnya disertai rasa nikmat atau memancar?",
+        "en": "Was there a discharge of semen (sperm) either due to a wet dream or otherwise, accompanied by pleasure or in spurts?",
+        "ms": "Adakah keluar air mani (sperma) sama ada kerana mimpi basah (ihtilam) atau hal lain, yang keluarnya disertai rasa nikmat atau memancar?",
+        "ur": "کیا منی (اسپرم) کا اخراج ہوا ہے، خواہ احتلام کی وجہ سے یا کسی اور وجہ سے، جس کے ساتھ لذت یا اچھال محسوس ہوا ہو؟"
+      },
+      "yesTarget": "result_wajib_mani",
+      "noTarget": "node_madzi",
+      "isResult": false
+    },
+    {
+      "id": "node_madzi",
+      "question": {
+        "id": "Apakah yang keluar adalah cairan bening, lengket (madzi) saat syahwat ringan, atau cairan kental putih (wadi) setelah buang air kecil?",
+        "en": "Was the discharge a clear, sticky fluid (madhi) during mild arousal, or a thick white fluid (wadi) after urinating?",
+        "ms": "Adakah yang keluar itu cecair jernih, melekit (mazi) ketika syahwat ringan, atau cecair pekat putih (wadi) selepas buang air kecil?",
+        "ur": "کیا نکلنے والا مائع شہوت کے وقت شفاف اور چپچپا (مذی) تھا، یا پیشاب کے بعد گاڑھا سفید مائع (ودی)؟"
+      },
+      "yesTarget": "result_tidak_wajib_madzi",
+      "noTarget": "result_ragu",
+      "isResult": false
+    },
+    {
+      "id": "node_haid_nifas",
+      "question": {
+        "id": "Apakah kondisi ini berkaitan dengan siklus wanita (haid/menstruasi) atau pasca melahirkan (nifas/wiladah)?",
+        "en": "Is this condition related to the female menstrual cycle (haidh) or post-childbirth bleeding (nifas)?",
+        "ms": "Adakah keadaan ini berkaitan dengan kitaran wanita (haid) atau selepas bersalin (nifas)?",
+        "ur": "کیا یہ حالت خواتین کے ماہواری کے چکر (حیض) یا بچے کی پیدائش کے بعد کے خون (نفاس) سے متعلق ہے؟"
+      },
+      "yesTarget": "node_darah_berhenti",
+      "noTarget": "node_masuk_islam",
+      "isResult": false
+    },
+    {
+      "id": "node_darah_berhenti",
+      "question": {
+        "id": "Apakah darah haid atau nifas tersebut sudah sepenuhnya berhenti (suci)?",
+        "en": "Has the menstrual or post-childbirth bleeding completely stopped?",
+        "ms": "Adakah darah haid atau nifas tersebut telah berhenti sepenuhnya (suci)?",
+        "ur": "کیا حیض یا نفاس کا خون مکمل طور پر رک گیا ہے؟"
+      },
+      "yesTarget": "result_wajib_haid_nifas",
+      "noTarget": "result_belum_wajib_haid",
+      "isResult": false
+    },
+    {
+      "id": "node_masuk_islam",
+      "question": {
+        "id": "Apakah kondisi ini berkaitan dengan seseorang yang baru memeluk agama Islam (mualaf) atau seseorang yang meninggal dunia?",
+        "en": "Is this condition related to someone newly converting to Islam or someone who has passed away?",
+        "ms": "Adakah keadaan ini berkaitan dengan seseorang yang baru memeluk agama Islam (mualaf) atau seseorang yang meninggal dunia?",
+        "ur": "کیا یہ حالت کسی ایسے شخص سے متعلق ہے جس نے نیا اسلام قبول کیا ہو یا کوئی فوت ہو گیا ہو؟"
+      },
+      "yesTarget": "result_wajib_islam_meninggal",
+      "noTarget": "result_ragu",
+      "isResult": false
+    },
+    {
+      "id": "result_wajib_jima",
       "isResult": true,
       "question": {},
       "yesTarget": null,
@@ -27,15 +99,36 @@
         "ur": "آپ کو غسل کرنا واجب ہے"
       },
       "resultDescription": {
-        "id": "[Konten akan diisi oleh ustadz/tim produk]",
-        "en": "[Content to be filled by scholar/product team]",
-        "ms": "[Kandungan akan diisi oleh ustaz/pasukan produk]",
-        "ur": "[مواد عالم/پروڈکٹ ٹیم کی طرف سے بھرا جائے گا]"
+        "id": "Bertemunya dua khitan (hubungan suami istri) mewajibkan mandi, meskipun tidak sampai keluar air mani.",
+        "en": "Engaging in sexual intercourse obligates a ritual bath, even if ejaculation does not occur.",
+        "ms": "Bertemunya dua khitan (hubungan suami isteri) mewajibkan mandi, walaupun tidak keluar air mani.",
+        "ur": "ہمبستری کرنے سے غسل واجب ہو جاتا ہے، خواہ منی خارج نہ بھی ہو۔"
       },
-      "resultDalil": "[Dalil akan diisi]"
+      "resultDalil": "\"Bila seorang lelaki duduk di antara empat potongan tubuh wanita (bersetubuh) dan khitan (laki-laki) menyentuh khitan (perempuan), maka wajib mandi.\" (HR. Muslim)"
     },
     {
-      "id": "placeholder_no",
+      "id": "result_wajib_mani",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": true,
+      "resultTitle": {
+        "id": "Anda wajib mandi (ghusl)",
+        "en": "You must perform ritual bath (ghusl)",
+        "ms": "Anda wajib mandi (ghusl)",
+        "ur": "آپ کو غسل کرنا واجب ہے"
+      },
+      "resultDescription": {
+        "id": "Keluarnya air mani baik karena mimpi basah, syahwat, maupun sengaja, mewajibkan mandi janabah.",
+        "en": "The emission of semen, whether due to wet dreams, arousal, or intentional actions, obligates the ritual bath.",
+        "ms": "Keluarnya air mani sama ada kerana mimpi basah, syahwat, atau sengaja, mewajibkan mandi janabah.",
+        "ur": "منی کا اخراج، خواہ احتلام، شہوت، یا جان بوجھ کر ہو، غسل جنابت کو واجب کر دیتا ہے۔"
+      },
+      "resultDalil": "Ummu Sulaim bertanya: 'Wahai Rasulullah, apakah wanita wajib mandi jika mimpi basah?' Beliau menjawab: 'Ya, jika ia melihat air (mani).' (Muttafaq 'Alaih)"
+    },
+    {
+      "id": "result_tidak_wajib_madzi",
       "isResult": true,
       "question": {},
       "yesTarget": null,
@@ -48,18 +141,102 @@
         "ur": "آپ پر غسل واجب نہیں ہے"
       },
       "resultDescription": {
-        "id": "[Konten akan diisi oleh ustadz/tim produk]",
-        "en": "[Content to be filled by scholar/product team]",
-        "ms": "[Kandungan akan diisi oleh ustaz/pasukan produk]",
-        "ur": "[مواد عالم/پروڈکٹ ٹیم کی طرف سے بھرا جائے گا]"
+        "id": "Keluarnya cairan madzi (saat syahwat) atau wadi (setelah kencing) TIDAK mewajibkan mandi. Anda hanya perlu mencuci kemaluan dan berwudhu jika hendak sholat.",
+        "en": "The emission of madhi (pre-seminal fluid) or wadi (fluid after urination) does NOT obligate a bath. You only need to wash your genitals and perform wudhu (ablution) for prayer.",
+        "ms": "Keluarnya mazi (ketika syahwat) atau wadi (selepas kencing) TIDAK mewajibkan mandi. Anda hanya perlu membasuh kemaluan dan berwuduk jika hendak solat.",
+        "ur": "مذی یا ودی کے اخراج سے غسل واجب نہیں ہوتا۔ آپ کو صرف شرمگاہ دھونی چاہیے اور نماز کے لیے وضو کرنا چاہیے۔"
       },
-      "resultDalil": "[Dalil akan diisi]"
+      "resultDalil": "Tentang madzi, Nabi ﷺ bersabda: \"Cucilah kemaluanmu dan berwudhulah.\" (HR. Bukhari dan Muslim)"
+    },
+    {
+      "id": "result_wajib_haid_nifas",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": true,
+      "resultTitle": {
+        "id": "Anda wajib mandi (ghusl)",
+        "en": "You must perform ritual bath (ghusl)",
+        "ms": "Anda wajib mandi (ghusl)",
+        "ur": "آپ کو غسل کرنا واجب ہے"
+      },
+      "resultDescription": {
+        "id": "Berhentinya darah haid (menstruasi) atau nifas mewajibkan seorang wanita untuk mandi wajib agar dapat melaksanakan sholat dan ibadah lainnya.",
+        "en": "The cessation of menstrual (haidh) or post-childbirth (nifas) bleeding obligates a woman to take a ritual bath to perform prayers and other acts of worship.",
+        "ms": "Berhentinya darah haid atau nifas mewajibkan seorang wanita mandi wajib agar dapat melaksanakan solat dan ibadah yang lain.",
+        "ur": "حیض یا نفاس کا خون رکنے پر عورت کے لیے غسل کرنا واجب ہے تاکہ وہ نماز اور دیگر عبادات ادا کر سکے۔"
+      },
+      "resultDalil": "\"Apabila haidmu datang, maka tinggalkanlah sholat, dan jika telah berlalu (berhenti), maka mandilah dan sholatlah.\" (HR. Bukhari)"
+    },
+    {
+      "id": "result_belum_wajib_haid",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": false,
+      "resultTitle": {
+        "id": "Belum saatnya mandi wajib",
+        "en": "Not yet time for ritual bath",
+        "ms": "Belum tiba masanya untuk mandi wajib",
+        "ur": "ابھی غسل کا وقت نہیں آیا"
+      },
+      "resultDescription": {
+        "id": "Selama darah haid atau nifas masih keluar dan belum suci sepenuhnya, Anda tidak diperbolehkan mandi wajib untuk tujuan ibadah sholat.",
+        "en": "As long as the menstrual or nifas bleeding continues and has not fully stopped, you cannot perform the ritual bath for the purpose of praying.",
+        "ms": "Selagi darah haid atau nifas masih keluar dan belum suci sepenuhnya, anda tidak dibenarkan mandi wajib untuk tujuan ibadah solat.",
+        "ur": "جب تک حیض یا نفاس کا خون جاری ہے اور مکمل پاکی حاصل نہیں ہوئی، آپ نماز کے لیے غسل نہیں کر سکتیں۔"
+      },
+      "resultDalil": "\"Mereka bertanya kepadamu tentang haid. Katakanlah: 'Haid itu adalah suatu kotoran'. Oleh sebab itu hendaklah kamu menjauhkan diri dari wanita di waktu haid...\" (QS. Al-Baqarah: 222)"
+    },
+    {
+      "id": "result_wajib_islam_meninggal",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": true,
+      "resultTitle": {
+        "id": "Wajib mandi (ghusl)",
+        "en": "Must perform ritual bath (ghusl)",
+        "ms": "Wajib mandi (ghusl)",
+        "ur": "غسل کرنا واجب ہے"
+      },
+      "resultDescription": {
+        "id": "Orang yang baru masuk Islam diwajibkan (atau disunnahkan kuat) untuk mandi. Orang Muslim yang meninggal dunia juga wajib dimandikan oleh Muslim lainnya.",
+        "en": "A new convert to Islam is obligated (or strongly recommended) to take a bath. A deceased Muslim must also be bathed by other Muslims.",
+        "ms": "Orang yang baru memeluk Islam diwajibkan (atau disunatkan kuat) untuk mandi. Orang Islam yang meninggal dunia juga wajib dimandikan oleh Muslim yang lain.",
+        "ur": "نئے مسلمان ہونے والے کے لیے غسل کرنا واجب (یا سخت مستحب) ہے۔ ایک فوت شدہ مسلمان کو بھی دوسرے مسلمانوں کی طرف سے غسل دینا واجب ہے۔"
+      },
+      "resultDalil": "Nabi ﷺ memerintahkan Qais bin 'Ashim ketika masuk Islam untuk mandi dengan air dan daun bidara. (HR. Abu Daud)"
+    },
+    {
+      "id": "result_ragu",
+      "isResult": true,
+      "question": {},
+      "yesTarget": null,
+      "noTarget": null,
+      "mustGhusl": false,
+      "resultTitle": {
+        "id": "Kondisi tidak jelas",
+        "en": "Unclear condition",
+        "ms": "Keadaan tidak jelas",
+        "ur": "غیر واضح حالت"
+      },
+      "resultDescription": {
+        "id": "Kondisi yang Anda alami tidak termasuk dalam sebab-sebab umum wajibnya mandi (janabah, haid, nifas). Jika Anda sekadar ragu apakah keluar hadas besar, hukum asalnya adalah tetap suci sampai ada keyakinan.",
+        "en": "The condition you are experiencing does not fall under the common causes for a mandatory bath. If you are just in doubt, the fundamental rule is that you remain pure until proven otherwise.",
+        "ms": "Keadaan yang anda alami tidak termasuk dalam sebab-sebab umum wajibnya mandi. Jika anda hanya ragu-ragu, hukum asalnya ialah kekal suci sehingga ada keyakinan.",
+        "ur": "آپ جس حالت کا سامنا کر رہے ہیں وہ غسل کے عام اسباب میں شامل نہیں ہے۔ اگر آپ کو شک ہے، تو بنیادی اصول یہ ہے کہ آپ پاک ہیں۔"
+      },
+      "resultDalil": "\"Keyakinan tidak bisa dihilangkan dengan keraguan.\" (Kaidah Fiqih)"
     }
   ],
   "disclaimer": {
-    "id": "Ini panduan umum. Untuk kasus rumit, konsultasikan ke ustadz/ulama setempat.",
-    "en": "This is a general guide. For complex cases, consult a local scholar.",
-    "ms": "Ini panduan umum. Untuk kes rumit, rujuk ustaz/ulama tempatan.",
-    "ur": "یہ ایک عمومی رہنمائی ہے۔ پیچیدہ معاملات کے لیے مقامی عالم سے مشورہ کریں۔"
+    "id": "Ini adalah panduan fiqih umum. Untuk kasus medis/darah wanita yang kompleks (seperti istihadhah), konsultasikan langsung ke ustadz, ustadzah, atau ulama setempat.",
+    "en": "This is a general fiqh guide. For complex medical or female bleeding cases (such as istihadha), consult directly with a local scholar.",
+    "ms": "Ini adalah panduan fiqh umum. Untuk kes perubatan/darah wanita yang kompleks, rujuk terus kepada ustaz, ustazah, atau ulama tempatan.",
+    "ur": "یہ ایک عام فقہی رہنمائی ہے۔ پیچیدہ طبی یا خواتین کے خون کے معاملات کے لیے مقامی عالم سے رجوع کریں۔"
   }
 }

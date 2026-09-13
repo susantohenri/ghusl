@@ -54,7 +54,7 @@ class ProcessQuestionWorker(
             Result.success()
         } catch (e: Exception) {
             qnARepository.updateStatus(questionId, QnAStatus.ERROR)
-            Result.retry()
+            Result.failure()
         }
     }
 

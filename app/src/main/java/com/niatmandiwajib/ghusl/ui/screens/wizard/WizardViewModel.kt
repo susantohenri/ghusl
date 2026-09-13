@@ -20,8 +20,7 @@ data class WizardUiState(
 class WizardViewModel(application: Application) : AndroidViewModel(application) {
     private val container = (application as GhuslApplication).container
     private val userPreferences = container.userPreferences
-    // WizardRepository will be lazily accessed
-    // Note: WizardRepository is added to AppContainer after this feature is done
+    private val wizardRepository = container.wizardRepository
 
     private val _uiState = MutableStateFlow(WizardUiState())
     val uiState: StateFlow<WizardUiState> = _uiState.asStateFlow()
@@ -32,11 +31,10 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
                 .distinctUntilChanged()
                 .collectLatest { language ->
                     try {
-                        val engine = com.niatmandiwajib.ghusl.domain.engine.DecisionTreeEngine(application)
-                        val disclaimer = engine.getDisclaimer(language)
+                        val disclaimer = wizardRepository.getDisclaimer(language)
                         _uiState.update { current ->
                             current.copy(
-                                currentNode = current.currentNode ?: engine.getStartNode(),
+                                currentNode = current.currentNode ?: wizardRepository.getStartNode(),
                                 language = language,
                                 disclaimer = disclaimer
                             )
@@ -50,11 +48,7 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
 
     fun answerYes() {
         val current = _uiState.value.currentNode ?: return
-        val engine = try {
-            com.niatmandiwajib.ghusl.domain.engine.DecisionTreeEngine(getApplication())
-        } catch (e: Exception) { return }
-        
-        val nextNode = engine.answerYes(current)
+        val nextNode = wizardRepository.answerYes(current)
         if (nextNode != null) {
             _uiState.update {
                 it.copy(
@@ -68,11 +62,7 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
 
     fun answerNo() {
         val current = _uiState.value.currentNode ?: return
-        val engine = try {
-            com.niatmandiwajib.ghusl.domain.engine.DecisionTreeEngine(getApplication())
-        } catch (e: Exception) { return }
-        
-        val nextNode = engine.answerNo(current)
+        val nextNode = wizardRepository.answerNo(current)
         if (nextNode != null) {
             _uiState.update {
                 it.copy(
@@ -101,10 +91,9 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
     fun restart() {
         viewModelScope.launch {
             try {
-                val engine = com.niatmandiwajib.ghusl.domain.engine.DecisionTreeEngine(getApplication())
                 _uiState.update {
                     it.copy(
-                        currentNode = engine.getStartNode(),
+                        currentNode = wizardRepository.getStartNode(),
                         history = emptyList(),
                         isFinished = false
                     )

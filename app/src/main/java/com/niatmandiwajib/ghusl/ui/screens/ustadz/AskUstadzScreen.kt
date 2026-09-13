@@ -124,9 +124,7 @@ fun AskUstadzScreen(
                 ) {
                     items(qnaHistory) { item ->
                         QnAHistoryItem(item = item, onClick = {
-                            if (item.status == QnAStatus.ANSWERED) {
-                                navController.navigate("qna_detail/${item.id}")
-                            }
+                            navController.navigate("qna_detail/${item.id}")
                         })
                     }
                 }
@@ -141,7 +139,7 @@ fun QnAHistoryItem(item: QnAItem, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = onClick, enabled = item.status == QnAStatus.ANSWERED)
+            .clickable(onClick = onClick)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(

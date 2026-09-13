@@ -15,6 +15,8 @@ class QnARepository(private val qnADao: QnADao) {
 
     fun getQnAById(id: Long): Flow<QnAItem?> = qnADao.getQnAById(id).map { it?.toDomain() }
 
+    suspend fun getQuestionCount(): Int = qnADao.getQuestionCount()
+
     suspend fun submitQuestion(question: String): Long {
         return qnADao.insertQuestion(
             QnAEntity(question = question, status = "PENDING")
