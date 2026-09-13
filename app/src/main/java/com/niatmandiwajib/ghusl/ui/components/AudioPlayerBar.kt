@@ -28,6 +28,11 @@ fun AudioPlayerBar(
     var isPlaying by remember { mutableStateOf(false) }
     var progress by remember { mutableFloatStateOf(0f) }
 
+    LaunchedEffect(audioUrl) {
+        isPlaying = false
+        progress = 0f
+    }
+
     val exoPlayer = remember(audioUrl) {
         val cachedDataSourceFactory = com.niatmandiwajib.ghusl.media.AudioCacheManager.getCachedDataSourceFactory(context)
         val mediaSource = androidx.media3.exoplayer.source.ProgressiveMediaSource.Factory(cachedDataSourceFactory)
@@ -38,8 +43,9 @@ fun AudioPlayerBar(
             addListener(object : Player.Listener {
                 override fun onPlaybackStateChanged(playbackState: Int) {
                     if (playbackState == Player.STATE_ENDED) {
+                        this@apply.pause()
                         isPlaying = false
-                        seekTo(0)
+                        this@apply.seekTo(0)
                     }
                 }
 

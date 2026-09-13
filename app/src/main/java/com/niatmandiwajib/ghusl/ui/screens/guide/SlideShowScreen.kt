@@ -9,9 +9,11 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.BookmarkBorder
 import androidx.compose.material.icons.filled.Share
+import kotlinx.coroutines.launch
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -42,8 +44,10 @@ fun SlideShowScreen(
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     val adManager = (context.applicationContext as GhuslApplication).adManager
+    val coroutineScope = rememberCoroutineScope()
 
     Scaffold(
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         topBar = {
             GhuslTopAppBar(
                 title = uiState.content?.title ?: "",
@@ -87,7 +91,7 @@ fun SlideShowScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues)
+                .padding(top = paddingValues.calculateTopPadding())
         ) {
             if (uiState.isLoading) {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
@@ -187,18 +191,55 @@ fun SlideShowScreen(
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp)
+                                .padding(horizontal = 8.dp, vertical = 2.dp)
                         ) {
                             val currentAudio = slides[pagerState.currentPage].audioUrl
                             if (currentAudio.isNotBlank()) {
                                 AudioPlayerBar(audioUrl = currentAudio)
-                                Spacer(modifier = Modifier.height(8.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
                             }
-                            Text(
-                                text = stringResource(id = R.string.slide_of, pagerState.currentPage + 1, slides.size),
-                                style = MaterialTheme.typography.labelLarge,
-                                modifier = Modifier.align(Alignment.CenterHorizontally)
-                            )
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                IconButton(
+                                    onClick = {
+                                        if (pagerState.currentPage > 0) {
+                                            coroutineScope.launch {
+                                                pagerState.animateScrollToPage(pagerState.currentPage - 1)
+                                            }
+                                        }
+                                    },
+                                    enabled = pagerState.currentPage > 0
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                        contentDescription = stringResource(id = R.string.action_back)
+                                    )
+                                }
+
+                                Text(
+                                    text = stringResource(id = R.string.slide_of, pagerState.currentPage + 1, slides.size),
+                                    style = MaterialTheme.typography.labelLarge
+                                )
+
+                                IconButton(
+                                    onClick = {
+                                        if (pagerState.currentPage < slides.size - 1) {
+                                            coroutineScope.launch {
+                                                pagerState.animateScrollToPage(pagerState.currentPage + 1)
+                                            }
+                                        }
+                                    },
+                                    enabled = pagerState.currentPage < slides.size - 1
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                                        contentDescription = "Next"
+                                    )
+                                }
+                            }
                         }
                     }
                 }
