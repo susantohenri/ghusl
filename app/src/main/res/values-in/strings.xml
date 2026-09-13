@@ -78,4 +78,11 @@
     <string name="faq_a7">Ketuk \"Cek Kondisi\" dari beranda atau navigasi bawah. Jawab pertanyaan Ya/Tidak untuk mendapatkan panduan umum apakah ghusl diperlukan untuk situasi Anda. Ingat: ini panduan umum, bukan fatwa.</string>
     <string name="history_tab_reading">Bacaan</string>
     <string name="history_tab_qna">Tanya Jawab</string>
+    <!-- Actions -->
+    <string name="action_back">Kembali</string>
+    <string name="action_search">Cari</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="action_share">Bagikan</string>
+    <string name="action_bookmark">Markah</string>
+    <string name="action_refresh">Mulai Ulang</string>
 </resources>

@@ -9,6 +9,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -16,6 +17,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
+import com.niatmandiwajib.ghusl.ui.navigation.Screen
 
 data class FaqItem(
     val questionResId: Int,
@@ -37,11 +40,16 @@ fun FaqScreen(navController: NavController) {
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.more_faq)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+            GhuslTopAppBar(
+                title = stringResource(R.string.more_faq),
+                canNavigateBack = true,
+                onBackClick = { navController.popBackStack() },
+                actions = {
+                    IconButton(onClick = { navController.navigate(Screen.Search.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = stringResource(id = R.string.action_search)
+                        )
                     }
                 }
             )

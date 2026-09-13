@@ -25,6 +25,7 @@ import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.data.local.entity.BookmarkEntity
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -59,13 +60,10 @@ fun BookmarkScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.more_bookmarks)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
-                }
+            GhuslTopAppBar(
+                title = stringResource(R.string.more_bookmarks),
+                canNavigateBack = true,
+                onBackClick = { navController.popBackStack() }
             )
         }
     ) { padding ->

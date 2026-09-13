@@ -24,8 +24,10 @@ import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.data.repository.QnARepository
 import com.niatmandiwajib.ghusl.domain.model.QnAItem
 import com.niatmandiwajib.ghusl.domain.model.QnAStatus
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class QnADetailViewModel(application: Application) : AndroidViewModel(application) {
@@ -60,13 +62,10 @@ fun QnADetailScreen(
     
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.ustadz_detail_title)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
-                },
+            GhuslTopAppBar(
+                title = stringResource(R.string.ustadz_detail_title),
+                canNavigateBack = true,
+                onBackClick = { navController.popBackStack() },
                 actions = {
                     qnaItem?.let { item ->
                         if (item.answer != null) {
@@ -78,7 +77,10 @@ fun QnADetailScreen(
                                 }
                                 context.startActivity(Intent.createChooser(intent, null))
                             }) {
-                                Icon(Icons.Filled.Share, contentDescription = "Share")
+                                Icon(
+                                    imageVector = Icons.Filled.Share,
+                                    contentDescription = stringResource(id = R.string.action_share)
+                                )
                             }
                         }
                     }

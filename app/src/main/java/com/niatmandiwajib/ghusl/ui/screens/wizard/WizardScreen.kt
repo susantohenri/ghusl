@@ -2,7 +2,7 @@ package com.niatmandiwajib.ghusl.ui.screens.wizard
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,12 +25,17 @@ fun WizardScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.nav_wizard)) },
-                navigationIcon = {
-                    if (uiState.history.isNotEmpty()) {
-                        IconButton(onClick = { viewModel.goBack() }) {
-                            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+            GhuslTopAppBar(
+                title = stringResource(R.string.nav_wizard),
+                canNavigateBack = uiState.history.isNotEmpty(),
+                onBackClick = { viewModel.goBack() },
+                actions = {
+                    if (uiState.history.isNotEmpty() || uiState.isFinished) {
+                        IconButton(onClick = { viewModel.restart() }) {
+                            Icon(
+                                imageVector = Icons.Default.Refresh,
+                                contentDescription = stringResource(R.string.action_refresh)
+                            )
                         }
                     }
                 }

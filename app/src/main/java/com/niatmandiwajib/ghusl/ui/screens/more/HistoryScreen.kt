@@ -27,6 +27,7 @@ import com.niatmandiwajib.ghusl.data.local.entity.ReadHistoryEntity
 import com.niatmandiwajib.ghusl.domain.model.QnAItem
 import com.niatmandiwajib.ghusl.domain.model.QnAStatus
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -66,13 +67,10 @@ fun HistoryScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.more_history)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
-                }
+            GhuslTopAppBar(
+                title = stringResource(R.string.more_history),
+                canNavigateBack = true,
+                onBackClick = { navController.popBackStack() }
             )
         }
     ) { padding ->

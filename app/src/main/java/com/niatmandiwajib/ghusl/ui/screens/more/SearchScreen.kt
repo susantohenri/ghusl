@@ -13,6 +13,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -24,6 +25,7 @@ import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.domain.model.GuideContent
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -78,18 +80,20 @@ fun SearchScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
+            GhuslTopAppBar(
+                canNavigateBack = true,
+                onBackClick = { navController.popBackStack() },
+                titleContent = {
                     TextField(
                         value = query,
                         onValueChange = { viewModel.onQueryChange(it) },
                         placeholder = { Text(stringResource(R.string.search_hint)) },
                         modifier = Modifier.fillMaxWidth(),
                         colors = TextFieldDefaults.colors(
-                            focusedContainerColor = MaterialTheme.colorScheme.surface,
-                            unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-                            focusedIndicatorColor = MaterialTheme.colorScheme.primary,
-                            unfocusedIndicatorColor = MaterialTheme.colorScheme.surfaceVariant
+                            focusedContainerColor = Color.Transparent,
+                            unfocusedContainerColor = Color.Transparent,
+                            focusedIndicatorColor = Color.Transparent,
+                            unfocusedIndicatorColor = Color.Transparent
                         ),
                         singleLine = true,
                         trailingIcon = {
@@ -100,11 +104,6 @@ fun SearchScreen(
                             }
                         }
                     )
-                },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
                 }
             )
         }

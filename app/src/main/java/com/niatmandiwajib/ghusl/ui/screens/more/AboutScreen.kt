@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.BuildConfig
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,13 +31,10 @@ fun AboutScreen(navController: NavController) {
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.more_about)) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
-                }
+            GhuslTopAppBar(
+                title = stringResource(R.string.more_about),
+                canNavigateBack = true,
+                onBackClick = { navController.popBackStack() }
             )
         }
     ) { padding ->

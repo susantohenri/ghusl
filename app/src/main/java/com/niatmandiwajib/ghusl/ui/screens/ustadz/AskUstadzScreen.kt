@@ -4,6 +4,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -19,6 +21,8 @@ import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.domain.model.QnAItem
 import com.niatmandiwajib.ghusl.domain.model.QnAStatus
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
+import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -47,6 +51,19 @@ fun AskUstadzScreen(
     }
     
     Scaffold(
+        topBar = {
+            GhuslTopAppBar(
+                title = stringResource(id = R.string.nav_ask_ustadz),
+                actions = {
+                    IconButton(onClick = { navController.navigate(Screen.Faq.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.HelpOutline,
+                            contentDescription = stringResource(id = R.string.more_faq)
+                        )
+                    }
+                }
+            )
+        },
         snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { paddingValues ->
         Column(

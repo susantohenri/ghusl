@@ -30,6 +30,7 @@ import coil.request.ImageRequest
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.ui.components.AudioPlayerBar
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -44,27 +45,21 @@ fun SlideShowScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(text = uiState.content?.title ?: "") },
-                navigationIcon = {
-                    IconButton(onClick = {
-                        val activity = context as? android.app.Activity
-                        if (activity != null) {
-                            adManager.showInterstitialIfReady(activity)
-                        }
-                        navController.popBackStack()
-                    }) {
-                        Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Back"
-                        )
+            GhuslTopAppBar(
+                title = uiState.content?.title ?: "",
+                canNavigateBack = true,
+                onBackClick = {
+                    val activity = context as? android.app.Activity
+                    if (activity != null) {
+                        adManager.showInterstitialIfReady(activity)
                     }
+                    navController.popBackStack()
                 },
                 actions = {
                     IconButton(onClick = { viewModel.toggleBookmark() }) {
                         Icon(
                             imageVector = if (uiState.isBookmarked) Icons.Filled.Bookmark else Icons.Filled.BookmarkBorder,
-                            contentDescription = "Bookmark"
+                            contentDescription = stringResource(id = R.string.action_bookmark)
                         )
                     }
                     IconButton(onClick = {
@@ -82,7 +77,7 @@ fun SlideShowScreen(
                     }) {
                         Icon(
                             imageVector = Icons.Filled.Share,
-                            contentDescription = "Share"
+                            contentDescription = stringResource(id = R.string.action_share)
                         )
                     }
                 }

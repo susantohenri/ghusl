@@ -3,6 +3,9 @@ package com.niatmandiwajib.ghusl.ui.screens.guide
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -17,10 +20,12 @@ import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import com.niatmandiwajib.ghusl.ui.components.GuideContentCard
 import com.niatmandiwajib.ghusl.ui.components.NativeAdCard
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GuideListScreen(
     navController: NavController,
@@ -30,7 +35,32 @@ fun GuideListScreen(
     val context = LocalContext.current
     val adManager = (context.applicationContext as GhuslApplication).adManager
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    Scaffold(
+        topBar = {
+            GhuslTopAppBar(
+                title = stringResource(id = R.string.nav_guide),
+                actions = {
+                    IconButton(onClick = { navController.navigate(Screen.Search.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = stringResource(id = R.string.action_search)
+                        )
+                    }
+                    IconButton(onClick = { navController.navigate(Screen.Bookmarks.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.Bookmark,
+                            contentDescription = stringResource(id = R.string.action_bookmark)
+                        )
+                    }
+                }
+            )
+        }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
         Box(modifier = Modifier.weight(1f)) {
             if (uiState.isLoading) {
                 CircularProgressIndicator(
@@ -84,3 +114,5 @@ fun GuideListScreen(
         AdBannerView(adUnitId = adManager.getBannerUnitId())
     }
 }
+}
+

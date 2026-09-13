@@ -7,6 +7,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -24,6 +26,7 @@ import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.data.local.entity.ReadHistoryEntity
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -36,6 +39,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     navController: NavController,
@@ -45,18 +49,43 @@ fun HomeScreen(
     val context = LocalContext.current
     val adManager = (context.applicationContext as GhuslApplication).adManager
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    Scaffold(
+        topBar = {
+            GhuslTopAppBar(
+                title = stringResource(id = R.string.nav_home),
+                actions = {
+                    IconButton(onClick = { navController.navigate(Screen.Search.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = stringResource(id = R.string.action_search)
+                        )
+                    }
+                    IconButton(onClick = { navController.navigate(Screen.Settings.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.Settings,
+                            contentDescription = stringResource(id = R.string.action_settings)
+                        )
+                    }
+                }
+            )
+        }
+    ) { innerPadding ->
         Column(
             modifier = Modifier
-                .weight(1f)
-                .verticalScroll(rememberScrollState())
-                .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+                .fillMaxSize()
+                .padding(innerPadding)
         ) {
-            Text(
-                text = stringResource(id = R.string.home_greeting),
-                style = MaterialTheme.typography.headlineMedium
-            )
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .verticalScroll(rememberScrollState())
+                    .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Text(
+                    text = stringResource(id = R.string.home_greeting),
+                    style = MaterialTheme.typography.headlineMedium
+                )
             Text(
                 text = stringResource(id = R.string.home_subtitle),
                 style = MaterialTheme.typography.bodyLarge
@@ -149,4 +178,5 @@ fun HomeScreen(
         // Adaptive Banner Ad
         AdBannerView(adUnitId = adManager.getBannerUnitId())
     }
+}
 }

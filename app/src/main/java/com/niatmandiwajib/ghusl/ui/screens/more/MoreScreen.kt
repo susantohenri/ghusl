@@ -14,6 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -21,7 +22,17 @@ import com.niatmandiwajib.ghusl.ui.navigation.Screen
 fun MoreScreen(navController: NavController) {
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.nav_more)) })
+            GhuslTopAppBar(
+                title = stringResource(R.string.nav_more),
+                actions = {
+                    IconButton(onClick = { navController.navigate(Screen.Search.route) }) {
+                        Icon(
+                            imageVector = Icons.Default.Search,
+                            contentDescription = stringResource(id = R.string.action_search)
+                        )
+                    }
+                }
+            )
         }
     ) { padding ->
         LazyColumn(

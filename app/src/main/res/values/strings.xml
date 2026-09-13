@@ -80,4 +80,11 @@
     <string name="faq_a7">Tap \"Check Your Condition\" from the home screen or bottom navigation. Answer the Yes/No questions to receive general guidance on whether ghusl may be required for your situation. Remember: this is general guidance, not a fatwa.</string>
     <string name="history_tab_reading">Reading</string>
     <string name="history_tab_qna">Q\&amp;A</string>
+    <!-- Actions -->
+    <string name="action_back">Back</string>
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="action_bookmark">Bookmark</string>
+    <string name="action_refresh">Restart</string>
 </resources>
