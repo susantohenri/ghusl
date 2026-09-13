@@ -23,20 +23,29 @@ class GuideListViewModel(application: Application) : AndroidViewModel(applicatio
     val uiState: StateFlow<GuideListUiState> = _uiState.asStateFlow()
 
     init {
-        loadGuideContents()
+        viewModelScope.launch {
+            userPreferences.selectedLanguage
+                .distinctUntilChanged()
+                .collectLatest { language ->
+                    fetchContents(language = language, forceRefresh = false)
+                }
+        }
     }
 
-    fun loadGuideContents() {
+    fun loadGuideContents(forceRefresh: Boolean = true) {
         viewModelScope.launch {
-            _uiState.update { it.copy(isLoading = true, error = null) }
-            userPreferences.selectedLanguage.first().let { language ->
-                guideRepository.getGuideContents(language).collect { result ->
-                    result.onSuccess { contents ->
-                        _uiState.update { it.copy(isLoading = false, contents = contents) }
-                    }.onFailure { e ->
-                        _uiState.update { it.copy(isLoading = false, error = e.message) }
-                    }
-                }
+            val language = userPreferences.selectedLanguage.first()
+            fetchContents(language = language, forceRefresh = forceRefresh)
+        }
+    }
+
+    private suspend fun fetchContents(language: String, forceRefresh: Boolean) {
+        _uiState.update { it.copy(isLoading = true, error = null) }
+        guideRepository.getGuideContents(language, forceRefresh).collect { result ->
+            result.onSuccess { contents ->
+                _uiState.update { it.copy(isLoading = false, contents = contents) }
+            }.onFailure { e ->
+                _uiState.update { it.copy(isLoading = false, error = e.message) }
             }
         }
     }

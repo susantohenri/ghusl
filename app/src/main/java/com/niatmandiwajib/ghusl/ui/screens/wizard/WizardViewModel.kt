@@ -28,21 +28,23 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
 
     init {
         viewModelScope.launch {
-            val language = userPreferences.selectedLanguage.first()
-            try {
-                val engine = com.niatmandiwajib.ghusl.domain.engine.DecisionTreeEngine(application)
-                val startNode = engine.getStartNode()
-                val disclaimer = engine.getDisclaimer(language)
-                _uiState.update {
-                    it.copy(
-                        currentNode = startNode,
-                        language = language,
-                        disclaimer = disclaimer
-                    )
+            userPreferences.selectedLanguage
+                .distinctUntilChanged()
+                .collectLatest { language ->
+                    try {
+                        val engine = com.niatmandiwajib.ghusl.domain.engine.DecisionTreeEngine(application)
+                        val disclaimer = engine.getDisclaimer(language)
+                        _uiState.update { current ->
+                            current.copy(
+                                currentNode = current.currentNode ?: engine.getStartNode(),
+                                language = language,
+                                disclaimer = disclaimer
+                            )
+                        }
+                    } catch (e: Exception) {
+                        _uiState.update { it.copy(error = e.message) }
+                    }
                 }
-            } catch (e: Exception) {
-                _uiState.update { it.copy(error = e.message) }
-            }
         }
     }
 

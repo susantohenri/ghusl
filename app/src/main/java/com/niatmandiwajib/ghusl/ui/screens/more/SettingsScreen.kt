@@ -154,11 +154,6 @@ fun SettingsScreen(
             }
             
             Spacer(modifier = Modifier.weight(1f))
-            Text(
-                text = "Note: Restart app to fully apply language changes.",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.outline
-            )
         }
     }
 }

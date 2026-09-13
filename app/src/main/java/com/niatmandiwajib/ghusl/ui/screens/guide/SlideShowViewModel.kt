@@ -34,14 +34,19 @@ class SlideShowViewModel(
     val uiState: StateFlow<SlideShowUiState> = _uiState.asStateFlow()
 
     init {
-        loadContent()
+        viewModelScope.launch {
+            userPreferences.selectedLanguage
+                .distinctUntilChanged()
+                .collectLatest { language ->
+                    loadContent(language)
+                }
+        }
         observeBookmarkStatus()
     }
 
-    private fun loadContent() {
+    private fun loadContent(language: String) {
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, error = null) }
-            val language = userPreferences.selectedLanguage.first()
             guideRepository.getGuideContent(contentId, language).collect { result ->
                 result.onSuccess { content ->
                     _uiState.update { it.copy(isLoading = false, content = content) }

@@ -47,13 +47,14 @@ data class ContentTranslationsDto(
     val ur: LocalizedContentHeaderDto? = null
 ) {
     fun getLocalized(language: String): LocalizedContentHeaderDto? {
-        return when (language) {
+        val target = when (language) {
             "id", "in" -> id
             "en" -> en
             "ms" -> ms
             "ur" -> ur
             else -> en ?: id
         }
+        return target ?: en ?: id
     }
 }
 
@@ -110,13 +111,14 @@ data class SlideTranslationsDto(
     val ur: LocalizedSlideDto? = null
 ) {
     fun getLocalized(language: String): LocalizedSlideDto? {
-        return when (language) {
+        val target = when (language) {
             "id", "in" -> id
             "en" -> en
             "ms" -> ms
             "ur" -> ur
             else -> en ?: id
         }
+        return target ?: en ?: id
     }
 }
 

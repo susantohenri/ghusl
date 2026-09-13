@@ -53,12 +53,15 @@ class SearchViewModel(application: Application) : AndroidViewModel(application) 
 
     init {
         viewModelScope.launch {
-            val lang = userPreferences.selectedLanguage.first()
-            guideRepository.getGuideContents(lang).collect { result ->
-                result.onSuccess { contents ->
-                    _allContents.value = contents
+            userPreferences.selectedLanguage
+                .distinctUntilChanged()
+                .collectLatest { lang ->
+                    guideRepository.getGuideContents(lang).collect { result ->
+                        result.onSuccess { contents ->
+                            _allContents.value = contents
+                        }
+                    }
                 }
-            }
         }
     }
 
