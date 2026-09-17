@@ -16,14 +16,14 @@ val localProperties = Properties().apply {
 
 android {
     namespace = "com.niatmandiwajib.ghusl"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.niatmandiwajib.ghusl"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        targetSdk = 36
+        versionCode = 3
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
