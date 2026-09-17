@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niat-mandi-wajib.web.id/sitemap.xml
