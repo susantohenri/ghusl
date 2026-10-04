@@ -106,3 +106,22 @@ Search (index semua konten Panduan + FAQ), Bookmark (simpan konten favorit — l
 ---
 **Ringkasan instruksi kerja untuk kamu (Antigravity):**
 1. Buat `implementation_plan.md` + `task.md` dulu, pisahkan fase: scaffolding project → navigasi & UI shell → data model & local storage → fitur Panduan (dengan placeholder konten, dynamic dari remote JSON) → Wizard engine (data-driven) → Tanya Ustadz (Fase 1: client → Gemini langsung, key hardcoded) → AdMob integration & UMP → localization/RTL → settings & legal.
+
+---
+
+## 9. Referensi Publikasi & Backlink
+
+Bagian ini dikhususkan untuk **pedoman pemasangan backlink** (link building) ke aplikasi & website. Gunakan ketiga referensi berikut saat membangun profil backlink, profil media sosial, dan kanal komunitas.
+
+| Jenis | URL | Catatan |
+|---|---|---|
+| **Website resmi** | https://niat-mandi-wajib.web.id/ | Halaman landing utama; prioritaskan untuk profile link, situs web pendamping, dan SEO. |
+| **Google Play Store** | https://play.google.com/store/apps/details?id=com.niatmandiwajib.ghusl | Link toko aplikasi resmi; gunakan di bio, review app, komunitas developer, dan forum Muslim. |
+| **YouTube Shorts** | https://www.youtube.com/shorts/d88Lt7rwrhA | Konten video pendek (Shorts) promosi aplikasi; bagikan di media sosial, grup WhatsApp/Telegram, dan embed di blog. |
+
+**Pedoman pemasangan backlink:**
+- Prioritaskan situs dengan otoritas domain (DA) tinggi di niche Islami, pendidikan, dan mobile app review.
+- Gunakan anchor text bervariasi: `niat mandi wajib`, `ghusl app`, `fiqih mandi wajib`, `aplikasi ghusl`, `com.niatmandiwajib.ghusl`, atau URL langsung.
+- Pastikan backlink mengarah ke halaman yang relevan (landing web.id → Play Store → Shorts), bukan halaman error/404.
+- Periksa canonical & noindex pada halaman sumber agar backlink tidak terbuang sia-sia.
+- Jangan gunakan jasa backlink spam (PBN, komentar spam, direktori otomatis) — risiko penalti Google dan tidak sejalan dengan brand religi.
