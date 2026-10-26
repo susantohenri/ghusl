@@ -93,5 +93,23 @@
     <string name="bottom_nav_wizard">Check</string>
     <string name="bottom_nav_ask_ustadz">Scholar</string>
     <string name="bottom_nav_more">More</string>
+    <string name="shortcut_niat_junub_short">Niat Junub</string>
+    <string name="shortcut_niat_junub_long">Niat Mandi Junub</string>
+    <string name="shortcut_niat_haid_short">Niat Haid</string>
+    <string name="shortcut_niat_haid_long">Niat Mandi Haid</string>
+    <string name="quick_niat_title">Quick Intentions</string>
+    <string name="quick_niat_full_guide">Full Guide</string>
+    <string name="quick_niat_tab_junub">Janabah</string>
+    <string name="quick_niat_tab_haid">Haid</string>
+    <string name="quick_niat_tab_nifas">Nifas</string>
+    <string name="quick_niat_share_title">Share Intention</string>
+    <string name="quick_niat_share_meaning">Translation:</string>
+    <string name="quick_niat_share_footer">Shared from Ghusl app</string>
+    <string name="default_niat_junub_title">Intention for Janabah Ghusl</string>
+    <string name="default_niat_junub_translation">I intend to perform ghusl to remove major impurity of janabah for Allah Almighty.</string>
+    <string name="default_niat_haid_title">Intention for Haid Ghusl</string>
+    <string name="default_niat_haid_translation">I intend to perform ghusl to remove the impurity of menstruation for Allah Almighty.</string>
+    <string name="default_niat_nifas_title">Intention for Nifas Ghusl</string>
+    <string name="default_niat_nifas_translation">I intend to perform ghusl to remove the impurity of postnatal bleeding for Allah Almighty.</string>
 </resources>
 

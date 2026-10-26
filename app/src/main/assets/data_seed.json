@@ -1,0 +1,1532 @@
+[
+  {
+    "kode": "sebab-sebab-mandi-wajib",
+    "translations": {
+      "id": {
+        "judul_konten": "Sebab-sebab Mandi Wajib",
+        "deskripsi_konten": "Daftar kondisi yang mewajibkan mandi (junub, haid, nifas, dll)"
+      },
+      "en": {
+        "judul_konten": "Reasons for Obligatory Bath (Ghusl)",
+        "deskripsi_konten": "A list of conditions that make ghusl obligatory (janabah, menstruation, postnatal bleeding, etc.)"
+      },
+      "ms": {
+        "judul_konten": "Sebab-sebab Mandi Wajib",
+        "deskripsi_konten": "Senarai keadaan yang mewajibkan mandi (junub, haid, nifas, dan sebagainya)"
+      },
+      "ur": {
+        "judul_konten": "غسل واجب ہونے کے اسباب",
+        "deskripsi_konten": "ان حالات کی فہرست جو غسل کو واجب کرتی ہیں (جنابت، حیض، نفاس وغیرہ)"
+      }
+    },
+    "slide_show": [
+      {
+        "kode_slide": "haid-menstruasi",
+        "gambar": "haid-menstruasi.webp",
+        "arab": "إِذَا أَقْبَلَتِ الْحَيْضَةُ فَدَعِي الصَّلَاةَ، وَإِذَا أَدْبَرَتْ فَاغْتَسِلِي وَصَلِّي",
+        "latin": "Idzā aqbalatil-ḥaiḍatu fa da'īṣ-ṣalāh, wa idzā adbarat faghtasilī wa ṣallī",
+        "suara": "haid-menstruasi.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Haid (menstruasi)",
+            "text": "Haid adalah darah yang keluar dari rahim wanita dalam kondisi sehat, bukan karena sakit atau melahirkan. Ini adalah siklus alami yang Allah tetapkan bagi wanita.",
+            "terjemah": "Apabila haid datang, tinggalkanlah sholat. Dan apabila haid telah berhenti, mandilah kemudian sholatlah",
+            "sumber": "HR. Bukhari"
+          },
+          "en": {
+            "judul_slide": "Menstruation (Haid)",
+            "text": "Menstruation is blood that flows from a healthy woman's womb, not caused by illness or childbirth. It is a natural cycle that Allah has ordained for women.",
+            "terjemah": "When menstruation begins, leave the prayer. And when it ends, take a bath (ghusl) and then pray.",
+            "sumber": "Narrated by Bukhari"
+          },
+          "ms": {
+            "judul_slide": "Haid (menstruasi)",
+            "text": "Haid ialah darah yang keluar daripada rahim wanita dalam keadaan sihat, bukan disebabkan sakit atau bersalin. Ia adalah kitaran semula jadi yang ditetapkan oleh Allah bagi wanita.",
+            "terjemah": "Apabila haid datang, tinggalkanlah solat. Dan apabila haid telah berhenti, mandilah kemudian solatlah",
+            "sumber": "HR. Bukhari"
+          },
+          "ur": {
+            "judul_slide": "حیض (ماہواری)",
+            "text": "حیض وہ خون ہے جو صحت مند عورت کے رحم سے خارج ہوتا ہے، یہ بیماری یا زچگی کی وجہ سے نہیں ہوتا۔ یہ ایک فطری چکر ہے جو اللہ تعالیٰ نے عورتوں کے لیے مقرر فرمایا ہے۔",
+            "terjemah": "جب حیض شروع ہو جائے تو نماز چھوڑ دو، اور جب ختم ہو جائے تو غسل کر کے نماز پڑھو",
+            "sumber": "روایت بخاری"
+          }
+        }
+      },
+      {
+        "kode_slide": "nifas-pasca-melahirkan",
+        "gambar": "nifas-pasca-melahirkan.webp",
+        "arab": "كَانَتِ النُّفَسَاءُ تَقْعُدُ عَلَى عَهْدِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَرْبَعِينَ يَوْمًا",
+        "latin": "Kānat-in-nufasā'u taq'udu 'alā 'ahdi Rasūlillāhi ṣallallāhu 'alaihi wa sallama arba'īna yauman",
+        "suara": "nifas-pasca-melahirkan.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Nifas (pasca melahirkan)",
+            "text": "Nifas adalah darah yang keluar setelah seorang wanita melahirkan. Setelah darah nifas berhenti, ia wajib mandi lalu kembali melaksanakan sholat.",
+            "terjemah": "Pada masa Rasulullah, wanita yang mengalami nifas menunggu selama empat puluh hari.",
+            "sumber": "HR. Abu Dawud dan Tirmidzi"
+          },
+          "en": {
+            "judul_slide": "Postnatal Bleeding (Nifas)",
+            "text": "Nifas is the bleeding that occurs after a woman gives birth. When the bleeding ends, she must perform ghusl and resume prayer.",
+            "terjemah": "During the time of the Messenger of Allah, women experiencing postnatal bleeding would wait for forty days.",
+            "sumber": "Narrated by Abu Dawud and al-Tirmidhi"
+          },
+          "ms": {
+            "judul_slide": "Nifas (selepas bersalin)",
+            "text": "Nifas ialah darah yang keluar selepas seorang wanita bersalin. Setelah darah nifas berhenti, dia wajib mandi lalu kembali menunaikan solat.",
+            "terjemah": "Pada zaman Rasulullah, wanita yang mengalami nifas menunggu selama empat puluh hari.",
+            "sumber": "HR. Abu Dawud dan Tirmidzi"
+          },
+          "ur": {
+            "judul_slide": "نفاس (بچے کی پیدائش کے بعد)",
+            "text": "نفاس وہ خون ہے جو عورت کے بچے کو جنم دینے کے بعد جاری ہوتا ہے۔ جب نفاس کا خون بند ہو جائے تو عورت پر غسل کرنا اور نماز دوبارہ شروع کرنا لازم ہے۔",
+            "terjemah": "رسول اللہ صلی اللہ علیہ وسلم کے زمانے میں نفاس والی عورتیں چالیس دن تک انتظار کرتی تھیں۔",
+            "sumber": "روایت ابو داؤد و ترمذی"
+          }
+        }
+      },
+      {
+        "kode_slide": "keluar-mani-junub",
+        "gambar": "keluar-mani-junub.webp",
+        "arab": "إِنَّ اللَّهَ لَا يَسْتَحْيِي مِنَ الْحَقِّ، فَهَلْ عَلَى الْمَرْأَةِ مِنْ غُسْلٍ إِذَا هِيَ احْتَلَمَتْ؟ قَالَ: نَعَمْ إِذَا رَأَتِ الْمَاءَ",
+        "latin": "Innallāha lā yastaḥyī minal-ḥaqq, fahal 'alal-mar'ati min ghuslin idzā hiyaḥtalamat? Qāla: Na'am idzā ra'atim-mā'",
+        "suara": "keluar-mani-junub.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Keluar Mani (Junub)",
+            "text": "Keluarnya mani baik karena mimpi basah maupun sebab lainnya mewajibkan mandi bagi laki-laki maupun wanita jika menemukan bekas cairan.",
+            "terjemah": "Sesungguhnya Allah tidak malu terhadap kebenaran. Apakah wanita wajib mandi jika bermimpi basah? Nabi SAW menjawab: Ya, jika ia melihat air (mani).",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Seminal Discharge (Janabah)",
+            "text": "Emitting seminal fluid, whether due to a wet dream or other causes, obligates ghusl for both men and women if fluid traces are found.",
+            "terjemah": "Allah is not shy of the truth. Is a woman required to take a bath if she has a wet dream? The Prophet (pbuh) said: Yes, if she sees the fluid.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Keluar Mani (Junub)",
+            "text": "Keluarnya mani samada disebabkan mimpi basah atau sebab lain mewajibkan mandi bagi lelaki mahupun wanita jika mendapati kesan cecair.",
+            "terjemah": "Sesungguhnya Allah tidak malu terhadap kebenaran. Adakah wanita wajib mandi jika bermimpi basah? Nabi SAW menjawab: Ya, jika dia melihat air (mani).",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "خروج منی (جنابت)",
+            "text": "احتلام یا کسی اور سبب سے منی کا خارج ہونا مرد اور عورت دونوں پر غسل واجب کرتا ہے اگر نطفہ/رطوبت کے اثرات موجود ہوں۔",
+            "terjemah": "اللہ حق بات بیان کرنے سے نہیں شرماتا۔ کیا عورت پر احتلام کی صورت میں غسل ہے؟ آپ صلی اللہ علیہ وسلم نے فرمایا: ہاں، جب وہ پانی (رطوبت) دیکھے۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "hubungan-suami-istri",
+        "gambar": "hubungan-suami-istri.webp",
+        "arab": "إِذَا جَلَسَ بَيْنَ شُعَبِهَا الأَرْبَعِ ثُمَّ جَهَدَهَا فَقَدْ وَجَبَ الْغُسْلُ",
+        "latin": "Idzā jalasa baina syu'abihāl-arba'i tsumma jahadahā faqad wajabal-ghusl",
+        "suara": "hubungan-suami-istri.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Hubungan Suami Istri (Jima')",
+            "text": "Hubungan intim antara suami istri mewajibkan mandi bagi keduanya meskipun tidak keluar mani.",
+            "terjemah": "Apabila seseorang telah duduk di antara empat cabang wanita (bersanggama) lalu bersungguh-sungguh dengannya, maka sungguh wajib mandi.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Marital Intercourse (Jima')",
+            "text": "Sexual intercourse between husband and wife makes ghusl obligatory for both, even if no ejaculation occurs.",
+            "terjemah": "When a man sits between the four parts of a woman and has intercourse with her, ghusl becomes obligatory.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Hubungan Suami Isteri (Jima')",
+            "text": "Hubungan intim antara suami isteri mewajibkan mandi bagi kedua-duanya walaupun tidak keluar mani.",
+            "terjemah": "Apabila seseorang telah duduk di antara empat cabang wanita (bersanggama) lalu bersungguh-sungguh dengannya, maka sungguh wajib mandi.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "میاں بیوی کے تعلقات (جماع)",
+            "text": "میاں بیوی کے درمیان جسمانی تعلق قائم ہونے سے دونوں پر غسل واجب ہو جاتا ہے خواہ منی کا خروج نہ بھی ہوا ہو۔",
+            "terjemah": "جب مرد عورت کے چار زانو کے درمیان بیٹھ جائے اور پھر اس سے جماع کرے تو غسل واجب ہو گیا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "kode": "mandi-wajib-non-junub",
+    "slide_show": [
+      {
+        "kode_slide": "masuk-islam-mualaf",
+        "gambar": "masuk-islam-mualaf.webp",
+        "arab": "أَنَّ ثُمَامَةَ بْنَ أُثَالٍ أَسْلَمَ، فَأَمَرَهُ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَنْ يَغْتَسِلَ",
+        "latin": "Anna Tsumāmata-bna Utsālin aslama, fa-amarahun-Nabiyyu ṣallallāhu 'alaihi wa sallama an yaghtasila",
+        "suara": "masuk-islam-mualaf.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Mandi Masuk Islam (Mualaf)",
+            "text": "Seseorang yang baru masuk Islam disunnahkan atau diwajibkan mandi untuk menyucikan diri secara lahir dan batin memulai lembaran baru.",
+            "terjemah": "Bahwa Thumamah bin Utsal masuk Islam, lalu Nabi SAW memerintahkannya untuk mandi.",
+            "sumber": "HR. Abu Dawud dan An-Nasa'i"
+          },
+          "en": {
+            "judul_slide": "Bath Upon Embracing Islam",
+            "text": "A person who embraces Islam is recommended or required to perform ghusl to purify themselves physically and spiritually for a new beginning.",
+            "terjemah": "When Thumamah bin Uthal accepted Islam, the Prophet (pbuh) commanded him to perform ghusl.",
+            "sumber": "Narrated by Abu Dawud and An-Nasa'i"
+          },
+          "ms": {
+            "judul_slide": "Mandi Memeluk Islam (Mualaf)",
+            "text": "Seseorang yang baru memeluk Islam disunatkan atau diwajibkan mandi untuk menyucikan diri secara lahiriah dan batiniah memulakan lembaran baharu.",
+            "terjemah": "Bahawa Thumamah bin Utsal memeluk Islam, lalu Nabi SAW memerintahkannya untuk mandi.",
+            "sumber": "HR. Abu Dawud dan An-Nasa'i"
+          },
+          "ur": {
+            "judul_slide": "قبول اسلام پر غسل (نو مسلم)",
+            "text": "نیا مسلمان ہونے والے شخص کے لیے غسل کرنا مستحب یا واجب ہے تاکہ وہ ظاہری اور باطنی پاکیزگی کے ساتھ نئی زندگی کا آغاز کرے۔",
+            "terjemah": "جب ثمامہ بن اثال نے اسلام قبول کیا تو نبی کریم صلی اللہ علیہ وسلم نے انہیں غسل کرنے کا حکم فرمایا۔",
+            "sumber": "روایت ابو داؤد و نسائی"
+          }
+        }
+      },
+      {
+        "kode_slide": "memandikan-jenazah",
+        "gambar": "memandikan-jenazah.webp",
+        "arab": "اغْسِلْنَهَا ثَلَاثًا أَوْ خَمْسًا أَوْ أَكْثَرَ مِنْ ذَلِكِ إِنْ رَأَيْتُنَّ ذَلِكَ بِمَاءٍ وَسِدْرٍ",
+        "latin": "Ighsilnahā tsalātsan au khamsan au aktsara min dzālika in ra'aitunna dzālika bimā'in wa sidr",
+        "suara": "memandikan-jenazah.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Memandikan Jenazah",
+            "text": "Memandikan jenazah muslim adalah fardhu kifayah bagi masyarakat muslim, disucikan menggunakan air bersih dan daun bidara atau sabun.",
+            "terjemah": "Mandikanlah ia tiga kali, lima kali, atau lebih dari itu jika kalian pandang perlu, dengan air dan daun bidara.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Bathing the Deceased",
+            "text": "Bathing a deceased Muslim is a communal obligation (fardh kifayah), ensuring the deceased is cleansed with clean water and lotus leaves or soap.",
+            "terjemah": "Wash her three times, five times, or more if you see fit, with water and sidr (lotus leaves).",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Memandikan Jenazah",
+            "text": "Memandikan jenazah muslim ialah fardhu kifayah bagi masyarakat muslim, disucikan menggunakan air bersih dan daun bidara atau sabun.",
+            "terjemah": "Mandikanlah dia tiga kali, lima kali, atau lebih daripada itu jika kamu fikirkan perlu, dengan air dan daun bidara.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "میت کو غسل دینا",
+            "text": "مسلمان میت کو غسل دینا فرض کفایہ ہے، جسے صاف پانی اور بیری کے پتے یا صابن سے پاک کیا جاتا ہے۔",
+            "terjemah": "اسے تین، پانچ یا ضرورت سمجھو تو اس سے زیادہ بار پانی اور بیری کے پتوں سے غسل دو۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Mandi Wajib Non-Junub",
+        "deskripsi_konten": "Kategori khusus: haid, nifas, masuk Islam, jenazah"
+      },
+      "en": {
+        "judul_konten": "Non-Janabah Obligatory Bath",
+        "deskripsi_konten": "Special categories: menstruation, postnatal bleeding, embracing Islam, deceased"
+      },
+      "ms": {
+        "judul_konten": "Mandi Wajib Bukan Junub",
+        "deskripsi_konten": "Kategori khas: haid, nifas, memeluk Islam, jenazah"
+      },
+      "ur": {
+        "judul_konten": "غیر جنابت کے لیے غسل واجب",
+        "deskripsi_konten": "خاص زمرے: حیض، نفاس، اسلام قبول کرنا، میت"
+      }
+    }
+  },
+  {
+    "kode": "rukun-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "niat-mandi-wajib",
+        "gambar": "niat-mandi-wajib.webp",
+        "arab": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى",
+        "latin": "Innamāl-a'mālu bin-niyyāti wa innamā likullim-ri'in mā nawā",
+        "suara": "niat-mandi-wajib.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Rukun 1: Niat",
+            "text": "Niat dihadirkan di dalam hati saat air pertama kali menyentuh tubuh. Niat membedakan antara mandi biasa dengan mandi ibadah.",
+            "terjemah": "Sesungguhnya setiap amalan tergantung pada niatnya, dan sesungguhnya setiap orang akan mendapatkan sesuai apa yang diniatkannya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Pillar 1: Intention (Niyyah)",
+            "text": "Intention resides in the heart when water first touches the body. It distinguishes a regular bath from a ritual act of worship.",
+            "terjemah": "Actions are judged by intentions, and every person will get what they intended.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Rukun 1: Niat",
+            "text": "Niat dihadirkan di dalam hati semasa air pertama kali menyentuh tubuh. Niat membezakan antara mandi biasa dengan mandi ibadah.",
+            "terjemah": "Sesungguhnya setiap amalan bergantung pada niatnya, dan sesungguhnya setiap orang akan mendapat mengikut apa yang diniatkannya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "رکن 1: نیت",
+            "text": "پانی جسم کو چھوتے ہی دل میں نیت کا ہونا ضروری ہے۔ نیت عام غسل اور عبادت والے غسل کے درمیان فرق کرتی ہے۔",
+            "terjemah": "اعمال کا دارومدار نیتوں پر ہے اور ہر شخص کو وہی ملے گا جس کی اس نے نیت کی۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "meratakan-air-seluruh-tubuh",
+        "gambar": "meratakan-air-seluruh-tubuh.webp",
+        "arab": "ثُمَّ يُفِيضُ الْمَاءَ عَلَى جَسَدِهِ كُلِّهِ",
+        "latin": "Tsumma yufīḍul-mā'a 'alā jasadihī kullih",
+        "suara": "meratakan-air-seluruh-tubuh.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Rukun 2: Meratakan Air ke Seluruh Tubuh",
+            "text": "Membasuh seluruh permukaan kulit dan rambut dari ujung kepala hingga kaki tanpa ada satu bagian pun yang terlewat.",
+            "terjemah": "Kemudian beliau menuangkan air ke seluruh tubuhnya.",
+            "sumber": "HR. Bukhari"
+          },
+          "en": {
+            "judul_slide": "Pillar 2: Washing the Entire Body",
+            "text": "Washing every part of the skin and hair from top of head to toes without leaving any dry spot.",
+            "terjemah": "Then he poured water over his entire body.",
+            "sumber": "Narrated by Bukhari"
+          },
+          "ms": {
+            "judul_slide": "Rukun 2: Meratakan Air ke Seluruh Tubuh",
+            "text": "Membasuh seluruh permukaan kulit dan rambut dari hujung kepala hingga kaki tanpa ada satu bahagian pun yang terlepas.",
+            "terjemah": "Kemudian beliau menuangkan air ke seluruh tubuhnya.",
+            "sumber": "HR. Bukhari"
+          },
+          "ur": {
+            "judul_slide": "رکن 2: پورے جسم پر پانی بہانا",
+            "text": "سر کے بالوں سے لے کر پاؤں تک جلد اور بالوں کے تمام حصوں پر پانی بہانا تاکہ کوئی جگہ خشک نہ رہے۔",
+            "terjemah": "پھر آپ صلی اللہ علیہ وسلم نے اپنے پورے جسم پر پانی بہایا۔",
+            "sumber": "روایت بخاری"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Rukun Mandi Wajib",
+        "deskripsi_konten": "Hal wajib agar mandi sah"
+      },
+      "en": {
+        "judul_konten": "Pillars of Obligatory Bath",
+        "deskripsi_konten": "The obligatory elements for the bath to be valid"
+      },
+      "ms": {
+        "judul_konten": "Rukun Mandi Wajib",
+        "deskripsi_konten": "Perkara wajib agar mandi itu sah"
+      },
+      "ur": {
+        "judul_konten": "غسل واجب کے ارکان",
+        "deskripsi_konten": "وہ لازمی امور جن سے غسل درست ہوتا ہے"
+      }
+    }
+  },
+  {
+    "kode": "sunnah-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "membaca-basmalah",
+        "gambar": "membaca-basmalah.webp",
+        "arab": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+        "latin": "Bismillāhir-raḥmānir-raḥīm",
+        "suara": "membaca-basmalah.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Membaca Basmalah",
+            "text": "Membaca Basmalah sebelum mulai bersuci dianjurkan untuk mendatangkan keberkahan pada amalan ibadah.",
+            "terjemah": "Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang.",
+            "sumber": "Sunnah Nabi SAW"
+          },
+          "en": {
+            "judul_slide": "Reciting Basmalah",
+            "text": "Reciting Basmalah before starting purification brings blessings and follows the Prophet's sunnah.",
+            "terjemah": "In the name of Allah, the Most Gracious, the Most Merciful.",
+            "sumber": "Sunnah of the Prophet"
+          },
+          "ms": {
+            "judul_slide": "Membaca Basmalah",
+            "text": "Membaca Basmalah sebelum bermula bersuci digalakkan untuk mendatangkan keberkatan pada amalan ibadah.",
+            "terjemah": "Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang.",
+            "sumber": "Sunnah Nabi SAW"
+          },
+          "ur": {
+            "judul_slide": "بسم اللہ پڑھنا",
+            "text": "پاکیزگی شروع کرنے سے پہلے بسم اللہ پڑھنا عمل میں برکت اور ثواب کا باعث ہے۔",
+            "terjemah": "شروع اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
+            "sumber": "سنت نبوی"
+          }
+        }
+      },
+      {
+        "kode_slide": "mencuci-tangan-dan-kemaluan",
+        "gambar": "mencuci-tangan-dan-kemaluan.webp",
+        "arab": "غَسَلَ يَدَيْهِ مَرَّتَيْنِ أَوْ ثَلَاثًا ثُمَّ غَسَلَ فَرْجَهُ",
+        "latin": "Ghasala yadaihi marrataini au tsalātsan tsumma ghasala farjah",
+        "suara": "mencuci-tangan-dan-kemaluan.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Cuci Tangan & Kemaluan",
+            "text": "Mencuci kedua tangan 3 kali, lalu membersihkan segala kotoran atau najis pada kemaluan menggunakan tangan kiri.",
+            "terjemah": "Beliau mencuci kedua tangannya dua atau tiga kali, kemudian membasuh kemaluannya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Washing Hands & Private Parts",
+            "text": "Washing both hands 3 times, then cleansing private parts and any impurities with the left hand.",
+            "terjemah": "He washed his hands two or three times, then washed his private parts.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Cuci Tangan & Kemaluan",
+            "text": "Mencuci kedua-dua tangan 3 kali, kemudian membersihkan segala kotoran atau najis pada kemaluan menggunakan tangan kiri.",
+            "terjemah": "Beliau mencuci kedua-dua tangannya dua atau tiga kali, kemudian membasuh kemaluannya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "ہاتھ اور شرمگاہ دھونا",
+            "text": "پہلے دونوں ہاتھوں کو تین بار دھونا، پھر بائیں ہاتھ سے شرمگاہ اور نجاست کو اچھی طرح صاف کرنا۔",
+            "terjemah": "آپ نے اپنے ہاتھوں کو دو یا تین بار دھویا پھر اپنی شرمگاہ کو دھویا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "berwudhu-sebelum-mandi",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, a person cupping clear water to rinse the face, with visible water trailing down to the forearms, standing in a peaceful modest washroom setting, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "berwudhu-sebelum-mandi.webp",
+        "arab": "ثُمَّ تَوَضَّأَ وَضُوءَهُ لِلصَّلَاةِ",
+        "latin": "Tsumma tawadḍa'a wuḍū'ahū liṣ-ṣalāh",
+        "suara": "berwudhu-sebelum-mandi.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Berwudhu Sebelum Mandi",
+            "text": "Berwudhu secara sempurna sebagaimana wudhu untuk sholat sebelum menyiramkan air ke seluruh tubuh.",
+            "terjemah": "Kemudian beliau berwudhu sebagaimana wudhu untuk sholat.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Ablution (Wudu) Before Bathing",
+            "text": "Performing complete wudu as for prayer before pouring water over the body.",
+            "terjemah": "Then he performed ablution just like his ablution for prayer.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Berwudhu Sebelum Mandi",
+            "text": "Berwudhu secara sempurna sebagaimana wudhu untuk solat sebelum menyiramkan air ke seluruh tubuh.",
+            "terjemah": "Kemudian beliau berwudhu sebagaimana wudhu untuk solat.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "غسل سے پہلے وضو کرنا",
+            "text": "پورے جسم پر پانی بہانے سے پہلے نماز جیسا مکمل وضو کرنا۔",
+            "terjemah": "پھر آپ نے نماز کی طرح وضو فرمایا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "mendahulukan-anggota-kanan",
+        "gambar": "mendahulukan-anggota-kanan.webp",
+        "arab": "كَانَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يُعْجِبُهُ التَّيَمُّنُ فِي طُهُورِهِ",
+        "latin": "Kānan-Nabiyyu ṣallallāhu 'alaihi wa sallama yu'jibuhut-tayammunu fī ṭuhūrih",
+        "suara": "mendahulukan-anggota-kanan.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Mendahulukan Bagian Kanan",
+            "text": "Menyiram dan membasuh bagian tubuh sebelah kanan terlebih dahulu sebelum beralih ke sebelah kiri.",
+            "terjemah": "Nabi SAW sangat menyukai mendahulukan bagian kanan dalam bersuci.",
+            "sumber": "HR. Bukhari"
+          },
+          "en": {
+            "judul_slide": "Starting with the Right Side",
+            "text": "Pours water and washes the right side of the body first before moving to the left side.",
+            "terjemah": "The Prophet (pbuh) liked to start with the right side when purifying himself.",
+            "sumber": "Narrated by Bukhari"
+          },
+          "ms": {
+            "judul_slide": "Mendahulukan Bahagian Kanan",
+            "text": "Menyiram dan membasuh bahagian tubuh sebelah kanan terlebih dahulu sebelum beralih ke sebelah kiri.",
+            "terjemah": "Nabi SAW sangat menyukai mendahulukan bahagian kanan dalam bersuci.",
+            "sumber": "HR. Bukhari"
+          },
+          "ur": {
+            "judul_slide": "دائیں جانب سے شروعات",
+            "text": "بائیں جانب سے پہلے جسم کی دائیں جانب پانی بہانا اور دھونا۔",
+            "terjemah": "نبی اکرم صلی اللہ علیہ وسلم پاکیزگی میں دائیں جانب کو ترجیح دینا پسند فرماتے تھے۔",
+            "sumber": "روایت بخاری"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Sunnah Mandi Wajib",
+        "deskripsi_konten": "Hal dianjurkan, tidak wajib"
+      },
+      "en": {
+        "judul_konten": "Sunnah Acts of Ghusl",
+        "deskripsi_konten": "Recommended but not obligatory acts"
+      },
+      "ms": {
+        "judul_konten": "Sunat Mandi Wajib",
+        "deskripsi_konten": "Perkara yang digalakkan, tidak wajib"
+      },
+      "ur": {
+        "judul_konten": "غسل کی سنتیں",
+        "deskripsi_konten": "مستحب امور، واجب نہیں"
+      }
+    }
+  },
+  {
+    "kode": "fiqih-hukum-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "melepas-ikatan-rambut",
+        "gambar": "melepas-ikatan-rambut.webp",
+        "arab": "إِنَّمَا يَكْفِيكِ أَنْ تَحْثِيَ عَلَى رَأْسِكِ ثَلَاثَ حَثَيَاتٍ",
+        "latin": "Innamā yakfīki an taḥtsiya 'alā ra'siki tsalātsa ḥatsayāt",
+        "suara": "melepas-ikatan-rambut.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Hukum Ikatan Rambut Wanita",
+            "text": "Wanita tidak wajib mengurai jalinan atau kepangan rambutnya saat mandi janabah selama air dipastikan meresap ke akar rambut.",
+            "terjemah": "Cukuplah bagimu menuangkan air ke atas kepalamu tiga kali tuangan.",
+            "sumber": "HR. Muslim"
+          },
+          "en": {
+            "judul_slide": "Ruling on Braided Hair for Women",
+            "text": "A woman does not need to undo her braided hair for janabah ghusl as long as water reaches the roots of her hair.",
+            "terjemah": "It is sufficient for you to pour three handfuls of water over your head.",
+            "sumber": "Narrated by Muslim"
+          },
+          "ms": {
+            "judul_slide": "Hukum Ikatan Rambut Wanita",
+            "text": "Wanita tidak wajib mengurai jalinan atau dandan rambutnya semasa mandi janabah selagi air dipastikan sampai ke akar rambut.",
+            "terjemah": "Cukuplah bagimu menuangkan air ke atas kepalamu tiga kali tuangan.",
+            "sumber": "HR. Muslim"
+          },
+          "ur": {
+            "judul_slide": "عورتوں کی بالوں کی چوٹیوں کا حکم",
+            "text": "غسل جنابت میں عورت کے لیے چوٹیاں کھولنا ضروری نہیں بشرطیکہ پانی بالوں کی جڑوں تک پہنچ جائے۔",
+            "terjemah": "تمہارے لیے کافی ہے کہ اپنے سر پر تین لپ پانی ڈال لو۔",
+            "sumber": "روایت مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "air-tercampur-sabun-dan-shampo",
+        "gambar": "air-tercampur-sabun-dan-shampo.webp",
+        "arab": "الْمَاءُ طَهُورٌ لَا يُنَجِّسُهُ شَيْءٌ",
+        "latin": "Al-mā'u ṭahūrun lā yunajjisuhū syai'",
+        "suara": "air-tercampur-sabun-dan-shampo.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Penggunaan Sabun & Sampo",
+            "text": "Menggunakan sabun atau sampo saat mandi wajib diperbolehkan, lalu dibilas dengan air suci menyucikan hingga bersih.",
+            "terjemah": "Air itu suci dan menyucikan, tidak ada sesuatu pun yang menajiskannya.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "en": {
+            "judul_slide": "Use of Soap & Shampoo",
+            "text": "Using soap or shampoo during ghusl is permissible, provided the final rinse is done with pure cleansing water.",
+            "terjemah": "Water is pure and purifying; nothing makes it impure.",
+            "sumber": "Narrated by Abu Dawud"
+          },
+          "ms": {
+            "judul_slide": "Penggunaan Sabun & Syampu",
+            "text": "Menggunakan sabun atau syampu semasa mandi wajib dibenarkan, kemudian dibilas dengan air suci menyucikan sehingga bersih.",
+            "terjemah": "Air itu suci dan menyucikan, tidak ada sesuatu pun yang menajiskannya.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "ur": {
+            "judul_slide": "صابن اور شیمپو کا استعمال",
+            "text": "غسل میں صابن اور شیمپو کا استعمال جائز ہے، پھر پاک پانی سے جسم کو اچھی طرح دھو لیا جائے۔",
+            "terjemah": "پانی پاک اور پاک کرنے والا ہے، اسے کوئی چیز ناپاک نہیں کرتی۔",
+            "sumber": "روایت ابو داؤد"
+          }
+        }
+      },
+      {
+        "kode_slide": "apakah-mandi-wajib-menggantikan-wudhu",
+        "gambar": "apakah-mandi-wajib-menggantikan-wudhu.webp",
+        "arab": "وَأَيُّ وَضُوءٍ أَطْهَرُ مِنَ الْغُسْلِ",
+        "latin": "Wa ayyu wuḍū'in aṭharu minal-ghusl",
+        "suara": "apakah-mandi-wajib-menggantikan-wudhu.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Mandi Wajib Sekaligus Wudhu",
+            "text": "Mandi wajib yang memenuhi niat dan rukun secara otomatis mengangkat hadats kecil dan besar, sehingga tidak wajib berwudhu lagi.",
+            "terjemah": "Wudhu mana yang lebih menyucikan daripada mandi wajib?",
+            "sumber": "HR. Ibn Abi Shaybah"
+          },
+          "en": {
+            "judul_slide": "Does Ghusl Suffice for Wudu?",
+            "text": "A valid ghusl done with proper intention automatically clears major and minor impurity, so separate wudu is not mandatory after.",
+            "terjemah": "Which ablution could be more purifying than ghusl?",
+            "sumber": "Narrated by Ibn Abi Shaybah"
+          },
+          "ms": {
+            "judul_slide": "Mandi Wajib Sekaligus Wudhu",
+            "text": "Mandi wajib yang memenuhi niat dan rukun secara automatik mengangkat hadas kecil dan besar, maka tidak wajib berwudhu lagi.",
+            "terjemah": "Wudhu manakah yang lebih menyucikan daripada mandi wajib?",
+            "sumber": "HR. Ibn Abi Shaybah"
+          },
+          "ur": {
+            "judul_slide": "کیا غسل سے وضو ہو جاتا ہے؟",
+            "text": "صحیح غسل واجب جس میں نیت اور ارکان پورے ہوں وہ خود بخود حدث اصغر و اکبر کو دور کر دیتا ہے، لہذا الگ وضو فرض نہیں رہتا۔",
+            "terjemah": "غسل سے بڑھ کر کون سا وضو زیادہ پاک کرنے والا ہو سکتا ہے؟",
+            "sumber": "روایت ابن ابی شیبہ"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Fiqih & Hukum",
+        "deskripsi_konten": "Pembahasan hukum detail dan perbedaan pendapat ulama"
+      },
+      "en": {
+        "judul_konten": "Fiqh & Rulings",
+        "deskripsi_konten": "Detailed rulings and differences of scholarly opinion"
+      },
+      "ms": {
+        "judul_konten": "Fiqh & Hukum",
+        "deskripsi_konten": "Perbincangan hukum terperinci dan perbezaan pendapat ulama"
+      },
+      "ur": {
+        "judul_konten": "فقہ و احکام",
+        "deskripsi_konten": "تفصیلی احکام اور علماء کے اختلافی آراء"
+      }
+    }
+  },
+  {
+    "kode": "panduan-lengkap-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "langkah-1-niat-dan-cuci-tangan",
+        "gambar": "langkah-1-niat-dan-cuci-tangan.webp",
+        "arab": "بِسْمِ اللَّهِ - نَوَيْتُ الْغُسْلَ لِرَفْعِ الْحَدَثِ الأَكْبَرِ",
+        "latin": "Bismillāh - Nawaitul-ghusla li raf'il-ḥadatsil-akbar",
+        "suara": "langkah-1-niat-dan-cuci-tangan.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah 1: Niat & Cuci Tangan",
+            "text": "Berniat di dalam hati untuk mandi wajib, membaca Basmalah, lalu mencuci kedua telapak tangan sebanyak 3 kali.",
+            "terjemah": "Dengan nama Allah, aku berniat mandi untuk menghilangkan hadats besar.",
+            "sumber": "Panduan Sunnah Rasulullah"
+          },
+          "en": {
+            "judul_slide": "Step 1: Intention & Wash Hands",
+            "text": "Form the intention in your heart, say Bismillah, and wash both hands up to the wrists 3 times.",
+            "terjemah": "In the name of Allah, I intend to perform ghusl to remove major impurity.",
+            "sumber": "Sunnah Guide"
+          },
+          "ms": {
+            "judul_slide": "Langkah 1: Niat & Cuci Tangan",
+            "text": "Berniat di dalam hati untuk mandi wajib, membaca Basmalah, lalu mencuci kedua-dua tapak tangan sebanyak 3 kali.",
+            "terjemah": "Dengan nama Allah, aku berniat mandi untuk menghilangkan hadas besar.",
+            "sumber": "Panduan Sunnah Rasulullah"
+          },
+          "ur": {
+            "judul_slide": "قدم 1: نیت اور ہاتھ دھونا",
+            "text": "دل میں غسل کی نیت کریں، بسم اللہ پڑھیں اور دونوں ہاتھوں کو کلائیوں تک تین بار دھوئیں۔",
+            "terjemah": "اللہ کے نام سے، میں بڑی ناپاکی دور کرنے کے لیے غسل کی نیت کرتا ہوں۔",
+            "sumber": "سنت نبوی گائیڈ"
+          }
+        }
+      },
+      {
+        "kode_slide": "langkah-2-bersihkan-kemaluan",
+        "gambar": "langkah-2-bersihkan-kemaluan.webp",
+        "arab": "ثُمَّ غَسَلَ فَرْجَهُ وَمَا أَصَابَهُ مِنَ الأَذَى",
+        "latin": "Tsumma ghasala farjahū wa mā aṣābahū minal-adzā",
+        "suara": "langkah-2-bersihkan-kemaluan.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah 2: Bersihkan Najis",
+            "text": "Membersihkan kemaluan dan seluruh kotoran/najis yang ada pada tubuh menggunakan tangan kiri.",
+            "terjemah": "Kemudian beliau membasuh kemaluannya dan kotoran yang mengenainya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Step 2: Clean Impurities",
+            "text": "Wash private parts and any impurities on the body thoroughly using the left hand.",
+            "terjemah": "Then he washed his private parts and whatever dirt was on him.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Langkah 2: Bersihkan Najis",
+            "text": "Membersihkan kemaluan dan seluruh kotoran/najis yang ada pada tubuh menggunakan tangan kiri.",
+            "terjemah": "Kemudian beliau membasuh kemaluannya dan kotoran yang mengenainya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "قدم 2: نجاست کی صفائی",
+            "text": "بائیں ہاتھ سے شرمگاہ اور جسم پر لگی ناپاکی کو اچھی طرح دھو کر صاف کریں۔",
+            "terjemah": "پھر آپ نے اپنی شرمگاہ اور اس پر لگی نجاست کو دھویا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "langkah-3-berwudhu-sempurna",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, a person cupping water to rinse the face with visible water trailing down the forearms, a peaceful modest washroom setting emphasizing a complete wudu motion, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "langkah-3-berwudhu-sempurna.webp",
+        "arab": "ثُمَّ تَوَضَّأَ وَضُوءَهُ لِلصَّلَاةِ",
+        "latin": "Tsumma tawadḍa'a wuḍū'ahū liṣ-ṣalāh",
+        "suara": "langkah-3-berwudhu-sempurna.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah 3: Berwudhu Sempurna",
+            "text": "Melakukan wudhu secara sempurna sebagaimana wudhu untuk sholat.",
+            "terjemah": "Kemudian beliau berwudhu sebagaimana wudhu untuk sholat.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Step 3: Perform Full Wudu",
+            "text": "Perform a complete ablution (wudu) just as you would before praying.",
+            "terjemah": "Then he performed ablution as for prayer.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Langkah 3: Berwudhu Sempurna",
+            "text": "Melakukan wudhu secara sempurna sebagaimana wudhu untuk solat.",
+            "terjemah": "Kemudian beliau berwudhu sebagaimana wudhu untuk solat.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "قدم 3: مکمل وضو کرنا",
+            "text": "نماز کے وضو کی طرح مکمل وضو کریں۔",
+            "terjemah": "پھر آپ نے نماز کی طرح وضو فرمایا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "langkah-4-siram-kepala-3-kali",
+        "gambar": "langkah-4-siram-kepala-3-kali.webp",
+        "arab": "ثُمَّ يَحْثِي عَلَى رَأْسِهِ ثَلَاثَ حَثَيَاتٍ",
+        "latin": "Tsumma yaḥtsī 'alā ra'sihī tsalātsa ḥatsayāt",
+        "suara": "langkah-4-siram-kepala-3-kali.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah 4: Siram Kepala 3x",
+            "text": "Menyiram air ke atas kepala sebanyak 3 kali dan menggosok akar rambut dengan jari-jemari.",
+            "terjemah": "Kemudian beliau menuangkan air ke atas kepalanya tiga kali tuangan.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Step 4: Wash Head 3 Times",
+            "text": "Pour water over the head 3 times, rubbing roots of the hair so water saturates the scalp.",
+            "terjemah": "Then he poured three handfuls of water over his head.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Langkah 4: Siram Kepala 3x",
+            "text": "Menyiram air ke atas kepala sebanyak 3 kali dan menggosok akar rambut dengan jari-jemari.",
+            "terjemah": "Kemudian beliau menuangkan air ke atas kepalanya tiga kali tuangan.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "قدم 4: سر پر 3 بار پانی ڈالنا",
+            "text": "سر پر تین بار پانی ڈالیں اور انگلیوں سے بالوں کی جڑوں کو اچھی طرح تر کریں۔",
+            "terjemah": "پھر آپ نے اپنے سر پر تین بار پانی ڈالا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "langkah-5-siram-seluruh-tubuh",
+        "gambar": "langkah-5-siram-seluruh-tubuh.webp",
+        "arab": "ثُمَّ يُفِيضُ الْمَاءَ عَلَى سَائِرِ جَسَدِهِ",
+        "latin": "Tsumma yufīḍul-mā'a 'alā sā'iri jasadih",
+        "suara": "langkah-5-siram-seluruh-tubuh.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah 5: Siram Seluruh Tubuh",
+            "text": "Menyiram seluruh tubuh dimulai dari sisi kanan lalu sisi kiri hingga merata ke semua lipatan kulit.",
+            "terjemah": "Kemudian beliau meratakan air ke seluruh anggota tubuhnya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Step 5: Wash Rest of Body",
+            "text": "Pour water over the rest of the body, starting with the right side then the left side, ensuring complete coverage.",
+            "terjemah": "Then he poured water over the rest of his body.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Langkah 5: Siram Seluruh Tubuh",
+            "text": "Menyiram seluruh tubuh bermula dari sisi kanan kemudian sisi kiri sehingga merata ke semua lipatan kulit.",
+            "terjemah": "Kemudian beliau meratakan air ke seluruh anggota tubuhnya.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "قدم 5: پورے جسم پر پانی بہانا",
+            "text": "پہلے دائیں اور پھر بائیں جانب پورے جسم پر پانی بہائیں اور تمام شکنوں کو تر کریں۔",
+            "terjemah": "پھر آپ نے اپنے باقی تمام جسم پر پانی بہایا۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Panduan Lengkap",
+        "deskripsi_konten": "Tata cara mandi: rukun + sunnah + adab"
+      },
+      "en": {
+        "judul_konten": "Complete Guide",
+        "deskripsi_konten": "Bathing procedure: pillars + sunnah + etiquette"
+      },
+      "ms": {
+        "judul_konten": "Panduan Lengkap",
+        "deskripsi_konten": "Tatacara mandi: rukun + sunat + adab"
+      },
+      "ur": {
+        "judul_konten": "مکمل رہنمائی",
+        "deskripsi_konten": "غسل کا طریقہ: ارکان + سنتیں + آداب"
+      }
+    }
+  },
+  {
+    "kode": "panduan-cepat-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "langkah-ringkas-1-niat",
+        "gambar": "langkah-ringkas-1-niat.webp",
+        "arab": "نَوَيْتُ الْغُسْلَ لِرَفْعِ الْحَدَثِ الأَكْبَرِ فَرْضًا لِلَّهِ تَعَالَى",
+        "latin": "Nawaitul-ghusla li raf'il-ḥadatsil-akbari farḍan lillāhi ta'ālā",
+        "suara": "langkah-ringkas-1-niat.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah Ringkas 1: Niat",
+            "text": "Meniatkan di dalam hati untuk menghilangkan hadats besar saat air pertama kali menyentuh tubuh.",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadats besar fardhu karena Allah Ta'ala.",
+            "sumber": "Rukun Mandi"
+          },
+          "en": {
+            "judul_slide": "Quick Step 1: Intention",
+            "text": "Intend in your heart to purify yourself from major impurity as water touches your body.",
+            "terjemah": "I intend to perform ghusl to remove major impurity for Allah Almighty.",
+            "sumber": "Pillar of Ghusl"
+          },
+          "ms": {
+            "judul_slide": "Langkah Ringkas 1: Niat",
+            "text": "Meniatkan di dalam hati untuk menghilangkan hadas besar semasa air pertama kali menyentuh tubuh.",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadas besar fardhu kerana Allah Ta'ala.",
+            "sumber": "Rukun Mandi"
+          },
+          "ur": {
+            "judul_slide": "مختصر قدم 1: نیت",
+            "text": "پانی جسم کو چھوتے ہی دل میں ناپاکی دور کرنے کی نیت کریں۔",
+            "terjemah": "میں اللہ تعالی کی خاطر بڑی ناپاکی دور کرنے کے لیے غسل کی نیت کرتا ہوں۔",
+            "sumber": "غسل کا رکن"
+          }
+        }
+      },
+      {
+        "kode_slide": "langkah-ringkas-2-ratakan-air",
+        "gambar": "langkah-ringkas-2-ratakan-air.webp",
+        "arab": "وَإِنْ كُنْتُمْ جُنُبًا فَاطَّهَّرُوا",
+        "latin": "Wa in kuntum junuban faṭṭahharū",
+        "suara": "langkah-ringkas-2-ratakan-air.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Langkah Ringkas 2: Ratakan Air",
+            "text": "Menyiram dan meratakan air ke seluruh anggota tubuh dan rambut tanpa ada bagian yang kering.",
+            "terjemah": "Dan jika kamu junub, maka mandilah (bersucilah).",
+            "sumber": "QS. Al-Ma'idah: 6"
+          },
+          "en": {
+            "judul_slide": "Quick Step 2: Wash Whole Body",
+            "text": "Pour and spread water across all skin and hair so no spot remains dry. Once done, ghusl is valid.",
+            "terjemah": "And if you are in a state of janabah, then purify yourselves.",
+            "sumber": "Surah Al-Ma'idah: 6"
+          },
+          "ms": {
+            "judul_slide": "Langkah Ringkas 2: Ratakan Air",
+            "text": "Menyiram dan meratakan air ke seluruh anggota tubuh dan rambut tanpa ada bahagian yang kering.",
+            "terjemah": "Dan jika kamu junub, maka mandilah (bersucilah).",
+            "sumber": "QS. Al-Ma'idah: 6"
+          },
+          "ur": {
+            "judul_slide": "مختصر قدم 2: پانی بہانا",
+            "text": "تمام جسم اور بالوں پر پانی اس طرح بہائیں کہ کوئی جگہ بھی خشک نہ رہے۔ غسل مکمل ہو جائے گا۔",
+            "terjemah": "اور اگر تم جنابت کی حالت میں ہو تو غسل کر لو (پاک ہو جاؤ)۔",
+            "sumber": "سورۃ المائدۃ: 6"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Panduan Cepat",
+        "deskripsi_konten": "Tata cara mandi versi ringkas, asal sah"
+      },
+      "en": {
+        "judul_konten": "Quick Guide",
+        "deskripsi_konten": "Brief bathing procedure, minimum valid steps"
+      },
+      "ms": {
+        "judul_konten": "Panduan Pantas",
+        "deskripsi_konten": "Tatacara mandi versi ringkas, asalkan sah"
+      },
+      "ur": {
+        "judul_konten": "فوری رہنمائی",
+        "deskripsi_konten": "غسل کا مختصر طریقہ، بس درست ہو جائے"
+      }
+    }
+  },
+  {
+    "kode": "niat-doa-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "niat-mandi-junub",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, calm water ripples, elegant typography frame in soft sage green and gold accents, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "niat-mandi-junub.webp",
+        "arab": "نَوَيْتُ الْغُسْلَ لِرَفْعِ الْحَدَثِ الأَكْبَرِ عَنِ الْجَنَابَةِ فَرْضًا لِلَّهِ تَعَالَى",
+        "latin": "Nawaitul-ghusla li raf'il-ḥadatsil-akbari 'anil-janābati farḍan lillāhi ta'ālā",
+        "suara": "niat-mandi-junub.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Niat Mandi Junub",
+            "text": "Lafal niat untuk mandi bersuci dari junub (karena mimpi basah atau berhubungan suami istri).",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadats besar dari janabah fardhu karena Allah Ta'ala.",
+            "sumber": "Lafal Niat Fiqlih"
+          },
+          "en": {
+            "judul_slide": "Intention for Janabah Ghusl",
+            "text": "Wording of intention to purify oneself from janabah (discharge or sexual relations).",
+            "terjemah": "I intend to perform ghusl to remove major impurity of janabah for Allah Almighty.",
+            "sumber": "Fiqh Intention"
+          },
+          "ms": {
+            "judul_slide": "Niat Mandi Junub",
+            "text": "Lafaz niat untuk mandi bersuci daripada junub (kerana mimpi basah atau berhubungan suami isteri).",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadas besar daripada janabah fardhu kerana Allah Ta'ala.",
+            "sumber": "Lafaz Niat Fiqh"
+          },
+          "ur": {
+            "judul_slide": "غسل جنابت کی نیت",
+            "text": "جنابت (احتلام یا جماع) سے پاکی حاصل کرنے کے لیے دل میں نیت کے الفاظ۔",
+            "terjemah": "میں اللہ تعالیٰ کے لیے جنابت کی بڑی ناپاکی کو دور کرنے کے لیے غسل کی نیت کرتا ہوں۔",
+            "sumber": "فقہی نیت"
+          }
+        }
+      },
+      {
+        "kode_slide": "niat-mandi-haid",
+        "gambar": "niat-mandi-haid.webp",
+        "arab": "نَوَيْتُ الْغُسْلَ لِرَفْعِ حَدَثِ الْحَيْضِ فَرْضًا لِلَّهِ تَعَالَى",
+        "latin": "Nawaitul-ghusla li raf'i ḥadatsil-ḥaiḍi farḍan lillāhi ta'ālā",
+        "suara": "niat-mandi-haid.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Niat Mandi Haid",
+            "text": "Lafal niat mandi bagi wanita setelah selesai masa haid (menstruasi).",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadats haid fardhu karena Allah Ta'ala.",
+            "sumber": "Lafal Niat Fiqih"
+          },
+          "en": {
+            "judul_slide": "Intention for Haid Ghusl",
+            "text": "Wording of intention for women after the cessation of menstrual period.",
+            "terjemah": "I intend to perform ghusl to remove the impurity of menstruation for Allah Almighty.",
+            "sumber": "Fiqh Intention"
+          },
+          "ms": {
+            "judul_slide": "Niat Mandi Haid",
+            "text": "Lafaz niat mandi bagi wanita selepas selesai masa haid (menstruasi).",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadas haid fardhu kerana Allah Ta'ala.",
+            "sumber": "Lafaz Niat Fiqh"
+          },
+          "ur": {
+            "judul_slide": "غسل حیض کی نیت",
+            "text": "حیض (ماہواری) کا خون بند ہونے کے بعد عورت کے غسل کی نیت۔",
+            "terjemah": "میں اللہ تعالیٰ کے لیے حیض کی ناپاکی کو دور کرنے کے لیے غسل کی نیت کرتی ہوں۔",
+            "sumber": "فقہی نیت"
+          }
+        }
+      },
+      {
+        "kode_slide": "niat-mandi-nifas",
+        "gambar": "niat-mandi-nifas.webp",
+        "arab": "نَوَيْتُ الْغُسْلَ لِرَفْعِ حَدَثِ النِّفَاسِ فَرْضًا لِلَّهِ تَعَالَى",
+        "latin": "Nawaitul-ghusla li raf'i ḥadatsin-nifāsi farḍan lillāhi ta'ālā",
+        "suara": "niat-mandi-nifas.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Niat Mandi Nifas",
+            "text": "Lafal niat mandi bagi wanita setelah berhentinya darah nifas (pasca melahirkan).",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadats nifas fardhu karena Allah Ta'ala.",
+            "sumber": "Lafal Niat Fiqih"
+          },
+          "en": {
+            "judul_slide": "Intention for Nifas Ghusl",
+            "text": "Wording of intention for women after the end of postnatal bleeding.",
+            "terjemah": "I intend to perform ghusl to remove the impurity of postnatal bleeding for Allah Almighty.",
+            "sumber": "Fiqh Intention"
+          },
+          "ms": {
+            "judul_slide": "Niat Mandi Nifas",
+            "text": "Lafaz niat mandi bagi wanita selepas berhentinya darah nifas (selepas bersalin).",
+            "terjemah": "Aku berniat mandi untuk menghilangkan hadas nifas fardhu kerana Allah Ta'ala.",
+            "sumber": "Lafaz Niat Fiqh"
+          },
+          "ur": {
+            "judul_slide": "غسل نفاس کی نیت",
+            "text": "نفاس (پیدائش کے بعد کا خون) ختم ہونے پر عورت کے غسل کی نیت۔",
+            "terjemah": "میں اللہ تعالیٰ کے لیے نفاس کی ناپاکی کو دور کرنے کے لیے غسل کی نیت کرتی ہوں۔",
+            "sumber": "فقہی نیت"
+          }
+        }
+      },
+      {
+        "kode_slide": "doa-setelah-mandi",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, a person standing in soft light just outside a washroom, looking upward toward a gentle sky with hands open in supplication, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "doa-setelah-mandi.webp",
+        "arab": "أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ، اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ",
+        "latin": "Asyhadu allā ilāha illallāhu waḥdahū lā syarīka lah, wa asyhadu anna Muḥammadan 'abduhū wa rasūluh. Allāhummaj'alnī minat-tawwābīna waj'alnī minal-mutaṭahhirīn",
+        "suara": "doa-setelah-mandi.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Doa Setelah Mandi & Wudhu",
+            "text": "Doa yang disunnahkan dibaca setelah selesai mandi dan wudhu.",
+            "terjemah": "Aku bersaksi tiada Tuhan selain Allah Yang Maha Esa tiada sekutu bagi-Nya, dan aku bersaksi bahwa Muhammad hamba dan utusan-Nya. Ya Allah jadikanlah aku termasuk orang yang bertaubat dan bersuci.",
+            "sumber": "HR. Tirmidzi"
+          },
+          "en": {
+            "judul_slide": "Supplication After Ghusl",
+            "text": "Recommended supplication to recite upon completing ghusl and wudu.",
+            "terjemah": "I bear witness that there is no deity worthy of worship except Allah alone, with no partner, and that Muhammad is His servant and Messenger. O Allah, make me among those who repent and make me among those who purify themselves.",
+            "sumber": "Narrated by Tirmidzi"
+          },
+          "ms": {
+            "judul_slide": "Doa Selepas Mandi & Wudhu",
+            "text": "Doa yang disunatkan dibaca selepas selesai mandi dan wudhu.",
+            "terjemah": "Aku bersaksi tiada Tuhan melainkan Allah Yang Maha Esa tiada sekutu bagi-Nya, dan aku bersaksi bahawa Muhammad hamba dan utusan-Nya. Ya Allah jadikanlah aku daripada golongan yang bertaubat dan bersuci.",
+            "sumber": "HR. Tirmidzi"
+          },
+          "ur": {
+            "judul_slide": "غسل کے بعد کی دعا",
+            "text": "غسل اور وضو مکمل کرنے کے بعد پڑھی جانے والی مسنون دعا۔",
+            "terjemah": "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں وہ اکیلا ہے اس کا کوئی شریک نہیں، اور محمد اس کے بندے اور رسول ہیں۔ اے اللہ مجھے توبہ کرنے والوں اور پاکیزگی اختیار کرنے والوں میں بنا دے۔",
+            "sumber": "روایت ترمذی"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Niat & Doa",
+        "deskripsi_konten": "Lafal niat sesuai kondisi (junub, haid, nifas, dll)"
+      },
+      "en": {
+        "judul_konten": "Intention & Supplication",
+        "deskripsi_konten": "Wording of intention for each condition (janabah, menstruation, postnatal bleeding, etc.)"
+      },
+      "ms": {
+        "judul_konten": "Niat & Doa",
+        "deskripsi_konten": "Lafaz niat mengikut keadaan (junub, haid, nifas, dan sebagainya)"
+      },
+      "ur": {
+        "judul_konten": "نیت اور دعا",
+        "deskripsi_konten": "ہر حالت کے مطابق نیت کے الفاظ (جنابت، حیض، نفاس وغیرہ)"
+      }
+    }
+  },
+  {
+    "kode": "larangan-saat-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "pemborosan-air-israf",
+        "gambar": "pemborosan-air-israf.webp",
+        "arab": "وَكُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا إِنَّهُ لَا يُحِبُّ الْمُسْرِفِينَ",
+        "latin": "Wa kulū wasyrabū wa lā tusrifū innahū lā yuḥibbul-musrifīn",
+        "suara": "pemborosan-air-israf.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Pemborosan Air (Israf)",
+            "text": "Berlebih-lebihan menggunakan air saat mandi adalah hal yang dimakruhkan. Gunakan air secukupnya sesuai kebutuhan.",
+            "terjemah": "Makan dan minumlah, dan janganlah berlebih-lebihan. Sesungguhnya Allah tidak menyukai orang-orang yang berlebih-lebihan.",
+            "sumber": "QS. Al-A'raf: 31"
+          },
+          "en": {
+            "judul_slide": "Wasting Water (Israf)",
+            "text": "Excessive use of water during ghusl is disliked (makruh). Use water moderately according to need.",
+            "terjemah": "Eat and drink, but do not waste. Indeed, He does not like those who waste.",
+            "sumber": "Surah Al-A'raf: 31"
+          },
+          "ms": {
+            "judul_slide": "Pembaziran Air (Israf)",
+            "text": "Berlebih-lebihan menggunakan air semasa mandi adalah perkara yang dimakruhkan. Gunakan air secukupnya mengikut keperluan.",
+            "terjemah": "Makan dan minumlah, dan janganlah berlebih-lebihan. Sesungguhnya Allah tidak menyukai orang-orang yang berlebih-lebihan.",
+            "sumber": "QS. Al-A'raf: 31"
+          },
+          "ur": {
+            "judul_slide": "پانی کا ضیاع (اسراف)",
+            "text": "غسل کے دوران حد سے زیادہ پانی ضائع کرنا مکروہ ہے۔ ضرورت کے مطابق مناسب مقدار میں پانی استعمال کریں۔",
+            "terjemah": "کھاؤ اور پیو اور اسراف نہ کرو، بے شک اللہ اسراف کرنے والوں کو پسند نہیں فرماتا۔",
+            "sumber": "سورۃ الأعراف: 31"
+          }
+        }
+      },
+      {
+        "kode_slide": "membaca-zikir-di-kamar-mandi",
+        "gambar": "membaca-zikir-di-kamar-mandi.webp",
+        "arab": "أَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ كَرِهَ ذِكْرَ اللَّهِ إِلَّا عَلَى طُهْرٍ",
+        "latin": "Annan-Nabiyya ṣallallāhu 'alaihi wa sallama kariha dzikrallāhi illā 'alā ṭuhr",
+        "suara": "membaca-zikir-di-kamar-mandi.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Zikir Lisan di Toilet/Kamar Mandi",
+            "text": "Dimakruhkan melafalkan zikir atau ayat Al-Qur'an secara lisan saat berada di kamar mandi yang bersatu dengan toilet.",
+            "terjemah": "Bahwa Nabi SAW membenci menyebut nama Allah kecuali dalam keadaan suci/tempat yang bersih.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "en": {
+            "judul_slide": "Reciting Dhikr in the Washroom",
+            "text": "It is disliked to recite Quranic verses or dhikr aloud inside a bathroom that contains a toilet.",
+            "terjemah": "The Prophet (pbuh) disliked remembering Allah except in a clean and pure condition.",
+            "sumber": "Narrated by Abu Dawud"
+          },
+          "ms": {
+            "judul_slide": "Zikir Lisan di Bilik Mandi",
+            "text": "Dimakruhkan melafazkan zikir atau ayat Al-Quran secara lisan semasa berada di bilik mandi yang bersatu dengan tandas.",
+            "terjemah": "Bahawa Nabi SAW membenci menyebut nama Allah kecuali dalam keadaan suci/tempat yang bersih.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "ur": {
+            "judul_slide": "واش روم میں ذکر الہیٰ کرنا",
+            "text": "بیت الخلاء یا ٹوائلٹ پر مشتمل واش روم میں زبان سے قرآن یا ذکر الہیٰ پڑھنا مکروہ ہے۔",
+            "terjemah": "نبی اکرم صلی اللہ علیہ وسلم پاکیزہ حالت/جگہ کے علاوہ اللہ کا ذکر کرنا ناپسند فرماتے تھے۔",
+            "sumber": "روایت ابو داؤد"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Larangan Ketika Mandi",
+        "deskripsi_konten": "Hal yang dihindari selama proses mandi berlangsung"
+      },
+      "en": {
+        "judul_konten": "Prohibitions During Bathing",
+        "deskripsi_konten": "Things to avoid during the bathing process"
+      },
+      "ms": {
+        "judul_konten": "Larangan Semasa Mandi",
+        "deskripsi_konten": "Perkara yang perlu dielakkan semasa proses mandi"
+      },
+      "ur": {
+        "judul_konten": "غسل کے دوران ممنوعات",
+        "deskripsi_konten": "غسل کے عمل کے دوران ان باتوں سے بچنا"
+      }
+    }
+  },
+  {
+    "kode": "larangan-sebelum-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "larangan-sholat-dan-thawaf",
+        "gambar": "larangan-sholat-dan-thawaf.webp",
+        "arab": "لَا يَقْبَلُ اللَّهُ صَلَاةً بِغَيْرِ طُهُورٍ",
+        "latin": "Lā yaqbalullāhu ṣalātan bighairi ṭuhūr",
+        "suara": "larangan-sholat-dan-thawaf.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Dilarang Sholat & Thawaf",
+            "text": "Orang yang berhadats besar haram melaksanakan sholat fardhu/sunnah dan mengelilingi Ka'bah (thawaf) sebelum mandi wajib.",
+            "terjemah": "Allah tidak menerima sholat tanpa bersuci.",
+            "sumber": "HR. Muslim"
+          },
+          "en": {
+            "judul_slide": "Prohibition of Prayer & Tawaf",
+            "text": "A person in a state of major ritual impurity is forbidden from performing ritual prayers (Salah) and circumambulating the Kaaba (Tawaf) until taking ghusl.",
+            "terjemah": "Allah does not accept prayer without purification.",
+            "sumber": "Narrated by Muslim"
+          },
+          "ms": {
+            "judul_slide": "Dilarang Solat & Thawaf",
+            "text": "Orang yang berhadas besar haram menunaikan solat fardhu/sunat dan mengelilingi Kaabah (thawaf) sebelum mandi wajib.",
+            "terjemah": "Allah tidak menerima solat tanpa bersuci.",
+            "sumber": "HR. Muslim"
+          },
+          "ur": {
+            "judul_slide": "نماز اور طواف کی ممانعت",
+            "text": "بڑی ناپاکی (حدث اکبر) کی حالت میں شخص کے لیے غسل سے پہلے فرض/نفل نماز پڑھنا اور طواف کعبہ کرنا حرام ہے۔",
+            "terjemah": "اللہ تعالیٰ بغیر پاکیزگی کے نماز قبول نہیں فرماتا۔",
+            "sumber": "روایت مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "larangan-menyentuh-mushaf",
+        "gambar": "larangan-menyentuh-mushaf.webp",
+        "arab": "لَا يَمَسُّهُ إِلَّا الْمُطَهَّرُونَ",
+        "latin": "Lā yamassuhū illal-muṭahharūn",
+        "suara": "larangan-menyentuh-mushaf.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Dilarang Menyentuh Mushaf",
+            "text": "Dilarang menyentuh atau memegang lembaran Al-Qur'an secara langsung tanpa bersuci dari hadats besar.",
+            "terjemah": "Tidak ada yang menyentuhnya (Al-Qur'an) kecuali hamba-hamba yang disucikan.",
+            "sumber": "QS. Al-Waqi'ah: 79"
+          },
+          "en": {
+            "judul_slide": "Prohibition of Touching the Quran",
+            "text": "Touching or carrying the Arabic physical copy of the Quran (Mushaf) directly is prohibited while in major impurity.",
+            "terjemah": "None touch it except the purified.",
+            "sumber": "Surah Al-Waqi'ah: 79"
+          },
+          "ms": {
+            "judul_slide": "Dilarang Menyentuh Mushaf",
+            "text": "Dilarang menyentuh atau memegang lembaran Al-Quran secara langsung tanpa bersuci daripada hadas besar.",
+            "terjemah": "Tidak ada yang menyentuhnya (Al-Quran) melainkan hamba-hamba yang disucikan.",
+            "sumber": "QS. Al-Waqi'ah: 79"
+          },
+          "ur": {
+            "judul_slide": "مصحف قرآن کو چھونے کی ممانعت",
+            "text": "بڑی ناپاکی کی حالت میں قرآن مجید کے عربی نسخے کو بغیر غسل براہ راست چھونا منع ہے۔",
+            "terjemah": "اسے پاک لوگوں کے سوا کوئی نہ چھوئے۔",
+            "sumber": "سورۃ الواقعۃ: 79"
+          }
+        }
+      },
+      {
+        "kode_slide": "larangan-berdiam-di-masjid",
+        "gambar": "larangan-berdiam-di-masjid.webp",
+        "arab": "فَإِنِّي لَا أُحِلُّ الْمَسْجِدَ لِحَائِضٍ وَلَا جُنُبٍ",
+        "latin": "Fa innī lā uḥillul-masjida li ḥā'iḍin wa lā junub",
+        "suara": "larangan-berdiam-di-masjid.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Dilarang Berdiam di Masjid",
+            "text": "Orang berhadats besar dilarang berdiam diri (itikaf) di ruang sholat utama masjid, kecuali sekadar lewat.",
+            "terjemah": "Sesungguhnya aku tidak menghalalkan masjid bagi wanita haid dan orang yang junub.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "en": {
+            "judul_slide": "Prohibition of Staying in Mosque",
+            "text": "Staying or sitting inside the main prayer hall of a mosque is impermissible while in major impurity, though passing through is allowed.",
+            "terjemah": "Indeed I do not make the mosque lawful for a menstruating woman or a person in janabah.",
+            "sumber": "Narrated by Abu Dawud"
+          },
+          "ms": {
+            "judul_slide": "Dilarang Berdiam di Masjid",
+            "text": "Orang berhadas besar dilarang berdiam diri (itikaf) di ruang solat utama masjid, kecuali sekadar lalu.",
+            "terjemah": "Sesungguhnya aku tidak menghalalkan masjid bagi wanita haid dan orang yang junub.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "ur": {
+            "judul_slide": "مسجد میں ٹھہرنے کی ممانعت",
+            "text": "غسل واجب ہونے کی حالت میں مسجد کے اصلی ہال میں اعتکاف یا بیٹھنا منع ہے، البتہ گزرنے کی اجازت ہے۔",
+            "terjemah": "بے شک میں حائضہ عورت اور جنبی شخص کے لیے مسجد میں ٹھہرنا حلال نہیں کرتا۔",
+            "sumber": "روایت ابو داؤد"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Larangan Sebelum Mandi",
+        "deskripsi_konten": "Hal yang dihindari selama masih berhadats besar"
+      },
+      "en": {
+        "judul_konten": "Prohibitions Before Bathing",
+        "deskripsi_konten": "Things to avoid while still in a state of major ritual impurity"
+      },
+      "ms": {
+        "judul_konten": "Larangan Sebelum Mandi",
+        "deskripsi_konten": "Perkara yang perlu dielakkan semasa masih berhadas besar"
+      },
+      "ur": {
+        "judul_konten": "غسل سے پہلے ممنوعات",
+        "deskripsi_konten": "جب تک بڑی ناپاکی کی حالت میں ہوں ان باتوں سے بچنا"
+      }
+    }
+  },
+  {
+    "kode": "kondisi-khusus-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "tayamum-pengganti-mandi",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, hands performing tayammum on clean natural sand stone surface, warm desert tone background, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "tayamum-pengganti-mandi.webp",
+        "arab": "وَإِنْ كُنْتُمْ مَرْضَى أَوْ عَلَى سَفَرٍ ... فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا",
+        "latin": "Wa in kuntum marḍā au 'alā safarin ... falam tajidū mā'an fa tayammamū ṣa'īdan ṭayyibā",
+        "suara": "tayamum-pengganti-mandi.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Tayamum Pengganti Mandi",
+            "text": "Jika dalam keadaan sakit parah atau tidak ada air sama sekali, kewajiban mandi digantikan dengan tayamum menggunakan debu suci.",
+            "terjemah": "Dan jika kamu sakit atau dalam perjalanan... lalu kamu tidak memperoleh air, maka bertayamumlah dengan debu yang baik (suci).",
+            "sumber": "QS. Al-Ma'idah: 6"
+          },
+          "en": {
+            "judul_slide": "Tayammum as Substitute for Ghusl",
+            "text": "If severely ill or when no water is available, tayammum using clean dust substitutes for ghusl.",
+            "terjemah": "And if you are ill or on a journey... and find no water, then perform tayammum with clean earth.",
+            "sumber": "Surah Al-Ma'idah: 6"
+          },
+          "ms": {
+            "judul_slide": "Tayamum Pengganti Mandi",
+            "text": "Jika dalam keadaan sakit parah atau tidak ada air sama sekali, kewajipan mandi digantikan dengan tayamum menggunakan debu suci.",
+            "terjemah": "Dan jika kamu sakit atau dalam perjalanan... lalu kamu tidak memperoleh air, maka bertayamumlah dengan debu yang baik (suci).",
+            "sumber": "QS. Al-Ma'idah: 6"
+          },
+          "ur": {
+            "judul_slide": "تیمم غسل کا متبادل",
+            "text": "اگر شدید بیماری یا پانی بالکل میسر نہ ہونے کی صورت ہو تو غسل کے بجائے پاک مٹی سے تیمم کیا جا سکتا ہے۔",
+            "terjemah": "اور اگر تم بیمار ہو یا سفر میں ہو... اور تمہیں پانی نہ ملے تو پاک مٹی سے تیمم کر لو۔",
+            "sumber": "سورۃ المائدۃ: 6"
+          }
+        }
+      },
+      {
+        "kode_slide": "mandi-dengan-luka-atau-gips",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, illustration of a hand wrapped in a light medical bandage, moist fingers wiping gently over top of bandage, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "mandi-dengan-luka-atau-gips.webp",
+        "arab": "إِنَّمَا كَانَ يَكْفِيهِ أَنْ يَتَيَمَّمَ وَيَعْصِرَ أَوْ يَعْصِبَ عَلَى جُرْحِهِ خِرْقَةً ثُمَّ يَمْسَحَ عَلَيْهَا",
+        "latin": "Innamā kāna yakfīhi an yatayammama wa ya'ṣiba 'alā jurḥihī khirqatan tsumma yamsaha 'alaihā",
+        "suara": "mandi-dengan-luka-atau-gips.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Mandi Saat Luka / Bergips",
+            "text": "Membasuh bagian tubuh yang sehat dengan air, sedangkan perban atau gips cukup diusap bagian atasnya dengan tangan basah.",
+            "terjemah": "Cukuplah baginya bertayamum dan mengikatkan kain di atas lukanya lalu mengusap bagian atasnya.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "en": {
+            "judul_slide": "Bathing with Wounds or Casts",
+            "text": "Wash healthy body parts with water, while simply wiping wet hands over bandages or medical casts to avoid harm.",
+            "terjemah": "It was sufficient for him to perform tayammum and wrap a cloth over his wound and wipe over it.",
+            "sumber": "Narrated by Abu Dawud"
+          },
+          "ms": {
+            "judul_slide": "Mandi Semasa Luka / Bergips",
+            "text": "Membasuh bahagian tubuh yang sihat dengan air, manakala balutan atau gips cukuplah diusap bahagian atasnya dengan tangan basah.",
+            "terjemah": "Cukuplah baginya bertayamum dan mengikatkan kain di atas lukanya lalu mengusap bahagian atasnya.",
+            "sumber": "HR. Abu Dawud"
+          },
+          "ur": {
+            "judul_slide": "زخم یا پٹی کی حالت میں غسل",
+            "text": "صحت مند اعضاء کو پانی سے دھوئیں، جبکہ پٹی یا پلستر والے حصے کے اوپر صرف تر ہاتھ پھیرنا کافی ہے۔",
+            "terjemah": "اس کے لیے کافی تھا کہ تیمم کرتا اور اپنے زخم پر پٹی باندھ کر اس پر مسح کر لیتا۔",
+            "sumber": "روایت ابو داؤد"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Kondisi Khusus",
+        "deskripsi_konten": "Sakit, traveling, lansia/disabilitas - tayamum sebagai pengganti"
+      },
+      "en": {
+        "judul_konten": "Special Conditions",
+        "deskripsi_konten": "Illness, travel, elderly/disability - tayammum as a substitute"
+      },
+      "ms": {
+        "judul_konten": "Keadaan Khas",
+        "deskripsi_konten": "Sakit, musafir, warga emas/kurang upaya - tayamum sebagai ganti"
+      },
+      "ur": {
+        "judul_konten": "خصوصی حالات",
+        "deskripsi_konten": "بیماری، سفر، بزرگی/معذوری - تیمم بطور متبادل"
+      }
+    }
+  },
+  {
+    "kode": "menunda-mandi-wajib",
+    "slide_show": [
+      {
+        "kode_slide": "hukum-menunda-mandi",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, clock graphic showing prayer times, person planning ghusl before next prayer call, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "hukum-menunda-mandi.webp",
+        "arab": "كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا أَرَادَ أَنْ يَنَامَ وَهُوَ جُنُبٌ تَوَضَّأَ",
+        "latin": "Kāna Rasūlullāhi ṣallallāhu 'alaihi wa sallama idzā arāda an yanāma wa huwa junubun tawadḍa'",
+        "suara": "hukum-menunda-mandi.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Hukum Menunda Mandi Wajib",
+            "text": "Boleh menunda mandi wajib untuk sementara waktu (seperti tidur atau makan), asalkan dilakukan sebelum habisnya waktu sholat fardhu.",
+            "terjemah": "Rasulullah SAW apabila hendak tidur dalam keadaan junub, beliau berwudhu terlebih dahulu.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Ruling on Delaying Ghusl",
+            "text": "Delaying ghusl temporarily (e.g. to sleep or eat) is allowed, provided one bathes before the next obligatory prayer time expires.",
+            "terjemah": "When the Prophet (pbuh) intended to sleep while in a state of janabah, he would perform wudu first.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Hukum Menangguhkan Mandi Wajib",
+            "text": "Boleh menangguhkan mandi wajib untuk sementara waktu (seperti tidur atau makan), asalkan dilakukan sebelum tamatnya waktu solat fardhu.",
+            "terjemah": "Rasulullah SAW apabila hendak tidur dalam keadaan junub, beliau berwudhu terlebih dahulu.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "غسل میں تاخیر کا حکم",
+            "text": "عارضی طور پر غسل کو ملتوی کرنا (جیسے سونے یا کھانے کے لیے) جائز ہے بشرطیکہ اگلی فرض نماز کے وقت سے پہلے غسل کر لیا جائے۔",
+            "terjemah": "رسول اللہ صلی اللہ علیہ وسلم جب حالت جنابت میں سونا چاہتے تو پہلے وضو فرما لیتے تھے۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      },
+      {
+        "kode_slide": "sunnah-wudhu-sebelum-tidur-saat-junub",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, clean bed in quiet bedroom, wudu washing water pitcher nearby indicating recommended cleanliness before rest, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "sunnah-wudhu-sebelum-tidur-saat-junub.webp",
+        "arab": "تَوَضَّأْ وَاغْسِلْ ذَكَرَكَ ثُمَّ نَمْ",
+        "latin": "Tawadḍa' waghsil dzakaraka tsumma nam",
+        "suara": "sunnah-wudhu-sebelum-tidur-saat-junub.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Sunnah Wudhu Sebelum Tidur",
+            "text": "Jika seseorang dalam keadaan junub ingin tidur atau makan sebelum mandi, disunnahkan untuk berwudhu terlebih dahulu.",
+            "terjemah": "Berwudhulah dan cuci kemaluanmu, kemudian tidurlah.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "en": {
+            "judul_slide": "Sunnah Wudu Before Sleeping",
+            "text": "If a person in janabah wishes to sleep or eat before ghusl, it is Sunnah to wash private parts and perform wudu first.",
+            "terjemah": "Perform ablution and wash your private part, then sleep.",
+            "sumber": "Narrated by Bukhari and Muslim"
+          },
+          "ms": {
+            "judul_slide": "Sunat Wudhu Sebelum Tidur",
+            "text": "Jika seseorang dalam keadaan junub ingin tidur atau makan sebelum mandi, disunatkan untuk berwudhu terlebih dahulu.",
+            "terjemah": "Berwudhulah dan cuci kemaluanmu, kemudian tidurlah.",
+            "sumber": "HR. Bukhari dan Muslim"
+          },
+          "ur": {
+            "judul_slide": "جنابت میں سونے سے پہلے وضو",
+            "text": "اگر جنبی شخص غسل سے پہلے سونا یا کھانا چاہے تو مستحب ہے کہ پہلے شرمگاہ دھو کر وضو کر لے۔",
+            "terjemah": "وضو کرو اور اپنی شرمگاہ دھوؤ پھر سو جاؤ۔",
+            "sumber": "روایت بخاری و مسلم"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Menunda Mandi Wajib",
+        "deskripsi_konten": "Hukum dan konsekuensi menunda mandi wajib"
+      },
+      "en": {
+        "judul_konten": "Delaying the Obligatory Bath",
+        "deskripsi_konten": "Ruling and consequences of delaying ghusl"
+      },
+      "ms": {
+        "judul_konten": "Menangguhkan Mandi Wajib",
+        "deskripsi_konten": "Hukum dan akibat menangguhkan mandi wajib"
+      },
+      "ur": {
+        "judul_konten": "غسل واجب میں تاخیر",
+        "deskripsi_konten": "غسل میں تاخیر کا حکم اور نتائج"
+      }
+    }
+  },
+  {
+    "kode": "mengajari-anak-baligh",
+    "slide_show": [
+      {
+        "kode_slide": "tanda-tanda-baligh",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, a caring father talking kindly to his adolescent son, and a loving mother guiding her daughter in a bright warm living room, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "tanda-tanda-baligh.webp",
+        "arab": "رُفِعَ الْقَلَمُ عَنْ ثَلَاثَةٍ: عَنِ النَّائِمِ حَتَّى يَسْتَيْقِظَ، وَعَنِ الصَّبِيِّ حَتَّى يَحْتَلِمَ",
+        "latin": "Rufi'al-qalamu 'an tsalātsah: 'anin-nā'imi ḥattā yastaiqiẓa, wa 'aniṣ-ṣabiyyi ḥattā yaḥtalima",
+        "suara": "tanda-tanda-baligh.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Tanda-tanda Memasuki Baligh",
+            "text": "Anak yang memasuki usia baligh (ditandai mimpi basah bagi anak laki-laki atau menstruasi bagi anak perempuan) mulai dibebani kewajiban syariat.",
+            "terjemah": "Pena catatan amal diangkat dari tiga orang: orang tidur hingga bangun, anak kecil hingga baligh (bermimpi basah)...",
+            "sumber": "HR. Abu Dawud"
+          },
+          "en": {
+            "judul_slide": "Signs of Puberty (Baligh)",
+            "text": "When a youth reaches puberty (wet dreams for boys or menstruation for girls), religious obligations become binding upon them.",
+            "terjemah": "The pen is lifted from three: a sleeper until he awakens, a child until he reaches puberty...",
+            "sumber": "Narrated by Abu Dawud"
+          },
+          "ms": {
+            "judul_slide": "Tanda-tanda Memasuki Baligh",
+            "text": "Anak yang memasuki usia baligh (ditandai mimpi basah bagi anak lelaki atau menstruasi bagi anak perempuan) mula dipertanggungjawabkan syariat.",
+            "terjemah": "Pena amalan diangkat daripada tiga orang: orang tidur hingga bangun, anak kecil hingga baligh (bermimpi basah)...",
+            "sumber": "HR. Abu Dawud"
+          },
+          "ur": {
+            "judul_slide": "بلوغت کی علامات",
+            "text": "بچہ جب بالغ ہو جائے (لڑکوں کے لیے احتلام اور لڑکیوں کے لیے حیض) تو اس پر شرعی احکام فرض ہونا شروع ہو جاتے ہیں۔",
+            "terjemah": "تین لوگوں سے قلم اٹھا لیا گیا ہے: سوئے ہوئے سے جب تک بیدار نہ ہو، بچے سے جب تک بالغ نہ ہو جائے...",
+            "sumber": "روایت ابو داؤد"
+          }
+        }
+      },
+      {
+        "kode_slide": "bimbingan-orang-tua-bersuci",
+        "prompt_gambar": "2D flat illustration, minimalist Islamic educational style, parent and child reading an educational Islamic book together on a comfortable sofa under warm ambient lighting, faceless character design (no facial features shown, silhouette or back-view or cropped-head composition), modest clothing, gender-appropriate attire (loose hijab/gamis for female, simple loose clothing for male), soft pastel color palette (sage green, cream, soft blue, dusty rose), clean vector art, simple geometric shapes, soft rounded edges, gentle lighting, no text, no logos, flat design with subtle gradient shading, educational app illustration style similar to Duolingo/Headspace aesthetic",
+        "gambar": "bimbingan-orang-tua-bersuci.webp",
+        "arab": "يَا أَيُّهَا الَّذِينَ آمَنُوا قُوا أَنْفُسَكُمْ وَأَهْلِيكُمْ نَارًا",
+        "latin": "Yā ayyuhāl-ladzīna āmanū qū anfusakum wa ahlīkum nārā",
+        "suara": "bimbingan-orang-tua-bersuci.mp3",
+        "translations": {
+          "id": {
+            "judul_slide": "Bimbingan Orang Tua Bersuci",
+            "text": "Orang tua wajib membimbing anak yang baru baligh secara bijak, santun, dan penuh kasih sayang mengenai cara bersuci dan mandi wajib.",
+            "terjemah": "Wahai orang-orang yang beriman, peliharalah dirimu dan keluargamu dari api neraka.",
+            "sumber": "QS. At-Tahrim: 6"
+          },
+          "en": {
+            "judul_slide": "Parental Guidance in Purification",
+            "text": "Parents must guide newly pubescent children with wisdom, gentleness, and care regarding mandatory bathing and ritual cleanliness.",
+            "terjemah": "O you who have believed, protect yourselves and your families from a Fire.",
+            "sumber": "Surah At-Tahrim: 6"
+          },
+          "ms": {
+            "judul_slide": "Bimbingan Ibu Bapa Bersuci",
+            "text": "Ibu bapa wajib membimbing anak yang baru baligh secara bijaksana, santun, dan penuh kasih sayang mengenai cara bersuci dan mandi wajib.",
+            "terjemah": "Wahai orang-orang yang beriman, peliharalah dirimu dan keluargamu daripada api neraka.",
+            "sumber": "QS. At-Tahrim: 6"
+          },
+          "ur": {
+            "judul_slide": "پاکیزگی میں والدین کی رہنمائی",
+            "text": "والدین پر فرض ہے کہ نئے بالغ بچوں کو غسل اور طہارت کے احکام محبت، حکمت اور شفقت کے ساتھ سکھائیں۔",
+            "terjemah": "اے ایمان والو! اپنے آپ کو اور اپنے اہل خانہ کو آگ سے بچاؤ۔",
+            "sumber": "سورۃ التحریم: 6"
+          }
+        }
+      }
+    ],
+    "translations": {
+      "id": {
+        "judul_konten": "Mengajari Anak Baligh",
+        "deskripsi_konten": "Panduan untuk orang tua menjelaskan ke anak baru baligh"
+      },
+      "en": {
+        "judul_konten": "Teaching Children at Puberty",
+        "deskripsi_konten": "Guidance for parents explaining to a child who has just reached puberty"
+      },
+      "ms": {
+        "judul_konten": "Mengajar Anak Baligh",
+        "deskripsi_konten": "Panduan untuk ibu bapa menerangkan kepada anak yang baru baligh"
+      },
+      "ur": {
+        "judul_konten": "بالغ ہونے والے بچوں کو سکھانا",
+        "deskripsi_konten": "والدین کے لیے رہنمائی تاکہ نئے بالغ بچے کو سمجھائیں"
+      }
+    }
+  }
+]

@@ -25,13 +25,50 @@ class GhuslApplication : Application() {
 
     companion object {
         const val CHANNEL_ID_USTADZ = "tanya_ustadz_channel"
+        const val CHANNEL_ID_REMINDER = "sunnah_reminder_channel"
     }
 
     override fun onCreate() {
         super.onCreate()
+        com.niatmandiwajib.ghusl.analytics.AnalyticsHelper.init(this)
         container = AppContainer(this)
         createNotificationChannels()
         initializeAds()
+        scheduleContentPreload()
+        scheduleFridayReminder()
+    }
+
+    private fun scheduleContentPreload() {
+        try {
+            val constraints = androidx.work.Constraints.Builder()
+                .setRequiredNetworkType(androidx.work.NetworkType.CONNECTED)
+                .build()
+            val request = androidx.work.OneTimeWorkRequestBuilder<com.niatmandiwajib.ghusl.worker.ContentPreloadWorker>()
+                .setConstraints(constraints)
+                .build()
+            androidx.work.WorkManager.getInstance(this).enqueueUniqueWork(
+                "ContentPreloadWork",
+                androidx.work.ExistingWorkPolicy.KEEP,
+                request
+            )
+        } catch (e: Exception) {
+            // WorkManager enqueue failed
+        }
+    }
+
+    private fun scheduleFridayReminder() {
+        try {
+            val request = androidx.work.PeriodicWorkRequestBuilder<com.niatmandiwajib.ghusl.worker.FridayReminderWorker>(
+                24, java.util.concurrent.TimeUnit.HOURS
+            ).build()
+            androidx.work.WorkManager.getInstance(this).enqueueUniquePeriodicWork(
+                "FridayReminderWork",
+                androidx.work.ExistingPeriodicWorkPolicy.KEEP,
+                request
+            )
+        } catch (e: Exception) {
+            // Periodic work enqueue failed
+        }
     }
 
     private fun createNotificationChannels() {
@@ -44,7 +81,15 @@ class GhuslApplication : Application() {
                 description = "Notifications for Tanya Ustadz AI answers"
             }
             val manager = getSystemService(NotificationManager::class.java)
+            val reminderChannel = NotificationChannel(
+                CHANNEL_ID_REMINDER,
+                "Pengingat Ibadah",
+                NotificationManager.IMPORTANCE_DEFAULT
+            ).apply {
+                description = "Pengingat Mandi Sunnah Hari Jum'at"
+            }
             manager.createNotificationChannel(channel)
+            manager.createNotificationChannel(reminderChannel)
         }
     }
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>appOpenAdUnitId</key>
+        <value>ca-app-pub-1012224604632017/2016194717</value>
+    </entry>
+    <entry>
+        <key>bannerAdUnitId</key>
+        <value>ca-app-pub-1012224604632017/5653196554</value>
+    </entry>
+    <entry>
+        <key>interstitialAdUnitId</key>
+        <value>ca-app-pub-1012224604632017/5820717514</value>
+    </entry>
+    <entry>
+        <key>nativeAdUnitId</key>
+        <value>ca-app-pub-1012224604632017/3701820639</value>
+    </entry>
+    <entry>
+        <key>rewardedAdUnitId</key>
+        <value>ca-app-pub-1012224604632017/7143117057</value>
+    </entry>
+</defaultsMap>

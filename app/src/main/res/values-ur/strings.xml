@@ -91,4 +91,18 @@
     <string name="bottom_nav_wizard">جانچیں</string>
     <string name="bottom_nav_ask_ustadz">استاد</string>
     <string name="bottom_nav_more">مزید</string>
+    <string name="quick_niat_title">فوری نیت</string>
+    <string name="quick_niat_full_guide">مکمل رہنمائی</string>
+    <string name="quick_niat_tab_junub">جنابت</string>
+    <string name="quick_niat_tab_haid">حیض</string>
+    <string name="quick_niat_tab_nifas">نفاس</string>
+    <string name="quick_niat_share_title">غسل کی نیت شیئر کریں</string>
+    <string name="quick_niat_share_meaning">ترجمہ:</string>
+    <string name="quick_niat_share_footer">غسل ایپ سے شیئر کیا گیا</string>
+    <string name="default_niat_junub_title">غسل جنابت کی نیت</string>
+    <string name="default_niat_junub_translation">میں اللہ تعالیٰ کی رضا کے لیے ناپاکی دور کرنے کی نیت کرتا ہوں۔</string>
+    <string name="default_niat_haid_title">غسل حیض کی نیت</string>
+    <string name="default_niat_haid_translation">میں اللہ تعالیٰ کے لیے حیض کی ناپاکی دور کرنے کی نیت کرتی ہوں۔</string>
+    <string name="default_niat_nifas_title">غسل نفاس کی نیت</string>
+    <string name="default_niat_nifas_translation">میں اللہ تعالیٰ کے لیے نفاس کی ناپاکی دور کرنے کی نیت کرتی ہوں۔</string>
 </resources>

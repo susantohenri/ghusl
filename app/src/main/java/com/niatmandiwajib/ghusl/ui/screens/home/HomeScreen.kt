@@ -25,18 +25,43 @@ import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
 import com.niatmandiwajib.ghusl.data.local.entity.ReadHistoryEntity
+import com.niatmandiwajib.ghusl.domain.model.GuideContent
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
 import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
+import com.niatmandiwajib.ghusl.ui.components.QuickNiatCard
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
-    private val readHistoryRepository = (application as GhuslApplication).container.readHistoryRepository
+    private val container = (application as GhuslApplication).container
+    private val readHistoryRepository = container.readHistoryRepository
+    private val guideRepository = container.guideRepository
+    private val userPreferences = container.userPreferences
 
     val lastRead: StateFlow<ReadHistoryEntity?> = readHistoryRepository.getLastRead()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+
+    private val _quickNiatGuide = kotlinx.coroutines.flow.MutableStateFlow<GuideContent?>(null)
+    val quickNiatGuide: StateFlow<GuideContent?> = _quickNiatGuide
+
+    init {
+        loadQuickNiat()
+    }
+
+    private fun loadQuickNiat() {
+        viewModelScope.launch {
+            userPreferences.selectedLanguage.collect { lang ->
+                guideRepository.getGuideContent("niat-doa-mandi-wajib", lang).collect { result ->
+                    result.onSuccess { content ->
+                        _quickNiatGuide.value = content
+                    }
+                }
+            }
+        }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -46,6 +71,7 @@ fun HomeScreen(
     viewModel: HomeViewModel = viewModel()
 ) {
     val lastRead by viewModel.lastRead.collectAsState()
+    val quickNiatGuide by viewModel.quickNiatGuide.collectAsState()
     val context = LocalContext.current
     val adManager = (context.applicationContext as GhuslApplication).adManager
 
@@ -86,12 +112,20 @@ fun HomeScreen(
                     text = stringResource(id = R.string.home_greeting),
                     style = MaterialTheme.typography.headlineMedium
                 )
-            Text(
-                text = stringResource(id = R.string.home_subtitle),
-                style = MaterialTheme.typography.bodyLarge
-            )
+                Text(
+                    text = stringResource(id = R.string.home_subtitle),
+                    style = MaterialTheme.typography.bodyLarge
+                )
 
-            // Continue reading card
+                // Quick Niat Card (Instant value at 0 seconds)
+                QuickNiatCard(
+                    slides = quickNiatGuide?.slides,
+                    onNavigateToFullGuide = {
+                        navController.navigate(Screen.SlideShow.createRoute("niat-doa-mandi-wajib"))
+                    }
+                )
+
+                // Continue reading card
             lastRead?.let { history ->
                 Card(
                     modifier = Modifier

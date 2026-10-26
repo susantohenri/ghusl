@@ -91,4 +91,18 @@
     <string name="bottom_nav_wizard">Semak</string>
     <string name="bottom_nav_ask_ustadz">Ustaz</string>
     <string name="bottom_nav_more">Lagi</string>
+    <string name="quick_niat_title">Lafaz Niat Pantas</string>
+    <string name="quick_niat_full_guide">Panduan Penuh</string>
+    <string name="quick_niat_tab_junub">Hadats / Junub</string>
+    <string name="quick_niat_tab_haid">Haid</string>
+    <string name="quick_niat_tab_nifas">Nifas</string>
+    <string name="quick_niat_share_title">Kongsi Niat Mandi Wajib</string>
+    <string name="quick_niat_share_meaning">Maksud:</string>
+    <string name="quick_niat_share_footer">Dikongsi daripada aplikasi Ghusl</string>
+    <string name="default_niat_junub_title">Niat Mandi Junub (Hadats Besar)</string>
+    <string name="default_niat_junub_translation">Sahaja aku mandi wajib daripada hadas besar fardu kerana Allah Ta\'ala.</string>
+    <string name="default_niat_haid_title">Niat Mandi Haid</string>
+    <string name="default_niat_haid_translation">Sahaja aku mandi wajib daripada hadas haid fardu kerana Allah Ta\'ala.</string>
+    <string name="default_niat_nifas_title">Niat Mandi Nifas</string>
+    <string name="default_niat_nifas_translation">Sahaja aku mandi wajib daripada hadas nifas fardu kerana Allah Ta\'ala.</string>
 </resources>

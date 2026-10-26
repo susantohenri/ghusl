@@ -91,4 +91,22 @@
     <string name="bottom_nav_wizard">Cek</string>
     <string name="bottom_nav_ask_ustadz">Ustadz</string>
     <string name="bottom_nav_more">Lainnya</string>
+    <string name="shortcut_niat_junub_short">Niat Junub</string>
+    <string name="shortcut_niat_junub_long">Niat Mandi Junub</string>
+    <string name="shortcut_niat_haid_short">Niat Haid</string>
+    <string name="shortcut_niat_haid_long">Niat Mandi Haid</string>
+    <string name="quick_niat_title">Lafaz Niat Cepat</string>
+    <string name="quick_niat_full_guide">Panduan Penuh</string>
+    <string name="quick_niat_tab_junub">Hadats / Junub</string>
+    <string name="quick_niat_tab_haid">Haid</string>
+    <string name="quick_niat_tab_nifas">Nifas</string>
+    <string name="quick_niat_share_title">Bagikan Niat Mandi Wajib</string>
+    <string name="quick_niat_share_meaning">Artinya:</string>
+    <string name="quick_niat_share_footer">Dibagikan dari aplikasi Ghusl: Niat Mandi Wajib</string>
+    <string name="default_niat_junub_title">Niat Mandi Junub (Hadats Besar)</string>
+    <string name="default_niat_junub_translation">Aku berniat mandi untuk menghilangkan hadats besar, fardhu karena Allah Ta\'ala.</string>
+    <string name="default_niat_haid_title">Niat Mandi Haid</string>
+    <string name="default_niat_haid_translation">Aku berniat mandi untuk menghilangkan hadats haid, fardhu karena Allah Ta\'ala.</string>
+    <string name="default_niat_nifas_title">Niat Mandi Nifas</string>
+    <string name="default_niat_nifas_translation">Aku berniat mandi untuk menghilangkan hadats nifas, fardhu karena Allah Ta\'ala.</string>
 </resources>

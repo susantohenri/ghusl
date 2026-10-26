@@ -12,7 +12,7 @@ class AppContainer(context: Context) {
     private val database = GhuslDatabase.getInstance(context)
     private val apiService = RetrofitClient.getApiService(context)
 
-    val guideRepository = GuideRepository(apiService)
+    val guideRepository = GuideRepository(context, apiService, database.guideDao())
     val bookmarkRepository = BookmarkRepository(database.bookmarkDao())
     val readHistoryRepository = ReadHistoryRepository(database.readHistoryDao())
     val userPreferences = UserPreferencesManager(context)

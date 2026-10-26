@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="shortcut_niat_junub"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_niat_junub_short"
+        android:shortcutLongLabel="@string/shortcut_niat_junub_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.niatmandiwajib.ghusl"
+            android:targetClass="com.niatmandiwajib.ghusl.MainActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="shortcut_niat_haid"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/shortcut_niat_haid_short"
+        android:shortcutLongLabel="@string/shortcut_niat_haid_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.niatmandiwajib.ghusl"
+            android:targetClass="com.niatmandiwajib.ghusl.MainActivity" />
+    </shortcut>
+</shortcuts>

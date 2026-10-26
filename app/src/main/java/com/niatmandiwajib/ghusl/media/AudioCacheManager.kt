@@ -24,7 +24,7 @@ object AudioCacheManager {
         }
     }
 
-    fun getCachedDataSourceFactory(context: Context): DataSource.Factory {
+    fun getCachedDataSourceFactory(context: Context): CacheDataSource.Factory {
         val upstreamFactory = DefaultDataSource.Factory(context)
         return CacheDataSource.Factory()
             .setCache(getCache(context))
