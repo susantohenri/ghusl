@@ -1,13 +1,16 @@
 package com.niatmandiwajib.ghusl.domain.engine
 
 import android.content.Context
+import android.util.Log
+import androidx.annotation.Keep
 import com.google.gson.Gson
 import com.niatmandiwajib.ghusl.domain.model.WizardNode
 
+@Keep
 data class DecisionTreeData(
-    val version: Int,
-    val nodes: List<WizardNode>,
-    val disclaimer: Map<String, String>
+    val version: Int = 1,
+    val nodes: List<WizardNode> = emptyList(),
+    val disclaimer: Map<String, String> = emptyMap()
 )
 
 class DecisionTreeEngine(context: Context) {
@@ -15,9 +18,15 @@ class DecisionTreeEngine(context: Context) {
     private val nodeMap: Map<String, WizardNode>
 
     init {
-        val json = context.assets.open("decision_tree.json")
-            .bufferedReader().use { it.readText() }
-        treeData = Gson().fromJson(json, DecisionTreeData::class.java)
+        var parsedData: DecisionTreeData? = null
+        try {
+            val json = context.assets.open("decision_tree.json")
+                .bufferedReader().use { it.readText() }
+            parsedData = Gson().fromJson(json, DecisionTreeData::class.java)
+        } catch (e: Exception) {
+            Log.e("DecisionTreeEngine", "Failed to parse decision_tree.json", e)
+        }
+        treeData = parsedData ?: DecisionTreeData()
         nodeMap = treeData.nodes.associateBy { it.id }
     }
 

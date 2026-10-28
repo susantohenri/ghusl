@@ -56,11 +56,11 @@ class AdRepository(private val apiService: GuideApiService) {
             apiService.getAdConfig().also { cachedConfig = it }
         } catch (e: Exception) {
             AdConfigDto(
-                appOpenAdUnitId = "ca-app-pub-1012224604632017/2016194717",
-                bannerAdUnitId = "ca-app-pub-1012224604632017/5653196554",
-                interstitialAdUnitId = "ca-app-pub-1012224604632017/5820717514",
-                nativeAdUnitId = "ca-app-pub-1012224604632017/3701820639",
-                rewardedAdUnitId = "ca-app-pub-1012224604632017/7143117057"
+                appOpenAdUnitId = "ca-app-pub-3360913653749022/7868657747",
+                bannerAdUnitId = "ca-app-pub-3360913653749022/9177121558",
+                interstitialAdUnitId = "ca-app-pub-3360913653749022/7161954421",
+                nativeAdUnitId = "ca-app-pub-3360913653749022/6694428444",
+                rewardedAdUnitId = "ca-app-pub-3360913653749022/7864039881"
             ).also { cachedConfig = it }
         }
     }

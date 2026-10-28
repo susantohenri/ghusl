@@ -1,0 +1,39 @@
+{
+  "parameters": {
+    "appOpenAdUnitId": {
+      "defaultValue": {
+        "value": "ca-app-pub-3360913653749022/7868657747"
+      },
+      "description": "AdMob App Open Ad Unit ID",
+      "valueType": "STRING"
+    },
+    "bannerAdUnitId": {
+      "defaultValue": {
+        "value": "ca-app-pub-3360913653749022/9177121558"
+      },
+      "description": "AdMob Banner Ad Unit ID",
+      "valueType": "STRING"
+    },
+    "interstitialAdUnitId": {
+      "defaultValue": {
+        "value": "ca-app-pub-3360913653749022/7161954421"
+      },
+      "description": "AdMob Interstitial Ad Unit ID",
+      "valueType": "STRING"
+    },
+    "nativeAdUnitId": {
+      "defaultValue": {
+        "value": "ca-app-pub-3360913653749022/6694428444"
+      },
+      "description": "AdMob Native Ad Unit ID",
+      "valueType": "STRING"
+    },
+    "rewardedAdUnitId": {
+      "defaultValue": {
+        "value": "ca-app-pub-3360913653749022/7864039881"
+      },
+      "description": "AdMob Rewarded Ad Unit ID",
+      "valueType": "STRING"
+    }
+  }
+}

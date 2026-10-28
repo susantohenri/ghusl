@@ -1,14 +1,22 @@
 package com.niatmandiwajib.ghusl.ui.components
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.filled.ContentCopy
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -123,16 +131,18 @@ fun QuickNiatCard(
 
     Card(
         modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        border = BorderStroke(1.2.dp, androidx.compose.ui.graphics.Color(0xFFC5A059).copy(alpha = 0.45f)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
+            containerColor = MaterialTheme.colorScheme.surface
         )
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+            verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             // Header
             Row(
@@ -173,7 +183,10 @@ fun QuickNiatCard(
                 }
             }
 
-            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f),
+                thickness = 0.5.dp
+            )
 
             // Animated content based on tab
             AnimatedContent(
@@ -183,54 +196,132 @@ fun QuickNiatCard(
             ) { item ->
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     Text(
                         text = item.title,
-                        style = MaterialTheme.typography.labelLarge,
+                        style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.primary,
-                        fontWeight = FontWeight.SemiBold
+                        fontWeight = FontWeight.Bold
                     )
 
-                    // Arabic Text
-                    Text(
-                        text = item.arabic,
-                        style = MaterialTheme.typography.headlineSmall.copy(
-                            lineHeight = 42.sp,
-                            textDirection = TextDirection.Rtl
-                        ),
-                        textAlign = TextAlign.Right,
+                    // Spiritual Calligraphy Mihrab Frame
+                    val isDark = isSystemInDarkTheme()
+                    val frameBgColor = if (isDark) androidx.compose.ui.graphics.Color(0xFF16251D) else androidx.compose.ui.graphics.Color(0xFFFBF8F2)
+                    val goldAccent = androidx.compose.ui.graphics.Color(0xFFC5A059)
+                    val arabicTextColor = if (isDark) androidx.compose.ui.graphics.Color(0xFFE8F5E9) else androidx.compose.ui.graphics.Color(0xFF144734)
+
+                    Surface(
                         modifier = Modifier.fillMaxWidth(),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+                        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp, bottomStart = 16.dp, bottomEnd = 16.dp),
+                        color = frameBgColor,
+                        border = BorderStroke(1.2.dp, goldAccent.copy(alpha = 0.5f)),
+                        shadowElevation = 2.dp
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(18.dp),
+                            verticalArrangement = Arrangement.spacedBy(12.dp)
+                        ) {
+                            // Ornamental Bismillah Header
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = "✦  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ  ✦",
+                                    style = MaterialTheme.typography.labelMedium.copy(
+                                        textDirection = TextDirection.Rtl,
+                                        fontWeight = FontWeight.Medium
+                                    ),
+                                    color = goldAccent,
+                                    textAlign = TextAlign.Center
+                                )
+                            }
 
-                    // Latin Transliteration
-                    Text(
-                        text = item.latin,
-                        style = MaterialTheme.typography.bodyMedium.copy(
-                            fontStyle = FontStyle.Italic
-                        ),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
+                            HorizontalDivider(
+                                color = goldAccent.copy(alpha = 0.25f),
+                                thickness = 0.8.dp
+                            )
 
-                    // Translation
-                    Text(
-                        text = item.translation,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.85f)
-                    )
+                            // Arabic Text with Islamic aesthetic spacing
+                            Text(
+                                text = item.arabic,
+                                style = MaterialTheme.typography.headlineSmall.copy(
+                                    fontSize = 22.sp,
+                                    lineHeight = 44.sp,
+                                    textDirection = TextDirection.Rtl,
+                                    fontWeight = FontWeight.Bold
+                                ),
+                                textAlign = TextAlign.Right,
+                                modifier = Modifier.fillMaxWidth(),
+                                color = arabicTextColor
+                            )
+
+                            HorizontalDivider(
+                                color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.35f),
+                                thickness = 0.5.dp
+                            )
+
+                            // Latin Transliteration
+                            Text(
+                                text = item.latin,
+                                style = MaterialTheme.typography.bodyMedium.copy(
+                                    fontStyle = FontStyle.Italic
+                                ),
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+
+                            // Translation
+                            Text(
+                                text = item.translation,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.9f)
+                            )
+                        }
+                    }
 
                     // Audio Player
                     if (item.audioUrl.isNotBlank()) {
                         AudioPlayerBar(audioUrl = item.audioUrl)
                     }
 
-                    // Share button
+                    // Action buttons: Copy & Share
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.End
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        TextButton(
+                        OutlinedButton(
+                            onClick = {
+                                val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
+                                val clip = ClipData.newPlainText(
+                                    "Niat Mandi",
+                                    "${item.title}\n\n${item.arabic}\n\n\"${item.latin}\"\n\n$shareMeaningLabel\n${item.translation}"
+                                )
+                                clipboard?.setPrimaryClip(clip)
+                                Toast.makeText(
+                                    context,
+                                    context.getString(R.string.copy_success),
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            },
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.ContentCopy,
+                                contentDescription = stringResource(R.string.action_copy),
+                                modifier = Modifier.size(16.dp)
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(stringResource(R.string.action_copy))
+                        }
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
+                        Button(
                             onClick = {
                                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                     type = "text/plain"
@@ -240,12 +331,13 @@ fun QuickNiatCard(
                                     )
                                 }
                                 context.startActivity(Intent.createChooser(shareIntent, shareChooserTitle))
-                            }
+                            },
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
                         ) {
                             Icon(
                                 imageVector = Icons.Default.Share,
                                 contentDescription = stringResource(R.string.action_share),
-                                modifier = Modifier.size(18.dp)
+                                modifier = Modifier.size(16.dp)
                             )
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(stringResource(R.string.action_share))

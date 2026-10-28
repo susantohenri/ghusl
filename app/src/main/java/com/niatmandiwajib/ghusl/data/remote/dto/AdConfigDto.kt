@@ -1,7 +1,9 @@
 package com.niatmandiwajib.ghusl.data.remote.dto
 
+import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+@Keep
 data class AdConfigDto(
     @SerializedName("appOpenAdUnitId") val appOpenAdUnitId: String = "",
     @SerializedName("bannerAdUnitId") val bannerAdUnitId: String = "",

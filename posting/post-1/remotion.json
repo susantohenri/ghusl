@@ -1,0 +1,162 @@
+{
+  "project": {
+    "appName": "Ghusl: Niat Mandi Wajib",
+    "websiteUrl": "https://play.google.com/store/apps/details?id=com.niatmandiwajib.ghusl",
+    "ctaHeadline": "CARI DI GOOGLE PLAY",
+    "ctaSubline": "Cari Ghusl: Niat Mandi Wajib di Play Store",
+    "theme": {
+      "primaryColor": "#1F7A5C",
+      "secondaryColor": "#8EC9E8",
+      "accentColor": "#F4D58D"
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene-1",
+      "ttsScript": "Subuh tinggal sebentar, wajib mandi atau cukup wudu?",
+      "durationInSeconds": 3.6,
+      "durationInFrames": 108,
+      "headline": "WAJIB MANDI ATAU WUDU?",
+      "highlightWords": [
+        "WAJIB MANDI"
+      ],
+      "imagePrompt": "Quiet home hallway just before dawn in deep blue-green light. At the right edge, a forearm in a plain white sleeve seen from behind, hand hovering hesitantly near a closed bathroom door handle, a thin warm line of light under the door. A folded white towel on a wall hook beside the door. A simple analog wall clock with plain tick marks and no numerals at the upper left. Keep the center band (35-65% of the frame height) as a calm, empty dark wall for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "videoMotionPrompt": "Image-to-video, vertical 9:16, 3 seconds, first frame is the Scene 1 image. Pre-dawn home hallway in deep blue-green light. A forearm in a plain white sleeve, seen from behind with no face, hovers near a closed bathroom door handle and pauses with a slight hesitation, a thin warm line of light glowing under the door, while the second hand of the analog wall clock at the upper left ticks forward. Camera: one slow, stable push-in of about 8 percent toward the hand and door handle. Timing: 0-1s hold on the opening frame with the clock ticking; 1-2.5s slow push-in as the hand hesitates; 2.5-3s settle and hold with the hand frozen just before the handle. Lighting: cool low-key blue-green ambient light, with the warm line under the door as the only warm accent. Composition: keep the center of the frame empty and end with the hand and door in the right third. No faces, no text, no morphing, no cuts, realistic physics.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "slam",
+      "placement": "center",
+      "badgeText": "DILEMA SUBUH"
+    },
+    {
+      "id": "scene-2",
+      "ttsScript": "Mau bertanya ke orang lain, rasanya canggung.",
+      "durationInSeconds": 3.2,
+      "durationInFrames": 96,
+      "headline": "MALU BERTANYA SOAL INI?",
+      "highlightWords": [
+        "MALU BERTANYA"
+      ],
+      "imagePrompt": "A person seen only from behind, sitting on the edge of a bed at night, head slightly lowered in hesitation, holding a smartphone with a completely dark blank screen. Soft cool lamp light, minimal bedroom in muted green and light blue. Subject in the upper 60% of the frame; keep the lower-left third quiet, dark and empty for the subtitle. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "bottom-left",
+      "badgeText": "WAJAR KOK"
+    },
+    {
+      "id": "scene-3",
+      "ttsScript": "Aplikasi Ghusl punya Cek Kondisi, cukup jawab ya atau tidak.",
+      "durationInSeconds": 4.5,
+      "durationInFrames": 135,
+      "headline": "CEK KONDISI, YA ATAU TIDAK",
+      "highlightWords": [
+        "CEK KONDISI"
+      ],
+      "imagePrompt": "Close-up of a hand holding a smartphone upright in soft morning light. The screen glows with a calm white-and-green card made only of abstract soft shapes: one rounded card with two plain rounded buttons side by side, no icons or text. Blurred cozy light-blue room in the background. Phone and hand in the upper 60% of the frame; keep the lower-left third as soft blurred empty space for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "uiSwitch",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "bottom-left",
+      "badgeText": "ALUR TANYA-JAWAB"
+    },
+    {
+      "id": "scene-4",
+      "ttsScript": "Hasilnya berupa arahan bersuci yang sesuai dengan kondisimu.",
+      "durationInSeconds": 3.7,
+      "durationInFrames": 111,
+      "headline": "ARAHAN SESUAI KONDISIMU",
+      "highlightWords": [
+        "SESUAI KONDISIMU"
+      ],
+      "imagePrompt": "Still life of a clear glass of water and a neatly folded white towel on a small wooden stool beside a window, soft light-blue morning light, a green leaf in soft focus, feeling of calm relief and clarity. Objects in the upper 60% of the frame; keep the lower-left third softly blurred and empty for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "ding",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "bottom-left",
+      "badgeText": "ARAHAN UMUM"
+    },
+    {
+      "id": "scene-5",
+      "ttsScript": "Kalau memang wajib, niat dan doanya lengkap dengan Arab, latin, dan audio.",
+      "durationInSeconds": 5.4,
+      "durationInFrames": 162,
+      "headline": "NIAT DAN DOA LENGKAP",
+      "highlightWords": [
+        "NIAT DAN DOA"
+      ],
+      "imagePrompt": "Still life of a wooden Quran stand holding an open book with softly blurred pages and no legible script, beside a pair of white wireless earbuds on a white cloth, warm gentle light with light-blue bokeh, calm devotional mood. Place objects in the lower 35% of the frame; keep the center band (35-65% of the frame height) and the upper area as a clean, softly blurred empty wall for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "ADA AUDIO"
+    },
+    {
+      "id": "scene-6",
+      "ttsScript": "Tata caranya ada di tiga belas bab, lengkap dengan dalil.",
+      "durationInSeconds": 4.5,
+      "durationInFrames": 135,
+      "headline": "13 BAB PANDUAN LENGKAP",
+      "highlightWords": [
+        "13 BAB"
+      ],
+      "imagePrompt": "Angled overhead view of an open book resting on a pale wooden desk, pages softly blurred with no legible script, with several thin ribbon bookmarks in soft green and light blue sticking out from between the pages like chapter markers, soft morning light, serene study mood. Book in the upper 60% of the frame; keep the lower-left third empty for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "bottom-left",
+      "badgeText": "SLIDESHOW VISUAL"
+    },
+    {
+      "id": "scene-7",
+      "ttsScript": "Masih ragu, fitur Tanya Ustadz berbasis AI siap menjawab.",
+      "durationInSeconds": 4.2,
+      "durationInFrames": 126,
+      "headline": "TANYA USTADZ AI",
+      "highlightWords": [
+        "USTADZ AI"
+      ],
+      "imagePrompt": "A smartphone resting on a folded prayer rug beside a window, its screen softly glowing with abstract rounded speech-bubble shapes in green and light blue, no text, icons or robot imagery. Calm morning light, gentle bokeh. Phone in the upper 60% of the frame; keep the lower-left third empty and softly blurred for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "bottom-left",
+      "badgeText": "BERBASIS AI"
+    },
+    {
+      "id": "scene-8",
+      "ttsScript": "Untuk kasus rumit, tetap konsultasikan ke ustadz setempat.",
+      "durationInSeconds": 3.7,
+      "durationInFrames": 111,
+      "headline": "KASUS RUMIT, TEMUI USTADZ",
+      "highlightWords": [
+        "TEMUI USTADZ"
+      ],
+      "imagePrompt": "Quiet corner of a study room in a mosque: two cushions facing each other across a low wooden table with two empty tea cups, a rolled prayer rug nearby, warm light from a side window, nobody present, respectful and inviting mood. Keep objects in the lower 35% of the frame and keep the center band (35-65% of the frame height) as a clean, softly lit wall for the headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "BUKAN FATWA"
+    },
+    {
+      "id": "scene-9",
+      "ttsScript": "Cari Ghusl: Niat Mandi Wajib di Google Play Store.",
+      "durationInSeconds": 4.2,
+      "durationInFrames": 126,
+      "headline": "CARI DI GOOGLE PLAY",
+      "highlightWords": [
+        "CARI",
+        "GOOGLE PLAY"
+      ],
+      "imagePrompt": "The same quiet home hallway at sunrise, soft green-gold and light-blue dawn light, the bathroom door now open with warm light spilling out, a prayer rug neatly unrolled in the lower foreground, a folded white towel on the wall hook, the analog clock out of focus at the upper left, feeling of calm relief. Keep the center band (35-65% of the frame height) clean and softly lit for the CTA headline. Soft cinematic photorealistic style, calm palette of deep green, light blue and white, gentle diffused light. Vertical 9:16 aspect ratio. No text, letters, numbers, logos, watermarks or faces.",
+      "videoMotionPrompt": "Image-to-video, vertical 9:16, 3 seconds, first frame is the Scene 9 image. The same quiet hallway at sunrise: the bathroom door is open and warm light spills out as the window light slowly brightens from soft light blue to gentle green-gold. Camera: one slow, stable pull-back of about 8 percent from the open door, revealing more of the neatly unrolled prayer rug in the foreground. Timing: 0-1s hold on the opening frame; 1-2.5s slow pull-back as the light gradually brightens; 2.5-3s settle into a calm, stable hold. Lighting: warm soft sunrise, low contrast. Composition: keep the center and lower-center of the frame clean and softly lit for the CTA text. No people, no text, no morphing, no abrupt movement.",
+      "sfx": "ding",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "COBA SEKARANG"
+    }
+  ]
+}

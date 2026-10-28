@@ -111,5 +111,35 @@
     <string name="default_niat_haid_translation">I intend to perform ghusl to remove the impurity of menstruation for Allah Almighty.</string>
     <string name="default_niat_nifas_title">Intention for Nifas Ghusl</string>
     <string name="default_niat_nifas_translation">I intend to perform ghusl to remove the impurity of postnatal bleeding for Allah Almighty.</string>
+    <string name="action_copy">Copy</string>
+    <string name="copy_success">Intention copied to clipboard</string>
+    <string name="badge_interactive">Interactive</string>
+    <string name="badge_private">Private</string>
+    <string name="badge_friday_sunnah">Friday Sunnah</string>
+    <string name="home_card_guide_desc">Complete guide, pillars, and etiquettes</string>
+    <string name="home_card_wizard_desc">Check if your condition requires ghusl</string>
+    <string name="home_card_ustadz_desc">Ask purification fiqh questions privately</string>
+    <string name="home_section_steps">5 Quick Steps</string>
+    <string name="home_section_menu">Main Features</string>
+    <string name="home_step_1">1. Intention &amp; Wash</string>
+    <string name="home_step_2">2. Clean Impurity</string>
+    <string name="home_step_3">3. Perform Wudu</string>
+    <string name="home_step_4">4. Wash Head</string>
+    <string name="home_step_5">5. Wash Body</string>
+    <string name="home_tip_title">Purification Wisdom</string>
+    <string name="home_tip_desc">The only obligatory pillars of ghusl are intention and washing the entire body with pure water.</string>
+    <string name="home_tip_1">The only obligatory pillars of ghusl are having the sincere intention and washing the entire body with pure water.</string>
+    <string name="home_tip_2">Taking a bath on Friday is an emphasized Sunnah before attending the Friday congregational prayer.</string>
+    <string name="home_tip_3">Ghusl automatically lifts minor ritual impurity as well, so you can pray without performing a separate wudu.</string>
+    <string name="home_tip_4">It is a Sunnah to perform wudu before sleeping if one is in a state of janabah and has not bathed yet.</string>
+    <string name="home_tip_5">For women after menstruation or postpartum bleeding, ghusl is required before resuming prayers and fasting.</string>
+    <string name="home_tip_6">Soap and shampoo enhance cleanliness, but ensure clean pure water reaches all parts of skin and hair.</string>
+    <string name="home_tip_7">It is recommended to wash hands and cleanse impurities first before washing the rest of the body.</string>
+    <string name="greeting_morning">Good Morning</string>
+    <string name="greeting_afternoon">Good Afternoon</string>
+    <string name="greeting_evening">Good Evening</string>
+    <string name="greeting_night">Good Night</string>
+    <string name="home_hero_blessing">Keep yourself in purity and mindfulness</string>
+    <string name="action_next_tip">Next Wisdom</string>
 </resources>
 

@@ -2,22 +2,22 @@
 <defaultsMap>
     <entry>
         <key>appOpenAdUnitId</key>
-        <value>ca-app-pub-1012224604632017/2016194717</value>
+        <value>ca-app-pub-3360913653749022/7868657747</value>
     </entry>
     <entry>
         <key>bannerAdUnitId</key>
-        <value>ca-app-pub-1012224604632017/5653196554</value>
+        <value>ca-app-pub-3360913653749022/9177121558</value>
     </entry>
     <entry>
         <key>interstitialAdUnitId</key>
-        <value>ca-app-pub-1012224604632017/5820717514</value>
+        <value>ca-app-pub-3360913653749022/7161954421</value>
     </entry>
     <entry>
         <key>nativeAdUnitId</key>
-        <value>ca-app-pub-1012224604632017/3701820639</value>
+        <value>ca-app-pub-3360913653749022/6694428444</value>
     </entry>
     <entry>
         <key>rewardedAdUnitId</key>
-        <value>ca-app-pub-1012224604632017/7143117057</value>
+        <value>ca-app-pub-3360913653749022/7864039881</value>
     </entry>
 </defaultsMap>

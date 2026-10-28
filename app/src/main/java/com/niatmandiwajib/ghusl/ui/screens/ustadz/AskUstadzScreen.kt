@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.HelpOutline
+import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -57,7 +57,7 @@ fun AskUstadzScreen(
                 actions = {
                     IconButton(onClick = { navController.navigate(Screen.Faq.route) }) {
                         Icon(
-                            imageVector = Icons.Default.HelpOutline,
+                            imageVector = Icons.AutoMirrored.Filled.HelpOutline,
                             contentDescription = stringResource(id = R.string.more_faq)
                         )
                     }

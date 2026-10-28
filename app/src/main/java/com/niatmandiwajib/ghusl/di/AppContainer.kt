@@ -16,7 +16,7 @@ class AppContainer(context: Context) {
     val bookmarkRepository = BookmarkRepository(database.bookmarkDao())
     val readHistoryRepository = ReadHistoryRepository(database.readHistoryDao())
     val userPreferences = UserPreferencesManager(context)
-    val wizardRepository = WizardRepository(DecisionTreeEngine(context))
+    val wizardRepository by lazy { WizardRepository(DecisionTreeEngine(context)) }
     val qnADao = database.qnADao()
     val qnARepository = QnARepository(database.qnADao())
     val geminiService = GeminiService(context)

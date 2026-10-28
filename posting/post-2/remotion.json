@@ -1,0 +1,115 @@
+{
+  "project": {
+    "appName": "Ghusl: Fiqih Mandi Wajib Lengkap",
+    "websiteUrl": "https://play.google.com/store/apps/details?id=com.niatmandiwajib.ghusl",
+    "ctaHeadline": "DOWNLOAD DI GOOGLE PLAY",
+    "ctaSubline": "Cari 'Ghusl: Fiqih Mandi Wajib Lengkap'",
+    "theme": {
+      "primaryColor": "#2D6A4F",
+      "secondaryColor": "#A2D2FF",
+      "accentColor": "#F8F9FA"
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene-1",
+      "ttsScript": "Ada satu bagian mandi wajib yang sering terlewat.",
+      "durationInSeconds": 3.5,
+      "durationInFrames": 105,
+      "headline": "BAGIAN YANG SERING TERLEWAT",
+      "highlightWords": ["SERING TERLEWAT"],
+      "imagePrompt": "Vertical 9:16 composition. Close-up of a calm bathroom counter in soft morning light. A small, elegant checklist notebook lies open, with one checkbox left empty and subtly illuminated by a warm glow. A simple pen rests beside it. Muted sage green and warm white palette. Shallow depth of field, gentle shadows. Negative space in the upper third for headline text. Minimalist, respectful, editorial lifestyle photography style. No visible text on the checklist—only abstract lines and one empty box. Aspect ratio 9:16.",
+      "videoMotionPrompt": "Vertical 9:16, 3 seconds. Start with a medium close-up of a calm bathroom counter in soft morning light. A small checklist notebook lies open, one checkbox empty and faintly glowing. The camera performs a very slow, smooth push-in toward the empty checkbox. A gentle sweep of warm light passes over the paper, making the empty box subtly shimmer. The pen beside it remains still. Soft sage green and warm white tones. End on a tight close-up of the empty checkbox, leaving the answer unresolved. No text, no distortion, natural motion only.",
+      "sfx": "whoosh",
+      "style": "kinetic-sticker",
+      "animation": "slam",
+      "placement": "center",
+      "badgeText": "PANDUAN"
+    },
+    {
+      "id": "scene-2",
+      "ttsScript": "Bukan cuma niat—rata air ke seluruh tubuh juga menentukan sahnya.",
+      "durationInSeconds": 4.0,
+      "durationInFrames": 120,
+      "headline": "BUKAN CUMA NIAT",
+      "highlightWords": ["BUKAN CUMA NIAT"],
+      "imagePrompt": "Vertical 9:16 composition. Side view of clear water droplets falling gently onto a modestly exposed forearm, with a soft highlight tracing the skin to suggest completeness. Background is a blurred, calm bathroom wall in pale blue-green. Natural window light, soft focus, serene atmosphere. Negative space in the upper third. Tasteful, non-explicit, editorial style. Aspect ratio 9:16.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "RATA AIR"
+    },
+    {
+      "id": "scene-3",
+      "ttsScript": "Aplikasi Ghusl memandu dari niat sampai tata cara lengkap, sesuai sunnah.",
+      "durationInSeconds": 4.5,
+      "durationInFrames": 135,
+      "headline": "PANDUAN LENGKAP",
+      "highlightWords": ["LENGKAP"],
+      "imagePrompt": "Vertical 9:16 composition. A hand gently holding a smartphone displaying a clean, calm Islamic educational app interface with Arabic text and step-by-step cards. The background is a softly lit, minimalist room with a prayer rug partially visible. Warm natural light, sage green and cream tones. The phone screen shows abstract UI elements and Arabic calligraphy—no readable Latin text required. Negative space in the lower third. Respectful, modern, editorial style. Aspect ratio 9:16.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "LENGKAP"
+    },
+    {
+      "id": "scene-4",
+      "ttsScript": "Ada juga Cek Kondisi dan Tanya Ustadz AI untuk kasus yang bikin ragu.",
+      "durationInSeconds": 4.5,
+      "durationInFrames": 135,
+      "headline": "CEK KONDISI & TANYA",
+      "highlightWords": ["CEK KONDISI"],
+      "imagePrompt": "Vertical 9:16 split composition. Left side: a smartphone showing a simple 'Ya / Tidak' decision-tree interface in calm green and white. Right side: a chat bubble interface with a subtle AI icon and Arabic-inspired geometric pattern. Soft blue and green palette, gentle shadows, clean UI mockup style without readable text. Negative space in the upper third. Modern, trustworthy, minimal. Aspect ratio 9:16.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "AI Q&A"
+    },
+    {
+      "id": "scene-5",
+      "ttsScript": "Ada 13 panduan slide, bisa dibookmark dan dibaca offline.",
+      "durationInSeconds": 4.0,
+      "durationInFrames": 120,
+      "headline": "13 PANDUAN SLIDE",
+      "highlightWords": ["13 PANDUAN"],
+      "imagePrompt": "Vertical 9:16 composition. A fan of 13 elegant, minimalist cards floating gently against a warm cream background, each card showing a simple icon: a bookmark, a speaker, a book, a slide. Soft sage green and light blue accents. Subtle depth, calm lighting, organized and inviting. Negative space in the upper third. Editorial flat-lay style, no readable text. Aspect ratio 9:16.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "13 SLIDE"
+    },
+    {
+      "id": "scene-6",
+      "ttsScript": "Tersedia dalam empat bahasa, dengan audio dan referensi.",
+      "durationInSeconds": 3.5,
+      "durationInFrames": 105,
+      "headline": "4 BAHASA & AUDIO",
+      "highlightWords": ["4 BAHASA"],
+      "imagePrompt": "Vertical 9:16 composition. Four soft, translucent language tags arranged elegantly around a subtle globe or crescent motif, with Arabic script gently highlighted. Tags suggest Indonesian, English, Malay, and Urdu through abstract letterforms and colors—no readable words required. Calm green, blue, and white palette. Soft glow, minimal background. Negative space in the lower third. Respectful, global, educational aesthetic. Aspect ratio 9:16.",
+      "sfx": "none",
+      "style": "kinetic-sticker",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "4 BAHASA"
+    },
+    {
+      "id": "scene-7",
+      "ttsScript": "Cari Ghusl di Google Play, dan mulai belajar dengan tenang.",
+      "durationInSeconds": 4.0,
+      "durationInFrames": 120,
+      "headline": "DOWNLOAD DI GOOGLE PLAY",
+      "highlightWords": ["DOWNLOAD"],
+      "imagePrompt": "Vertical 9:16 composition. A smartphone lying on a clean, soft prayer rug, screen glowing gently with a minimal app icon and a subtle 'Google Play' badge shape (no readable text required). Warm, inviting light; sage green and cream tones. A sense of calm and readiness. Negative space in the upper third. Respectful, aspirational, editorial product photography style. Aspect ratio 9:16.",
+      "videoMotionPrompt": "Vertical 9:16, 3 seconds. Start with a close-up of a smartphone screen glowing gently with a minimal app icon on a soft prayer rug. The camera performs a slow, smooth pull-back, revealing the phone resting on the rug in a calm, warmly lit room. A soft light bloom gently fades in around the phone, creating a serene, inviting atmosphere. End on a balanced medium shot with the phone centered and negative space above for the CTA headline. Sage green and cream tones, natural motion, no text distortion.",
+      "sfx": "ding",
+      "style": "comic-pop",
+      "animation": "pop",
+      "placement": "center",
+      "badgeText": "COBA SEKARANG"
+    }
+  ]
+}

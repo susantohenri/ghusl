@@ -1,8 +1,8 @@
 package com.niatmandiwajib.ghusl.ui.navigation
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.QuestionAnswer
 import androidx.compose.material.icons.filled.MoreHoriz
@@ -24,7 +24,7 @@ sealed class Screen(
         route = "guide",
         titleResId = com.niatmandiwajib.ghusl.R.string.nav_guide,
         navLabelResId = com.niatmandiwajib.ghusl.R.string.bottom_nav_guide,
-        icon = Icons.Filled.MenuBook
+        icon = Icons.AutoMirrored.Filled.MenuBook
     )
     data object Wizard : Screen(
         route = "wizard",
@@ -46,8 +46,8 @@ sealed class Screen(
     )
 
     // Sub-screens (no bottom nav icon)
-    data object SlideShow : Screen(route = "slide_show/{contentId}", titleResId = com.niatmandiwajib.ghusl.R.string.nav_guide) {
-        fun createRoute(contentId: String) = "slide_show/$contentId"
+    data object SlideShow : Screen(route = "slide_show/{contentId}?slide={initialSlide}", titleResId = com.niatmandiwajib.ghusl.R.string.nav_guide) {
+        fun createRoute(contentId: String, initialSlide: Int = 0) = "slide_show/$contentId?slide=$initialSlide"
     }
     data object WizardResult : Screen(route = "wizard_result", titleResId = com.niatmandiwajib.ghusl.R.string.nav_wizard)
     data object QnADetail : Screen(route = "qna_detail/{questionId}", titleResId = com.niatmandiwajib.ghusl.R.string.nav_ask_ustadz) {

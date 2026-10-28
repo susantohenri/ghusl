@@ -38,6 +38,7 @@ import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 @Composable
 fun SlideShowScreen(
     contentId: String,
+    initialSlide: Int = 0,
     navController: NavController,
     viewModel: SlideShowViewModel = viewModel()
 ) {
@@ -103,7 +104,11 @@ fun SlideShowScreen(
                 )
             } else if (uiState.content != null) {
                 val slides = uiState.content!!.slides
-                val pagerState = rememberPagerState(pageCount = { slides.size })
+                val safeInitialPage = initialSlide.coerceIn(0, (slides.size - 1).coerceAtLeast(0))
+                val pagerState = rememberPagerState(
+                    initialPage = safeInitialPage,
+                    pageCount = { slides.size }
+                )
                 
                 LaunchedEffect(pagerState.currentPage) {
                     viewModel.onSlideChanged(pagerState.currentPage)

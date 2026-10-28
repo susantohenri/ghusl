@@ -174,6 +174,6 @@ class AdManager(private val context: Context) {
         return false
     }
 
-    fun getBannerUnitId(): String = adConfig?.bannerAdUnitId ?: "ca-app-pub-1012224604632017/5653196554"
-    fun getNativeUnitId(): String = adConfig?.nativeAdUnitId ?: "ca-app-pub-1012224604632017/3701820639"
+    fun getBannerUnitId(): String = adConfig?.bannerAdUnitId ?: "ca-app-pub-3360913653749022/9177121558"
+    fun getNativeUnitId(): String = adConfig?.nativeAdUnitId ?: "ca-app-pub-3360913653749022/6694428444"
 }

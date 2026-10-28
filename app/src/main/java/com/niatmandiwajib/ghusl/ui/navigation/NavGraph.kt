@@ -44,12 +44,20 @@ fun NavGraph(
 
         // Sub-screens
         composable(
-            Screen.SlideShow.route,
-            arguments = listOf(navArgument("contentId") { type = NavType.StringType })
+            route = Screen.SlideShow.route,
+            arguments = listOf(
+                navArgument("contentId") { type = NavType.StringType },
+                navArgument("initialSlide") {
+                    type = NavType.IntType
+                    defaultValue = 0
+                }
+            )
         ) { backStackEntry ->
             val contentId = backStackEntry.arguments?.getString("contentId") ?: return@composable
+            val initialSlide = backStackEntry.arguments?.getInt("initialSlide") ?: 0
             SlideShowScreen(
                 contentId = contentId,
+                initialSlide = initialSlide,
                 navController = navController
             )
         }
