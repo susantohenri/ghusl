@@ -15,12 +15,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdOptions
 import com.google.android.gms.ads.nativead.NativeAdView
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 
 @Composable
 fun NativeAdCard(
@@ -31,10 +34,31 @@ fun NativeAdCard(
     var nativeAd by remember { mutableStateOf<NativeAd?>(null) }
 
     DisposableEffect(adUnitId) {
+        AnalyticsLogger.logAdRequest(adUnitId, "NATIVE")
+
         val adLoader = AdLoader.Builder(context, adUnitId)
             .forNativeAd { ad ->
+                ad.setOnPaidEventListener { adValue ->
+                    val adSource = ad.responseInfo?.loadedAdapterResponseInfo?.adSourceName
+                    AnalyticsLogger.logAdImpression(
+                        adUnitId = adUnitId,
+                        adFormat = "NATIVE",
+                        adSource = adSource,
+                        currency = adValue.currencyCode,
+                        valueMicros = adValue.valueMicros
+                    )
+                }
                 nativeAd = ad
             }
+            .withAdListener(object : AdListener() {
+                override fun onAdClicked() {
+                    AnalyticsLogger.logAdClick(adUnitId, "NATIVE")
+                }
+
+                override fun onAdFailedToLoad(error: LoadAdError) {
+                    AnalyticsLogger.logAdFailed(adUnitId, "NATIVE", error.code)
+                }
+            })
             .withNativeAdOptions(NativeAdOptions.Builder().build())
             .build()
         adLoader.loadAd(AdRequest.Builder().build())

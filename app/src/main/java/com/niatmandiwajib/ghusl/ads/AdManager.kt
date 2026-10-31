@@ -12,6 +12,7 @@ import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.google.android.ump.ConsentInformation
 import com.google.android.ump.ConsentRequestParameters
 import com.google.android.ump.UserMessagingPlatform
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.data.remote.dto.AdConfigDto
 
 class AdManager(private val context: Context) {
@@ -74,10 +75,27 @@ class AdManager(private val context: Context) {
     fun preloadInterstitial() {
         try {
             val unitId = adConfig?.interstitialAdUnitId ?: return
+            AnalyticsLogger.logAdRequest(unitId, "INTERSTITIAL")
             InterstitialAd.load(context, unitId, AdRequest.Builder().build(),
                 object : InterstitialAdLoadCallback() {
-                    override fun onAdLoaded(ad: InterstitialAd) { interstitialAd = ad }
-                    override fun onAdFailedToLoad(error: LoadAdError) { interstitialAd = null }
+                    override fun onAdLoaded(ad: InterstitialAd) {
+                        ad.setOnPaidEventListener { adValue ->
+                            val adSource = ad.responseInfo?.loadedAdapterResponseInfo?.adSourceName
+                            AnalyticsLogger.logAdImpression(
+                                adUnitId = unitId,
+                                adFormat = "INTERSTITIAL",
+                                adSource = adSource,
+                                currency = adValue.currencyCode,
+                                valueMicros = adValue.valueMicros
+                            )
+                        }
+                        interstitialAd = ad
+                    }
+
+                    override fun onAdFailedToLoad(error: LoadAdError) {
+                        AnalyticsLogger.logAdFailed(unitId, "INTERSTITIAL", error.code)
+                        interstitialAd = null
+                    }
                 })
         } catch (e: Exception) {
             Log.e(TAG, "Preload interstitial error", e)
@@ -89,9 +107,19 @@ class AdManager(private val context: Context) {
         val now = System.currentTimeMillis()
         if (now - lastInterstitialTime < INTERSTITIAL_COOLDOWN_MS) return false
         try {
+            val unitId = adConfig?.interstitialAdUnitId ?: return false
             interstitialAd?.let { ad ->
                 ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdClicked() {
+                        AnalyticsLogger.logAdClick(unitId, "INTERSTITIAL")
+                    }
+
                     override fun onAdDismissedFullScreenContent() {
+                        interstitialAd = null
+                        preloadInterstitial()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(error: AdError) {
                         interstitialAd = null
                         preloadInterstitial()
                     }
@@ -110,10 +138,27 @@ class AdManager(private val context: Context) {
     fun preloadAppOpenAd() {
         try {
             val unitId = adConfig?.appOpenAdUnitId ?: return
+            AnalyticsLogger.logAdRequest(unitId, "OPEN_APP")
             AppOpenAd.load(context, unitId, AdRequest.Builder().build(),
                 object : AppOpenAd.AppOpenAdLoadCallback() {
-                    override fun onAdLoaded(ad: AppOpenAd) { appOpenAd = ad }
-                    override fun onAdFailedToLoad(error: LoadAdError) { appOpenAd = null }
+                    override fun onAdLoaded(ad: AppOpenAd) {
+                        ad.setOnPaidEventListener { adValue ->
+                            val adSource = ad.responseInfo?.loadedAdapterResponseInfo?.adSourceName
+                            AnalyticsLogger.logAdImpression(
+                                adUnitId = unitId,
+                                adFormat = "OPEN_APP",
+                                adSource = adSource,
+                                currency = adValue.currencyCode,
+                                valueMicros = adValue.valueMicros
+                            )
+                        }
+                        appOpenAd = ad
+                    }
+
+                    override fun onAdFailedToLoad(error: LoadAdError) {
+                        AnalyticsLogger.logAdFailed(unitId, "OPEN_APP", error.code)
+                        appOpenAd = null
+                    }
                 })
         } catch (e: Exception) {
             Log.e(TAG, "Preload app open ad error", e)
@@ -125,9 +170,19 @@ class AdManager(private val context: Context) {
         val now = System.currentTimeMillis()
         if (now - lastAppOpenTime < APP_OPEN_COOLDOWN_MS) return false
         try {
+            val unitId = adConfig?.appOpenAdUnitId ?: return false
             appOpenAd?.let { ad ->
                 ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdClicked() {
+                        AnalyticsLogger.logAdClick(unitId, "OPEN_APP")
+                    }
+
                     override fun onAdDismissedFullScreenContent() {
+                        appOpenAd = null
+                        preloadAppOpenAd()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(error: AdError) {
                         appOpenAd = null
                         preloadAppOpenAd()
                     }
@@ -146,10 +201,27 @@ class AdManager(private val context: Context) {
     fun preloadRewarded() {
         try {
             val unitId = adConfig?.rewardedAdUnitId ?: return
+            AnalyticsLogger.logAdRequest(unitId, "REWARDED")
             RewardedAd.load(context, unitId, AdRequest.Builder().build(),
                 object : RewardedAdLoadCallback() {
-                    override fun onAdLoaded(ad: RewardedAd) { rewardedAd = ad }
-                    override fun onAdFailedToLoad(error: LoadAdError) { rewardedAd = null }
+                    override fun onAdLoaded(ad: RewardedAd) {
+                        ad.setOnPaidEventListener { adValue ->
+                            val adSource = ad.responseInfo?.loadedAdapterResponseInfo?.adSourceName
+                            AnalyticsLogger.logAdImpression(
+                                adUnitId = unitId,
+                                adFormat = "REWARDED",
+                                adSource = adSource,
+                                currency = adValue.currencyCode,
+                                valueMicros = adValue.valueMicros
+                            )
+                        }
+                        rewardedAd = ad
+                    }
+
+                    override fun onAdFailedToLoad(error: LoadAdError) {
+                        AnalyticsLogger.logAdFailed(unitId, "REWARDED", error.code)
+                        rewardedAd = null
+                    }
                 })
         } catch (e: Exception) {
             Log.e(TAG, "Preload rewarded error", e)
@@ -158,9 +230,19 @@ class AdManager(private val context: Context) {
 
     fun showRewardedAd(activity: Activity, onRewarded: () -> Unit): Boolean {
         try {
+            val unitId = adConfig?.rewardedAdUnitId ?: return false
             rewardedAd?.let { ad ->
                 ad.fullScreenContentCallback = object : FullScreenContentCallback() {
+                    override fun onAdClicked() {
+                        AnalyticsLogger.logAdClick(unitId, "REWARDED")
+                    }
+
                     override fun onAdDismissedFullScreenContent() {
+                        rewardedAd = null
+                        preloadRewarded()
+                    }
+
+                    override fun onAdFailedToShowFullScreenContent(error: AdError) {
                         rewardedAd = null
                         preloadRewarded()
                     }

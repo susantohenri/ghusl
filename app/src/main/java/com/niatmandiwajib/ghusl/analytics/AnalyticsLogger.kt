@@ -165,14 +165,88 @@ object AnalyticsLogger {
     }
 
     /**
-     * Sets a custom key-value pair for Crashlytics diagnostic context.
+     * Current canonical screen name tracked by the app.
      */
-    fun setCrashlyticsCustomKey(key: String, value: String) {
-        if (key.isBlank()) return
-        try {
-            FirebaseCrashlytics.getInstance().setCustomKey(key, value)
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to set Crashlytics custom key '$key'", e)
+    val currentScreen: String
+        get() = lastTrackedScreen ?: "main"
+
+    /**
+     * Logs ad_request right before loadAd is invoked.
+     */
+    fun logAdRequest(adUnitId: String, adFormat: String, screen: String = currentScreen) {
+        if (adUnitId.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("ad_unit_id", adUnitId)
+            putString("ad_format", adFormat)
+            putString("screen", screen)
         }
+        logEvent("ad_request", bundle)
+        Log.d(TAG, "ad_request: format=$adFormat, unit=$adUnitId, screen=$screen")
+    }
+
+    /**
+     * Logs ad_impression via OnPaidEventListener with accurate revenue calculation.
+     * Prioritizes OnPaidEventListener as the single canonical impression source.
+     */
+    fun logAdImpression(
+        adUnitId: String,
+        adFormat: String,
+        adSource: String?,
+        currency: String?,
+        valueMicros: Long,
+        screen: String = currentScreen
+    ) {
+        if (adUnitId.isBlank()) return
+        val value = valueMicros / 1_000_000.0
+        val curr = if (currency.isNullOrBlank()) "USD" else currency
+
+        val bundle = Bundle().apply {
+            putString("ad_unit_id", adUnitId)
+            putString("ad_format", adFormat)
+            if (!adSource.isNullOrBlank()) {
+                putString("ad_source", adSource)
+                putString(FirebaseAnalytics.Param.AD_SOURCE, adSource)
+            }
+            putString("screen", screen)
+            putString("currency", curr)
+            putDouble("value", value)
+
+            // Official Firebase Analytics constants
+            putString(FirebaseAnalytics.Param.AD_UNIT_NAME, adUnitId)
+            putString(FirebaseAnalytics.Param.AD_FORMAT, adFormat)
+            putString(FirebaseAnalytics.Param.CURRENCY, curr)
+            putDouble(FirebaseAnalytics.Param.VALUE, value)
+        }
+        logEvent(FirebaseAnalytics.Event.AD_IMPRESSION, bundle)
+        Log.d(TAG, "ad_impression: format=$adFormat, unit=$adUnitId, value=$value $curr, source=$adSource, screen=$screen")
+    }
+
+    /**
+     * Logs ad_click when an ad is clicked.
+     */
+    fun logAdClick(adUnitId: String, adFormat: String, screen: String = currentScreen) {
+        if (adUnitId.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("ad_unit_id", adUnitId)
+            putString("ad_format", adFormat)
+            putString("screen", screen)
+        }
+        logEvent("ad_click", bundle)
+        Log.d(TAG, "ad_click: format=$adFormat, unit=$adUnitId, screen=$screen")
+    }
+
+    /**
+     * Logs ad_failed when an ad fails to load.
+     */
+    fun logAdFailed(adUnitId: String, adFormat: String, errorCode: Int, screen: String = currentScreen) {
+        if (adUnitId.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("ad_unit_id", adUnitId)
+            putString("ad_format", adFormat)
+            putInt("error_code", errorCode)
+            putString("screen", screen)
+        }
+        logEvent("ad_failed", bundle)
+        Log.d(TAG, "ad_failed: format=$adFormat, unit=$adUnitId, error_code=$errorCode, screen=$screen")
     }
 }
