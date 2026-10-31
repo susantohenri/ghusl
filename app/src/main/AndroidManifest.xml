@@ -25,6 +25,11 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3360913653749022~6889498436" />
 
+        <!-- Disable Firebase Analytics automatic screen reporting to prevent double counting in Compose -->
+        <meta-data
+            android:name="google_analytics_automatic_screen_reporting_enabled"
+            android:value="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

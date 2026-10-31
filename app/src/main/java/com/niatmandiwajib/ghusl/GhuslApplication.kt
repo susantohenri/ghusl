@@ -30,7 +30,7 @@ class GhuslApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        com.niatmandiwajib.ghusl.analytics.AnalyticsHelper.init(this)
+        com.niatmandiwajib.ghusl.analytics.AnalyticsLogger.init(this)
         container = AppContainer(this)
         createNotificationChannels()
         initializeAds()

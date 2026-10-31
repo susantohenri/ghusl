@@ -20,7 +20,10 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.navigationBars
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.DisposableEffect
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavController
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +39,17 @@ class MainActivity : AppCompatActivity() {
             val themeMode by app.container.userPreferences.themeMode.collectAsState(initial = "system")
             GhuslTheme(themeMode = themeMode) {
                 val navController = rememberNavController()
+
+                DisposableEffect(navController) {
+                    val listener = NavController.OnDestinationChangedListener { _, destination, _ ->
+                        AnalyticsLogger.logScreenFromRoute(destination.route)
+                    }
+                    navController.addOnDestinationChangedListener(listener)
+                    onDispose {
+                        navController.removeOnDestinationChangedListener(listener)
+                    }
+                }
+
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
 
