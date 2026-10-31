@@ -7,6 +7,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.niatmandiwajib.ghusl.BuildConfig
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
+import java.util.Locale
 
 /**
  * Singleton wrapper and canonical entry point for Firebase Analytics instrumentation.
@@ -16,6 +17,15 @@ import com.niatmandiwajib.ghusl.ui.navigation.Screen
 object AnalyticsLogger {
 
     private const val TAG = "AnalyticsLogger"
+    private const val PREFS_NAME = "analytics_user_properties"
+    private const val KEY_FIRST_SEEN = "first_seen_timestamp"
+    private const val KEY_LAST_SEEN = "last_seen_timestamp"
+    private const val KEY_CACHED_LANGUAGE = "cached_language"
+    private const val KEY_CACHED_COUNTRY = "cached_country"
+    private const val KEY_CACHED_ENGAGEMENT = "cached_engagement_level"
+
+    private const val ONE_DAY_MS = 24 * 60 * 60 * 1000L
+    private const val SEVEN_DAYS_MS = 7 * ONE_DAY_MS
 
     @Volatile
     private var firebaseAnalytics: FirebaseAnalytics? = null
@@ -42,6 +52,9 @@ object AnalyticsLogger {
             firebaseAnalytics = analytics
             Log.d(TAG, "Firebase Analytics initialized successfully with app_version=${BuildConfig.VERSION_NAME}")
 
+            // Initialize user properties (language, country, engagement_level)
+            updateUserProperties(appContext)
+
             // Initialize Firebase Crashlytics collection explicitly
             try {
                 FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
@@ -51,6 +64,70 @@ object AnalyticsLogger {
             }
         } catch (e: Exception) {
             Log.e(TAG, "Failed to initialize Firebase Analytics", e)
+        }
+    }
+
+    /**
+     * Evaluates and updates user properties (language, country, engagement_level).
+     * Caches values in SharedPreferences to avoid redundant setUserProperty calls.
+     */
+    fun updateUserProperties(context: Context) {
+        try {
+            val prefs = context.applicationContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            val now = System.currentTimeMillis()
+
+            val firstSeen = prefs.getLong(KEY_FIRST_SEEN, 0L)
+            val lastSeen = prefs.getLong(KEY_LAST_SEEN, 0L)
+
+            val actualFirstSeen = if (firstSeen == 0L) {
+                now
+            } else {
+                firstSeen
+            }
+
+            // Evaluate engagement_level based on prior activity before updating lastSeen
+            val engagementLevel = when {
+                (now - actualFirstSeen) <= ONE_DAY_MS -> "new"
+                lastSeen > 0L && (now - lastSeen) <= SEVEN_DAYS_MS -> "active"
+                lastSeen > 0L && (now - lastSeen) > SEVEN_DAYS_MS -> "dormant"
+                else -> "new"
+            }
+
+            val locale = Locale.getDefault()
+            val language = locale.language.takeIf { it.isNotBlank() } ?: "unknown"
+            val country = locale.country.takeIf { it.isNotBlank() } ?: "unknown"
+
+            val cachedLanguage = prefs.getString(KEY_CACHED_LANGUAGE, null)
+            val cachedCountry = prefs.getString(KEY_CACHED_COUNTRY, null)
+            val cachedEngagement = prefs.getString(KEY_CACHED_ENGAGEMENT, null)
+
+            val editor = prefs.edit()
+            if (firstSeen == 0L) {
+                editor.putLong(KEY_FIRST_SEEN, actualFirstSeen)
+            }
+            editor.putLong(KEY_LAST_SEEN, now)
+
+            if (cachedLanguage != language) {
+                setUserProperty("language", language)
+                editor.putString(KEY_CACHED_LANGUAGE, language)
+                Log.d(TAG, "User property set: language=$language")
+            }
+
+            if (cachedCountry != country) {
+                setUserProperty("country", country)
+                editor.putString(KEY_CACHED_COUNTRY, country)
+                Log.d(TAG, "User property set: country=$country")
+            }
+
+            if (cachedEngagement != engagementLevel) {
+                setUserProperty("engagement_level", engagementLevel)
+                editor.putString(KEY_CACHED_ENGAGEMENT, engagementLevel)
+                Log.d(TAG, "User property set: engagement_level=$engagementLevel")
+            }
+
+            editor.apply()
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to update user properties", e)
         }
     }
 
