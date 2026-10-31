@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.niatmandiwajib.ghusl.BuildConfig
 import com.niatmandiwajib.ghusl.ui.navigation.Screen
 
@@ -40,6 +41,14 @@ object AnalyticsLogger {
 
             firebaseAnalytics = analytics
             Log.d(TAG, "Firebase Analytics initialized successfully with app_version=${BuildConfig.VERSION_NAME}")
+
+            // Initialize Firebase Crashlytics collection explicitly
+            try {
+                FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
+                Log.d(TAG, "Firebase Crashlytics initialized successfully")
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to initialize Firebase Crashlytics", e)
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Failed to initialize Firebase Analytics", e)
         }
@@ -129,6 +138,41 @@ object AnalyticsLogger {
             firebaseAnalytics?.setUserProperty(name, value)
         } catch (e: Exception) {
             Log.e(TAG, "Failed to set user property '$name'", e)
+        }
+    }
+
+    /**
+     * Records a non-fatal exception to Firebase Crashlytics safely.
+     */
+    fun recordException(throwable: Throwable) {
+        try {
+            FirebaseCrashlytics.getInstance().recordException(throwable)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to record exception in Crashlytics", e)
+        }
+    }
+
+    /**
+     * Writes a custom log line to the next Firebase Crashlytics report.
+     */
+    fun logCrashlytics(message: String) {
+        if (message.isBlank()) return
+        try {
+            FirebaseCrashlytics.getInstance().log(message)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to write Crashlytics log", e)
+        }
+    }
+
+    /**
+     * Sets a custom key-value pair for Crashlytics diagnostic context.
+     */
+    fun setCrashlyticsCustomKey(key: String, value: String) {
+        if (key.isBlank()) return
+        try {
+            FirebaseCrashlytics.getInstance().setCustomKey(key, value)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to set Crashlytics custom key '$key'", e)
         }
     }
 }
