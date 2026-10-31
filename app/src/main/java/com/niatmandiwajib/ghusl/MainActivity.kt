@@ -1,5 +1,6 @@
 package com.niatmandiwajib.ghusl
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        checkNotificationIntent(intent)
 
         val app = application as GhuslApplication
         app.adManager.requestConsent(this) { canRequestAds ->
@@ -97,6 +100,19 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
             }
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        checkNotificationIntent(intent)
+    }
+
+    private fun checkNotificationIntent(intent: Intent?) {
+        intent?.getStringExtra("notification_type")?.let { type ->
+            AnalyticsLogger.logNotificationOpened(type)
+            intent.removeExtra("notification_type")
         }
     }
 }

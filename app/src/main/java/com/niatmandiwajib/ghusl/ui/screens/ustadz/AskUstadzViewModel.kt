@@ -8,6 +8,7 @@ import androidx.work.WorkManager
 import androidx.work.workDataOf
 import com.niatmandiwajib.ghusl.BuildConfig
 import com.niatmandiwajib.ghusl.GhuslApplication
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.data.repository.QnARepository
 import com.niatmandiwajib.ghusl.domain.model.QnAItem
 import com.niatmandiwajib.ghusl.worker.ProcessQuestionWorker
@@ -59,6 +60,8 @@ class AskUstadzViewModel(application: Application) : AndroidViewModel(applicatio
             try {
                 val existingCount = qnARepository.getQuestionCount()
                 val questionId = qnARepository.submitQuestion(_questionText.value)
+                
+                AnalyticsLogger.logQuestionSubmitted(questionId.toString(), existingCount == 0)
                 
                 val context = getApplication<Application>().applicationContext
                 val delay = if (existingCount == 0) {

@@ -23,6 +23,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.domain.model.GuideContent
 import com.niatmandiwajib.ghusl.ui.components.AdBannerView
 import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
@@ -130,6 +131,9 @@ fun SearchScreen(
                                     )
                                 },
                                 modifier = Modifier.clickable {
+                                    if (query.isNotBlank()) {
+                                        AnalyticsLogger.logSearch(query)
+                                    }
                                     navController.navigate(Screen.SlideShow.createRoute(content.kode))
                                 }
                             )

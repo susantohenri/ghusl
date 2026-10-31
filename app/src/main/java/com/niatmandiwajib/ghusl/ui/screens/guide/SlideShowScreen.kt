@@ -31,6 +31,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.niatmandiwajib.ghusl.GhuslApplication
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.ui.components.AudioPlayerBar
 import com.niatmandiwajib.ghusl.ui.components.GhuslTopAppBar
 
@@ -109,9 +110,14 @@ fun SlideShowScreen(
                     initialPage = safeInitialPage,
                     pageCount = { slides.size }
                 )
-                
-                LaunchedEffect(pagerState.currentPage) {
+
+                var hasLoggedCompletion by remember(contentId) { mutableStateOf(false) }
+                LaunchedEffect(pagerState.currentPage, slides.size) {
                     viewModel.onSlideChanged(pagerState.currentPage)
+                    if (slides.isNotEmpty() && pagerState.currentPage == slides.size - 1 && !hasLoggedCompletion) {
+                        hasLoggedCompletion = true
+                        AnalyticsLogger.logGuideCompleted(contentId, slides.size)
+                    }
                 }
 
                 Column(modifier = Modifier.fillMaxSize()) {

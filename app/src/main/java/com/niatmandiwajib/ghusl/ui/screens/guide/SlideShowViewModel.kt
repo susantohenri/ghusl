@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.niatmandiwajib.ghusl.GhuslApplication
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.domain.model.GuideContent
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -80,6 +81,7 @@ class SlideShowViewModel(
                 bookmarkRepository.removeBookmark(contentId)
             } else {
                 bookmarkRepository.addBookmark(contentId, title)
+                AnalyticsLogger.logGuideBookmarked(contentId)
             }
         }
     }

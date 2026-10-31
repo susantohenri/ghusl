@@ -47,6 +47,7 @@ class GhuslFirebaseMessagingService : FirebaseMessagingService() {
     private fun showNotification(title: String, body: String) {
         val intent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            putExtra("notification_type", "fcm_push")
         }
         val pendingIntent = PendingIntent.getActivity(
             this, 0, intent,

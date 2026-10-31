@@ -249,4 +249,103 @@ object AnalyticsLogger {
         logEvent("ad_failed", bundle)
         Log.d(TAG, "ad_failed: format=$adFormat, unit=$adUnitId, error_code=$errorCode, screen=$screen")
     }
+
+    /**
+     * Logs notification_opened when the user opens a notification.
+     */
+    fun logNotificationOpened(notificationType: String) {
+        if (notificationType.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("notification_type", notificationType)
+        }
+        logEvent("notification_opened", bundle)
+        Log.d(TAG, "notification_opened: type=$notificationType")
+    }
+
+    /**
+     * Logs wizard_completed when user finishes the decision tree condition check.
+     */
+    fun logWizardCompleted(resultId: String, mustGhusl: Boolean, stepCount: Int) {
+        val bundle = Bundle().apply {
+            putString("result_id", resultId)
+            putString("must_ghusl", mustGhusl.toString())
+            putInt("step_count", stepCount)
+        }
+        logEvent("wizard_completed", bundle)
+        Log.d(TAG, "wizard_completed: result=$resultId, must_ghusl=$mustGhusl, steps=$stepCount")
+    }
+
+    /**
+     * Logs guide_completed when user navigates to the final slide of a guide.
+     */
+    fun logGuideCompleted(guideId: String, totalSlides: Int) {
+        if (guideId.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("guide_id", guideId)
+            putInt("total_slides", totalSlides)
+        }
+        logEvent("guide_completed", bundle)
+        Log.d(TAG, "guide_completed: guide_id=$guideId, total_slides=$totalSlides")
+    }
+
+    /**
+     * Logs question_submitted when a user submits a question to Tanya Ustadz AI.
+     */
+    fun logQuestionSubmitted(questionId: String, isFirstQuestion: Boolean) {
+        if (questionId.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("question_id", questionId)
+            putString("is_first_question", isFirstQuestion.toString())
+        }
+        logEvent("question_submitted", bundle)
+        Log.d(TAG, "question_submitted: id=$questionId, is_first=$isFirstQuestion")
+    }
+
+    /**
+     * Logs niat_copied when user copies intention text to clipboard.
+     */
+    fun logNiatCopied(niatType: String) {
+        if (niatType.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("niat_type", niatType)
+        }
+        logEvent("niat_copied", bundle)
+        Log.d(TAG, "niat_copied: type=$niatType")
+    }
+
+    /**
+     * Logs niat_shared when user shares intention text.
+     */
+    fun logNiatShared(niatType: String) {
+        if (niatType.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("niat_type", niatType)
+        }
+        logEvent("niat_shared", bundle)
+        Log.d(TAG, "niat_shared: type=$niatType")
+    }
+
+    /**
+     * Logs standard Firebase search event when user searches guides.
+     */
+    fun logSearch(searchTerm: String) {
+        if (searchTerm.isBlank()) return
+        val bundle = Bundle().apply {
+            putString(FirebaseAnalytics.Param.SEARCH_TERM, searchTerm)
+        }
+        logEvent(FirebaseAnalytics.Event.SEARCH, bundle)
+        Log.d(TAG, "search: term=$searchTerm")
+    }
+
+    /**
+     * Logs guide_bookmarked when user bookmarks a guide.
+     */
+    fun logGuideBookmarked(guideId: String) {
+        if (guideId.isBlank()) return
+        val bundle = Bundle().apply {
+            putString("guide_id", guideId)
+        }
+        logEvent("guide_bookmarked", bundle)
+        Log.d(TAG, "guide_bookmarked: guide_id=$guideId")
+    }
 }

@@ -30,6 +30,7 @@ import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.niatmandiwajib.ghusl.R
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.domain.model.Slide
 
 data class QuickNiatItem(
@@ -296,6 +297,14 @@ fun QuickNiatCard(
                     ) {
                         OutlinedButton(
                             onClick = {
+                                val niatType = when (item.id) {
+                                    "niat-mandi-junub" -> "junub"
+                                    "niat-mandi-haid" -> "haid"
+                                    "niat-mandi-nifas" -> "nifas"
+                                    else -> item.id
+                                }
+                                AnalyticsLogger.logNiatCopied(niatType)
+
                                 val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager
                                 val clip = ClipData.newPlainText(
                                     "Niat Mandi",
@@ -323,6 +332,14 @@ fun QuickNiatCard(
 
                         Button(
                             onClick = {
+                                val niatType = when (item.id) {
+                                    "niat-mandi-junub" -> "junub"
+                                    "niat-mandi-haid" -> "haid"
+                                    "niat-mandi-nifas" -> "nifas"
+                                    else -> item.id
+                                }
+                                AnalyticsLogger.logNiatShared(niatType)
+
                                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                                     type = "text/plain"
                                     putExtra(

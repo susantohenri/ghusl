@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.niatmandiwajib.ghusl.GhuslApplication
+import com.niatmandiwajib.ghusl.analytics.AnalyticsLogger
 import com.niatmandiwajib.ghusl.domain.model.WizardNode
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -50,6 +51,14 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
         val current = _uiState.value.currentNode ?: return
         val nextNode = wizardRepository.answerYes(current)
         if (nextNode != null) {
+            val stepCount = _uiState.value.history.size + 1
+            if (nextNode.isResult) {
+                AnalyticsLogger.logWizardCompleted(
+                    resultId = nextNode.id,
+                    mustGhusl = nextNode.mustGhusl ?: false,
+                    stepCount = stepCount
+                )
+            }
             _uiState.update {
                 it.copy(
                     currentNode = nextNode,
@@ -64,6 +73,14 @@ class WizardViewModel(application: Application) : AndroidViewModel(application) 
         val current = _uiState.value.currentNode ?: return
         val nextNode = wizardRepository.answerNo(current)
         if (nextNode != null) {
+            val stepCount = _uiState.value.history.size + 1
+            if (nextNode.isResult) {
+                AnalyticsLogger.logWizardCompleted(
+                    resultId = nextNode.id,
+                    mustGhusl = nextNode.mustGhusl ?: false,
+                    stepCount = stepCount
+                )
+            }
             _uiState.update {
                 it.copy(
                     currentNode = nextNode,
